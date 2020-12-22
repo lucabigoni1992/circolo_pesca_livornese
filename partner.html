@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+
+<html lang="it">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Welcome to Per iscriversi</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="./css/style.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="./css/Partner.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="./css/listaelementi.css">
+    <script src="./script/partner.js"></script>
+    <script src="./script/costanti.js"></script>
+    <script src="./script/indice.js"></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div id="branding">
+                <a href="index.html">
+                    <img alt="Circolo Pesca Livorno" class="logo-ico " src="./resource/LOGO.png">
+                </a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="prodotti.html">Prodotti</a></li>
+                    <li><a href="richiesta_iscrizione.html">Per iscriversi</a></li>
+                    <li class="current"><a href="Partner.html">Partner</a></li>
+                    <li><a href="calendario_eventi.html">Eventi</a></li>
+                    <li><a href="chi_siamo.html">Chi siamo</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section id="showcase">
+        <div class="container">
+            <h2 class="classeTitolo">Associazioni gemellate</h2>
+            <div class="basePrefazioneProdotti">
+                <p>
+                   Movendo il Mouse sull'area indicata vi comparirità la lista dell'asociazioni con le quali abbiamo stretto un gemellaggio.
+                </p>
+            </div>
+
+            <aside id="tr">
+
+
+                <div class="basePartner">
+                    <div class=" PartnerLeftMap  ">
+                        <img alt="Clicca per vedere la lista dei nostri Partner" src="./resource/italia.png" usemap="#image-map">
+                        <map id="mapCoord" name="image-map">
+                        </map>
+                    </div>
+                    <div class=" PartnerLeftTran  " id="Regioni"></div>
+                    <div class=" PartnerLeftTran  ">
+                        <div id="Regioni_lista"></div>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </section>
+
+    <footer>
+    </footer>
+</body>
+</html>

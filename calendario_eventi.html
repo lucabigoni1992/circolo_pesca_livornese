@@ -1,0 +1,98 @@
+﻿
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Welcome to About</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="./css/style.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="./css/table.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="./css/calendario.css">
+    <script src="./script/gestione_mail.js"></script>
+    <script src="./script/costanti.js"></script>
+    <script src="./script/calendario.js"></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div id="branding">
+                <a href="index.html">
+                    <img alt="Circolo Pesca Livorno" class="logo-ico " src="./resource/LOGO.png">
+                </a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="prodotti.html">Prodotti</a></li>
+                    <li><a href="richiesta_iscrizione.html">Per iscriversi</a></li>
+                    <li><a href="Partner.html">Partner</a></li>
+                    <li class="current"><a href="calendario_eventi.html">Eventi</a></li>
+                    <li><a href="chi_siamo.html">Chi siamo</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section id="showcase">
+        <div class="container">
+            <h2 class="classeTitolo">Calendario Eventi</h2>
+            <article id="main-col">
+                <div class="basePreventivo">
+                    <p>
+                        Ecco l'elenco dei nosti prossimi <i>Eventi in programma </i>
+                        Cliccndo sulla data ci potrete inviare un'email per la prenotazione all'evento.
+                    </p>
+                    <p>
+                        Per creare automaticamente un'email precompilata trascinare il prezzo nella sezione di destra
+                    </p>
+                    <span>Eventi</span>
+
+                    <div class="borderLine"></div>
+                    <br />
+
+                    <div class="month">
+                        <ul>
+                            <li class="prev">
+                                <input type="button" id="prev" onclick="Month(-1)" value="&#10094;" />
+                            </li>
+                            <li class="next">
+                                <input type="button" id="next" onclick="Month(+1)" value="&#10095;" />
+                            </li>
+                            <li id="Month">
+                            </li>
+                        </ul>
+                    </div>
+
+                    <ul class="weekdays">
+                        <li>Lu</li>
+                        <li>Ma</li>
+                        <li>Me</li>
+                        <li>Gi</li>
+                        <li>Ve</li>
+                        <li>Sa</li>
+                        <li>Do</li>
+                    </ul>
+
+                    <ul id="Days" class="days">
+                        <!--<li><span class="active">10</span></li>-->
+
+                    </ul>
+
+
+                </div>
+            </article>
+            <aside id="sidebar">
+                <div id="expand" class="basePreventivo smalldesc">
+                    <h3 id="didascalia">Seleziona un'evento</h3>
+                    <p id="eventDescription"></p>
+                    <div id="divImmagine" class="fill">
+                    </div>
+                </div>
+            </aside>
+
+        </div>
+    </section>
+    <footer>
+    </footer>
+</body>
+</html>

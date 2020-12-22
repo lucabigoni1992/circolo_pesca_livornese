@@ -1,0 +1,129 @@
+﻿
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Welcome to About</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="./css/style.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="./css/table.css">
+    <script src="./script/gestione_mail.js"></script>
+    <script src="./script/tabella_iscrizione.js"></script>
+    <script src="./script/costanti.js"></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div id="branding">
+                <a href="index.html">
+                    <img alt="Circolo Pesca Livorno" class="logo-ico " src="./resource/LOGO.png">
+                </a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="prodotti.html">Prodotti</a></li>
+                    <li class="current"><a href="richiesta_iscrizione.html">Per iscriversi</a></li>
+                    <li><a href="Partner.html">Partner</a></li>
+                    <li ><a href="calendario_eventi.html">Eventi</a></li>
+                    <li><a href="chi_siamo.html">Chi siamo</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header> 
+    <section id="showcase">
+        <div class="container">
+            <h2 class="classeTitolo">Iscrizione</h2>
+            <article id="main-col">
+                <div class="basePreventivo">
+                    <p>
+                        Per iscriversi al nostro <i>Circolo Nautico</i> vi basterà inviare un email cliccando <a href="mailto:luca.bigoni@live.it">qui</a>.
+                        L'email dovrà contenere il vostro Nome e Cognome ed inoltre,dovete allegate anche una copia del versamento e la vostra carte d'identità.
+                    </p>
+                    <p>
+                        Per creare automaticamente un'email precompilata trascinare il prezzo nella sezione di destra
+                    </p>
+                    <span>Quote per l'iscrizione</span>
+
+                    <div class="borderLine"></div>
+                    <br />
+                    <table id="noScrollTab" class="TabellaProdotti">
+                        <thead>
+                            <tr>
+                                <th class="colw8">Abbonamento</th>
+                                <th class="colw2">Quota</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tabBody" class="table-wrapper-scroll-y my-custom-scrollbar">
+                            <tr>
+                                <td>
+                                </td>
+                                <td>
+                                </td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td>
+                                </td>
+                                <td>
+                                </td>
+                            </tr>
+                        </tfoot>
+                    </table>
+
+                </div>
+            </article>
+            <aside id="sidebar">
+                <div class="basePreventivo">
+                    <h3>Richiedi d'iscrizione</h3>
+
+                    <form id="contact-form" onsubmit="submitContactForm('Richiedi un preventivo');" class="margin-top"
+                          role="form">
+
+                        <div class="row">
+                            <div class="form-group">
+                                <i class="fa fa-check-circle fa-2 check" aria-hidden="true"></i>
+                                <input id="form_name" type="text" name="name" placeholder="Nome" required="required"
+                                       data-error="Nome è obligatorio.">
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="form-group">
+                                <i class="fa fa-check-circle fa-2 check" aria-hidden="true"></i>
+                                <input id="form_email" type="email" name="email" placeholder="Email" required="required"
+                                       data-error="E-mail è obligatorio.">
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="form-group">
+                                <i class="fa fa-check-circle fa-2 check" aria-hidden="true"></i>
+                                <input id="form_phone" type="tel" pattern="[\+]\d{2}-\d{10}" placeholder="+39-123456789"
+                                       name="phone" required="required"
+                                       data-error="numero di telefono obbligatorio.">
+                                <!--ho usato una regular expression carattere+ 2 numeri trattino e nove numeri-->
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="form-group">
+                                <i class="fa fa-check-circle fa-2 check" aria-hidden="true"></i>
+                                <textarea id="form_message"  ondrop="drop(event)" ondragover="allowDrop(event)" name="message" placeholder="Message" rows="2"
+                                          required="required"
+                                          data-error="Inserisci il messaggio che vuoi inviarmi."></textarea>
+                            </div>
+                        </div>
+                        <input class="" type="submit" value="Inoltra"/>
+                    </form>
+                </div>
+            </aside>
+          
+        </div>
+    </section>
+    <footer>
+    </footer>
+</body>
+</html>

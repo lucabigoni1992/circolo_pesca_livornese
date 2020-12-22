@@ -1,0 +1,151 @@
+﻿<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Welcome to Prodotti</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="./css/style.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="./css/table.css">
+
+    <script src="./script/costanti.js"></script>
+    <script src="./script/tabella_preventivo.js"></script>
+    <script src="./script/preventivo.js"></script>
+    <script src="./script/gestione_mail.js"></script>
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <div id="branding">
+                <a href="index.html">
+                    <img alt="Circolo Pesca Livorno" class="logo-ico " src="./resource/LOGO.png">
+                </a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li class="current"><a href="prodotti.html">Prodotti</a></li>
+                    <li><a href="richiesta_iscrizione.html">Per iscriversi</a></li>
+                    <li><a href="Partner.html">Partner</a></li>
+                    <li ><a href="calendario_eventi.html">Eventi</a></li>
+                    <li><a href="chi_siamo.html">Chi siamo</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+        
+    <section id="showcase">
+        <div class="container">
+            <h2 class="classeTitolo">Prodotti acquistabili da noi</h2>
+            <div class="basePrefazioneProdotti">
+                <p>
+                    Il nostro circolo mette a disposizione dei soci e dei loro ospiti l'acquisto diretto di alcuni prodotti locali.
+                </p>
+                <p>
+                    Ogni prodotto qua elencato è garantito da noi come proveniente da una filiera sicura e controllata.
+                </p>
+            </div>
+            <div id="main-col">
+                <div id="Prodotti">
+                    <div class="baseProdotti">
+                        <table id="scrollTab" class="TabellaProdotti">
+                            <thead>
+                                <tr>
+                                    <th class="colw2">Modello</th>
+                                    <th class="colw6">Descrizione</th>
+                                    <th class="colw2">Numero/Prodotto</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tabBody" class="table-wrapper-scroll-y my-custom-scrollbar">
+                                <tr>
+                                    <td>
+                                    </td>
+                                    <td>
+                                    </td>
+                                    <td>
+                                    </td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <td class="colw2">
+                                        <div id="linksLf">
+                                            <div>
+                                                <label for="ProdNumber">N°Prodotti</label>
+                                                <select onchange="changeShowProduct(ProdNumber)" name="ProdNumber" id="ProdNumber">
+                                                    <option value="2" selected="selected">2</option>
+                                                    <option value="5">5</option>
+                                                    <option value="10">10</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="colw2">
+                                    </td>
+                                    <td class="colw6">
+
+                                        <div id="links">
+                                            <input type="button" value="<<" />
+                                            <input type="button" value="0" />
+                                            <input type="button" value="1" />
+                                            <input type="button" value="2" />
+                                            <input type="button" value="3" />
+                                            <input type="button" value=">>" />
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                    </div>
+                </div>
+
+            <aside id="sidebar">
+                <div class="basePreventivo">
+                    <h3>Preventivo</h3>
+                    <table class="TabellaPreventivo">
+                        <thead id="TabPreventivoHead">
+                            <tr>
+                                <td class="colw4">Prodotto scelto</td>
+                                <td class="colw2">N°</td>
+                                <td class="colw2">Pre U.</td>
+                                <td class="colw2">Totale</td>
+                            </tr>
+                        </thead>
+                        <tbody id="TabPreventivo">
+                            <tr>
+                                <td>
+                                </td>
+                                <td>
+                                </td>
+                                <td>
+                                </td>
+                                <td>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div id="PreventivoDataInput">
+                        <div>
+                            <input id="inp_mail" type="email" name="name" onkeyup="controllaEmail(inp_mail)" placeholder="Email del Richiedente">
+                        </div>
+                        <div>
+                            <input id="inp_richiedente" type="text" name="name" onkeyup="controllaRichiedente(inp_richiedente)" placeholder="Nome del Richiedente">
+                        </div>
+                        <div>
+                            <textarea id="inp_message" name="message" onkeyup="controllaMessage(inp_message)" placeholder="Note D'allegare"></textarea>
+                        </div>
+                        <input id="btn_sendQuote" type="button" class="OrangeButton" onClick="inviaPreventivo(normalizeData(),inp_mail,inp_richiedente,inp_message);" value="Richiedi" />
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </section>
+
+    <footer>
+    </footer>
+</body>
+
+</html>

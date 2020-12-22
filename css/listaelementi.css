@@ -1,0 +1,35 @@
+
+
+#showcase ul {
+    list-style-type: none;
+    width: 100%;
+}
+
+#showcase h3 {
+    font: bold 20px/1.5 Helvetica, Verdana, sans-serif;
+}
+#showcase article  span {
+        text-align: center;
+        margin-left: 105px;
+    }
+#showcase li img {
+    float: left;
+    margin: 0 15px 0 0;
+}
+
+
+
+#showcase ul li {
+    padding: 5px;
+    overflow: auto;
+}
+
+#showcase ul li p {
+    font: 200 18px/1.5 Georgia, Times New Roman, serif;
+
+}
+    
+#showcase ul li h3:hover {
+    background: #eee;
+    cursor: pointer;
+}

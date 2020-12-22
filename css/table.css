@@ -1,0 +1,239 @@
+table.TabellaProdotti {
+    border-radius: 5px 5px;
+    background: var(--constBh);
+    margin-bottom: 10px;
+    border: 1px solid #6a6a6a;
+    width: 100%;
+    -webkit-box-shadow: 5px 5px 10px 0px #000000;
+    -moz-box-shadow: 5px 5px 10px 0px #000000;
+    box-shadow: 5px 5px 10px 0px #000000;
+    /*border: 1px solid var(--constBh);
+    background-color: #EEEEEE;
+    width: 100%;*/
+    text-align: center;
+    /*border-collapse: collapse;*/
+}
+
+    table.TabellaProdotti td, table.TabellaProdotti th {
+        padding: 3px 2px;
+    }
+
+    table.TabellaProdotti tbody td {
+        font-size: 13px;
+        border: 1px solid #6a6a6a;
+    }
+
+    table.TabellaProdotti tbody tr {
+        display: inline-table;
+    }
+
+    table.TabellaProdotti tbody img { /*immagine  nella tabella e*/
+        border-radius: 20%;
+        width: 150px;
+        height: 150px;
+    }
+
+    table.TabellaProdotti thead {
+        background: var(--constBh);
+        font-size: 14px;
+        font-weight: bold;
+        color: var(--baseBg);
+        background: -moz-linear-gradient(top, #035387 0%, #3f7399 50%, var(--constBh) 100%);
+        background: -webkit-linear-gradient(top, #035387 0%, #3f7399 50%, var(--constBh) 100%);
+        background: linear-gradient(to bottom,#035387 0%, #3f7399 50%, var(--constBh) 100%);
+    }
+
+        table.TabellaProdotti thead tr {
+            display: flex;
+        }
+
+        table.TabellaProdotti thead th {
+            font-size: 15px;
+            font-weight: bold;
+            color: var(--baseBg);
+            border: none;
+        }
+
+            table.TabellaProdotti thead th:first-child {
+                border-left: none;
+            }
+
+    table.TabellaProdotti tfoot {
+        font-size: 14px;
+        font-weight: bold;
+        color: var(--baseBg);
+        background: -moz-linear-gradient(top, #035387 0%, #3f7399 50%, var(--constBh) 100%);
+        background: -webkit-linear-gradient(top, #035387 0%, #3f7399 50%, var(--constBh) 100%);
+        background: var(--constBh);
+        margin: 5px;
+    }
+
+        table.TabellaProdotti tfoot td {
+            font-size: 14px;
+        }
+
+        table.TabellaProdotti tfoot tr {
+            display: flex;
+        }
+
+    table.TabellaProdotti tbody ul {
+        padding: 20px;
+        text-align: left;
+        list-style: none;
+        padding: 5px;
+        margin-bottom: 5px;
+    }
+
+    table.TabellaProdotti tbody h4 {
+        font-size: 15px;
+        font-weight: bold;
+        color: var(--baseBg);
+        border: none;
+    }
+
+    table.TabellaProdotti tbody p {
+        text-align: center;
+        font-size: 10px;
+    }
+
+    table.TabellaProdotti tbody ul li {
+        background: #d0e7f1;
+        padding: 5px;
+    }
+
+        table.TabellaProdotti tbody ul li:not(:last-child) {
+            border-bottom: var(--constBg) solid 1px;
+        }
+
+    table.TabellaProdotti tfoot #links {
+        text-align: right;
+        float: right;
+        margin: 5px;
+    }
+
+        table.TabellaProdotti tfoot #links input {
+            background: var(--constFg);
+            color: var(--baseBg);
+            padding: 2px 8px;
+            border-radius: 5px;
+            height: auto;
+        }
+
+        table.TabellaProdotti tfoot #links input {
+            background: var(--constbgSfum);
+            color: var(--baseBg);
+            padding: 2px 8px;
+            border-radius: 5px;
+            margin: 1px;
+            display: inline-block;
+            height: 32px;
+        }
+
+            table.TabellaProdotti tfoot #links input:hover {
+                background-color: #46000D;
+                color: var(--baseBg);
+            }
+
+    table.TabellaProdotti tfoot #linksLf {
+        text-align: right;
+        float: left;
+        text-align: left;
+    }
+
+        table.TabellaProdotti tfoot #linksLf div {
+            background: var(--constbgSfum);
+            color: var(--baseBg);
+            padding: 2px 6px;
+            margin: 5px;
+            border-radius: 5px;
+        }
+
+
+/*  OverRide for table*/
+ul#Prodotti li {
+    list-style: none;
+    padding: 5px;
+    border: var(--constBg) solid 1px;
+    margin-bottom: 5px;
+    background: #e6e6e6;
+}
+
+.colw10 {
+    width: 100%;
+}
+
+.colw8 {
+    width: 80%;
+}
+
+.colw6 {
+    width: 60%;
+}
+
+.colw4 {
+    width: 40%;
+}
+
+.colw2 {
+    width: 20%;
+}
+
+.colw0 {
+    width: 0%;
+}
+
+.imgOffuscataNonDisponibile {
+    filter: brightness(100%) blur(5px);
+}
+
+table.TabellaPreventivo {
+    width: 100%;
+    text-align: left;
+    border-collapse: collapse;
+}
+
+table.TabellaProdotti th {
+    padding: 15px;
+    font-weight: bold;
+    margin-top: 6px;
+}
+
+
+/*per la scroll bar nella tabella */
+#scrollTab thead,
+#scrollTab tbody,
+#noScrollTab tbody,
+#noScrollTab thead {
+    float: initial;
+    width: 100%;
+}
+
+#scrollTab tbody {
+    overflow: auto;
+    height: 445px;
+}
+#noScrollTab tbody {
+    overflow: auto;
+}
+
+.my-custom-scrollbar {
+    position: unset;
+    overflow: auto;
+}
+
+.table-wrapper-scroll-y {
+    display: inline-grid;
+}
+
+.fakeTd {
+    padding-top: 5px;
+    border-bottom: 1px solid #035387;
+}
+/* Media Queries serve per adattare lo scenario mostrato a schermi più piccoli di 768 px*/
+@media(max-width: 1400px) {
+    #scrollTab {
+        float: none;
+        text-align: center;
+        width: 100%;
+    }
+}
