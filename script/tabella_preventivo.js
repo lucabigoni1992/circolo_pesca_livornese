@@ -63,7 +63,7 @@ function impostaColonna1(tdCol, elem, indx) {
     h4.appendChild(document.createTextNode(elem.Titolo));
     var img = document.createElement("img");
     img.id = "img" + indx.toString();
-    img.src = "./resource/img/" + elem.Titolo.toString().replaceAll(" ", "_") + "1.jpg";
+    img.src = "./resource/img/" + elem.Titolo.toString().toLowerCase().replaceAll(" ", "_") + "1.jpg";
     img.setAttribute("alt", elem.Titolo);
     if (!elem.disponibile) img.className = "imgOffuscataNonDisponibile";
     tdCol.appendChild(h4);

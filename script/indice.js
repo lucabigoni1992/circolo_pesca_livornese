@@ -44,7 +44,7 @@ function madeRegione(area) {
     img.alt = area.zona;
     img.addEventListener("click", () => { return GenerateAddressList(event,area.zona); });
     img.addEventListener("mouseover", () => { GenerateAddressList(event,area.zona) });
-    img.src = "./resource/icone/icona-" + area.zona + ".png";
+    img.src = "./resource/icone/icona-" + area.zona.toLowerCase() + ".png";
     li.appendChild(img);
     var h3 = document.createElement("h3");
     h3.addEventListener("mouseover", () => { GenerateAddressList(event,area.zona) });
