@@ -102,8 +102,8 @@ const _prodotti = {
         {
             id: 0,
             prezzi: [
-                { quantita: 3, prezzo: 11.20 },
                 { quantita: 5, prezzo: 10.25 },
+                { quantita: 3, prezzo: 11.20 },
                 { quantita: 1, prezzo: 12.5 }
             ],
             disponibile: true,
@@ -118,7 +118,7 @@ const _prodotti = {
                 "Eco Friendly! le barche che pescano questi pesci usano carburanti eco compatibili",
                 "Orate da 300 a 400 gr"
             ],
-            Titolo: "Filetto di pesce al limone"
+            Titolo: "filetto di pesce al limone"
         },
         {
             id: 1,
@@ -212,8 +212,8 @@ const _prodotti = {
             prezzi: [
 
                 { quantita: 1, prezzo: 8 },
-                { quantita: 2, prezzo: 9.75 },
-                { quantita: 6, prezzo: 11.5 }
+                { quantita: 2, prezzo: 7.75 },
+                { quantita: 6, prezzo: 5.5 }
             ],
             disponibile: true,
             alPeso: "Porzione",

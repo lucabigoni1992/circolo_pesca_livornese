@@ -88,7 +88,7 @@ function impostaSceltaProdotto(ul, elem, indx) {
 function impostaColonna1(tdCol, elem, indx) {
     tdCol.setAttribute("class", "colw2");
     var h4 = document.createElement("h4");
-    h4.appendChild(document.createTextNode(elem.Titolo));
+    h4.appendChild(document.createTextNode(elem.Titolo.length > 0 ? (elem.Titolo[0].toUpperCase() + elem.Titolo.slice(1)) : ""));
     var img = document.createElement("img");
     img.id = "img" + indx.toString();
     img.src = "./resource/img/" + elem.Titolo.toString().toLowerCase().replaceAll(" ", "_") + "1.jpg";
@@ -115,8 +115,7 @@ function impostaColonna3(tdCol, elem, indx) {
     var testo = !elem.disponibile ?
         "NON disponibile" :
         elem.alPeso === "" ?
-            "" :
-            "prezzo al " + elem.alPeso;
+            "" : elem.alPeso;
     label.appendChild(document.createTextNode(testo));
     var ul = document.createElement("ul");
     impostaQuantita(ul, elem, indx);

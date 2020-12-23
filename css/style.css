@@ -382,6 +382,16 @@ footer {
     position: fixed;
 }
 
+    footer .copyright {
+        padding-left:15px;
+        float: left;
+    }
+
+    footer .circolo {
+        padding-right: 15px;
+        float: right;
+    }
+
 /* Media Queries serve per adattare lo scenario mostrato a schermi più piccoli di 768 px*/
 @media(max-width: 1450px) {
     aside#sidebarNoMargin,
