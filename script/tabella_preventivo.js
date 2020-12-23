@@ -33,11 +33,28 @@ function impostaQuantita(ul, elem, indx) {
     input.id = id;
     var label = document.createElement("label");
     if (!elem.disponibile) input.disabled = true;
-    else input.addEventListener("change", () => AggiornaPreventivo(input.value, 'quantita', elem.id));
+    else input.addEventListener("change",
+        () => {
+            try {
+                var productList = document.getElementById("id_" + elem.id + "_inputProdotto");
+                enabeOrDisabeProductList(productList, input.value);
+                var selectedData = { type: productList.value, quantity: parseInt(input.value) }
+                AggiornaPreventivo(selectedData, elem.id);
+
+            } catch (e) {
+                window.alert(e.message);
+            }
+        }
+    );
     li.appendChild(input);
     li.appendChild(label);
     ul.appendChild(li);
 }
+/* abilito o disabilito la selezione della tipologia del prodotto*/
+function enabeOrDisabeProductList(productList, quantity) {
+    productList.disabled = quantity > 0 ? false : true;
+}
+
 /*Preparazione per settare i colori nella select */
 function impostaSceltaProdotto(ul, elem, indx) {
     var li = document.createElement("li");
@@ -45,10 +62,21 @@ function impostaSceltaProdotto(ul, elem, indx) {
     label.appendChild(document.createTextNode("Prodotto:"));
     var select = document.createElement("select");
     var id = "id_" + elem.id + "_inputProdotto";
-    select.id = id;;
-    popolaSelect(select, elem.coloriDispoibili)
+    select.id = id;
+    select.disabled = true;
+    popolaSelect(select, elem.varianti)
     if (!elem.disponibile) select.disabled = true;
-    else select.addEventListener("change", () => AggiornaPreventivo(select.value, 'Prodotto', elem.id));
+    else select.addEventListener("change", () => {
+
+        try {
+            var productQuantity = document.getElementById("id_" + elem.id + "_inputQuantita");
+            var selectedData = { type: input.value, quantity: parseInt(productQuantity) }
+            AggiornaPreventivo(selectedData, elem.id)
+
+        } catch (e) {
+            window.alert(e.message);
+        }
+    });
     var cacheColor = getStoredColorValue(indx);
     if (cacheColor !== "") select.value = cacheColor;
     li.appendChild(label);

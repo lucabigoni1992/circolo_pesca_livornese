@@ -7,11 +7,7 @@ table.TabellaProdotti {
     -webkit-box-shadow: 5px 5px 10px 0px #000000;
     -moz-box-shadow: 5px 5px 10px 0px #000000;
     box-shadow: 5px 5px 10px 0px #000000;
-    /*border: 1px solid var(--constBh);
-    background-color: #EEEEEE;
-    width: 100%;*/
     text-align: center;
-    /*border-collapse: collapse;*/
 }
 
     table.TabellaProdotti td, table.TabellaProdotti th {

@@ -6,13 +6,21 @@ const _event = [
     }
     , {
         id: 1, datainizio: new Date('2020-12-29T00:00:00'), datafine: new Date('2021-01-03T00:00:00'), tipologia: "BARCA", titolo: "Gara di pesca a traina"
-        , descrizione: "Sessioni di un ora di pesca dalle banchine del porto.\n Vi insegleremo le basi della pesca a fondo!\n tutti i giorni dalle 15 alle 17."}
+        , descrizione: "La gara si svolgera a 7 miglia dal porto.\n chi lo prenderà più grosso vincerà 300 Euro"
+    }
     , {
         id: 2, datainizio: new Date('2021-01-17T00:00:00'), datafine: new Date('2021-01-23T00:00:00'), tipologia: "PESCA", titolo: "Corso di pesca per bambini"
-        , descrizione: "Sessioni di un ora di pesca dalle banchine del porto.\n Vi insegleremo le basi della pesca a fondo!\n tutti i giorni dalle 15 alle 17."}
+        , descrizione: "Sessioni di un ora di pesca dalle banchine del porto.\n Vi insegleremo le basi della pesca a fondo!\n tutti i giorni dalle 15 alle 17."
+    }
     , {
         id: 3, datainizio: new Date('2020-02-10T00:00:00'), datafine: new Date('2020-02-17T00:00:00'), tipologia: "BARCA", titolo: "Gara di pesca a bollentino"
-        , descrizione: "Sessioni di un ora di pesca dalle banchine del porto.\n Vi insegleremo le basi della pesca a fondo!\n tutti i giorni dalle 15 alle 17."}
+        , descrizione: "La gara si svolgera a 3 miglia dal porto.\n chi lo prenderà più grosso vincerà 300 Euro"
+    }
+    , {
+        id: 4, datainizio: new Date('2021-01-28T00:00:00'), datafine: new Date('2021-02-17T00:00:00'), tipologia: "BARCA", titolo: "Gara di pesca alla Meloria"
+        , descrizione: "La gara si svolgera nell'area protetta della Meloria 3.5 miglia dal porto.\n chi lo prenderà più grosso vincerà 300 Euro"
+    }
+
 ]
 
 const _month = ["Gennaio", "Febbraio", "Marzo", "Aprile", "Maggio", "Giugno", "Luglio", "Agosto", "Settembre", "Ottobre", "Novembre", "Dicembre"];
@@ -94,137 +102,134 @@ const _prodotti = {
         {
             id: 0,
             prezzi: [
-                { quantita: 5, prezzo: 2 },
-                { quantita: 10, prezzo: 1.25 },
-                { quantita: 1, prezzo: 2.5 }
+                { quantita: 3, prezzo: 11.20 },
+                { quantita: 5, prezzo: 10.25 },
+                { quantita: 1, prezzo: 12.5 }
             ],
             disponibile: true,
-            alPeso: "",
-            coloriDispoibili: [
-                { Prodotto: "Arance" },
-                { Prodotto: "Misto Frutta" },
-                { Prodotto: "Albicocca" }
+            alPeso: "Porzione",
+            varianti: [
+                { Prodotto: "Orata" },
+                { Prodotto: "Mormora" },
+                { Prodotto: "Umbrina" }
             ],
             descrizione: [
-                "Marmellata d'arancie",
-                "Coltivata e prodotta a KM 0",
-                "Prodotto salurare ed energetico"
+                "Pesce pescato in giornata dai nostri pescatori locali",
+                "Eco Friendly! le barche che pescano questi pesci usano carburanti eco compatibili",
+                "Orate da 300 a 400 gr"
             ],
-            Titolo: "Marmellata"
+            Titolo: "Filetto di pesce al limone"
         },
         {
             id: 1,
             prezzi: [
-                { quantita: 1, prezzo: 1.75 },
-                { quantita: 20, prezzo: 1.10 },
-                { quantita: 5, prezzo: 1.50 }
+                { quantita: 5, prezzo: 11.25 },
+                { quantita: 3, prezzo: 11.75 },
+                { quantita: 1, prezzo: 13.5 }
             ],
             disponibile: true,
-            alPeso: "Kg",
-            coloriDispoibili: [
-                { Prodotto: "Baguette" }
-                , { Prodotto: "Pane francese" }
-                , { Prodotto: "Rosetta" }
-                , { Prodotto: "Sfilatino" }
+            alPeso: "Porzione",
+            varianti: [
+                { Prodotto: "Orata" },
+                { Prodotto: "Mormora" },
+                { Prodotto: "Umbrina" }
             ],
             descrizione: [
-                "Marmellata d'arancie",
-                "Coltivata e prodotta a KM 0",
-                "Prodotto salurare ed energetico"
+                "Pesce pescato in giornata dai nostri pescatori locali",
+                "Piatto servito con patate al forno e limone",
+                "Eco Friendly! le barche che pescano questi pesci usano carburanti eco compatibili",
+                "pesci da 300 a 400 gr"
             ],
-            Titolo: "Pane"
+            Titolo: "pesce al forno"
         },
         {
             id: 2,
             prezzi: [
-                { quantita: 1, prezzo: 0.80 },
-                { quantita: 500, prezzo: 0.60 },
-                { quantita: 200, prezzo: 0.75 }
+                { quantita: 5, prezzo: 11.25 },
+                { quantita: 3, prezzo: 11.75 },
+                { quantita: 1, prezzo: 13.5 }
             ],
             disponibile: true,
-            alPeso: "",
-            coloriDispoibili: [
-                { Prodotto: "Fgioli borlotti" }
-                , { Prodotto: "Fgioli cannellini" }
-                , { Prodotto: "Ceci" }
-                , { Prodotto: "Lenticchie" }
+            alPeso: "Porzione",
+            varianti: [
+                { Prodotto: "Linguine" },
+                { Prodotto: "Spaghetti" },
+                { Prodotto: "Penne" }
             ],
             descrizione: [
-                "Legumi provenienti dai campi vicino alla città",
-                "Coltivata e prodotta a KM 0",
-                "La Qualità di questo prodotto è controllata ogni mattina",
-                "Disponibili in ogni stagione"
+                "Pesce pescato in giornata dai nostri pescatori locali",
+                "Il primo sarà servito con un filo d'olio polpad'orata e pomodorini freschi",
+                "Eco Friendly! le barche che pescano questi pesci usano carburanti eco compatibili"
             ],
-            Titolo: "Legumi"
+            Titolo: "pasta all'orata"
         },
         {
             id: 3,
             prezzi: [
-
-                { quantita: 10, prezzo: 5 },
-                { quantita: 50, prezzo: 4.50 },
-                { quantita: 100, prezzo: 4 }
+                { quantita: 5, prezzo: 11.75 },
+                { quantita: 3, prezzo: 12.75 },
+                { quantita: 1, prezzo: 13.5 }
             ],
             disponibile: false,
-            alPeso: "Hg",
-            coloriDispoibili: [
-                { Prodotto: "Ferro di Cavallo" }
-                , { Prodotto: "Pastafrolla" }
-                , { Prodotto: "Frollini della nonna" }
+            alPeso: "Porzione",
+            varianti: [
+                { Prodotto: "Orata" },
+                { Prodotto: "Mormora" },
+                { Prodotto: "Umbrina" }
             ],
             descrizione: [
-                "Sfornati caldi ogni mattina",
-                "Prodotti dal Biscottificio il Biscottone di Livorno",
-                "Fatti con ingredienti freschi"
+                "Pesce pescato in giornata dai nostri pescatori locali",
+                "Il piatto sarà servito con un filo d'olio polpa d'del pesce sceto contornato da piselli e pomodoti freschi",
+                "Eco Friendly! le barche che pescano questi pesci usano carburanti eco compatibili"
             ],
-            Titolo: "Biscotti"
+            Titolo: "pesce piselli e pomodorini"
         },
         {
             id: 4,
             prezzi: [
 
-                { quantita: 1, prezzo: 10 },
-                { quantita: 5, prezzo: 9.25 },
-                { quantita: 10, prezzo: 9 }
+                { quantita: 1, prezzo: 8 },
+                { quantita: 3, prezzo: 7.25 },
+                { quantita: 5, prezzo: 7 }
             ],
             disponibile: true,
-            alPeso: "Kg",
-            coloriDispoibili: [
-                { Prodotto: "Della nonna" }
-                , { Prodotto: "Ciambellone" }
-                , { Prodotto: "Semifreddo al Cioccolato" }
+            alPeso: "Porzione",
+            varianti: [
+                { Prodotto: "Peperoni" }
+                , { Prodotto: "Melanzane" }
+                , { Prodotto: "Bietola" }
             ],
             descrizione: [
-                "Torte realizzate in mattinata dalla pasticceria Montenero.",
-                "Realizzate con ingredienti salutari ",
-                "Decorate a mano",
-                "Portate ogni mattina da noi mantenendo la filiera del freddo"
+                "Il pollo sarà servito ripieno d'una vertura a scelta tra quelle diponibili al momento",
+                "Il piatto sarà servito con una porzione abbondante di fagioli",
+                "Eco Friendly! le coltivazioni da cui provengono le verdure sono prive di pesticidi"
             ]
             ,
-            Titolo: "Torte"
+            Titolo: "pollo e fagioli"
         },
         {
             id: 5,
             prezzi: [
 
-                { quantita: 1, prezzo: 2 },
-                { quantita: 10, prezzo: 1.75 },
-                { quantita: 150, prezzo: 1.5 }
+                { quantita: 1, prezzo: 8 },
+                { quantita: 2, prezzo: 9.75 },
+                { quantita: 6, prezzo: 11.5 }
             ],
             disponibile: true,
-            alPeso: "hg",
-            coloriDispoibili: [
-                { Prodotto: "Bresaola" }
-                , { Prodotto: "Salame" }
-                , { Prodotto: "prociutto crudo" }
+            alPeso: "Porzione",
+            varianti: [
+                { Prodotto: "Insalata belga" }
+                , { Prodotto: "Insalata romana" }
+                , { Prodotto: "Insalata radicchio" }
             ],
             descrizione: [
-                "Gli affettati che vi proponiamo sono provenienti da animali allevati all'aperto",
-                "Gli animali sono stati nutriti con mangimi di qualità",
-                "Questi affettati sono tutti stagionati nelle antiche cantine locali"
+                "Prodotto semplice della tradizione Livornese",
+                "Le vuova vengono portate freesche ogni mattina così come i pomodori",
+                "Il prodotto sarò contornato da una porzione di pane abbrustolito e abbondanti verdure",
+                "Ottimo dopo una dura giornata in mare"
             ]
             ,
-            Titolo: "Affettati"
+            Titolo: "uova al pomodoro"
         }
     ]
 }
