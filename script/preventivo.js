@@ -1,18 +1,18 @@
 var _MemPrev = [];
-/* funzione principale che gestisce l'aggiornamento della pagina*/
-function AggiornaPreventivo(Valore, tipo, id) {
+/* funzione principale che gestisce l'aggiornamento della pagina si accetta in input un' oggetto di questo tipo selectedData->{ type: , quantity: }*/
+function AggiornaPreventivo(selectedData, id) {
     try {
-        if (tipo === 'quantita')
-            Valore = parseInt(Valore);
-        if (Valore <= 0 && tipo === 'quantita')
+        if (selectedData === undefined) {
+            if (_MemPrev.length === 0) DisableQuotePart(true);
+            return;
+        }
+        if (selectedData.quantity <= 0)
             removeProduct(id);
         else
-            if (_MemPrev.length === 0 && tipo === 'quantita')//se la memoria è vuota non controllo se è presente aggiungo
-                addNewProduct(id, Valore, tipo);
-            else if (!isInMemPrev(id) && tipo === 'quantita')
-                addNewProduct(id, Valore, tipo);
+            if (_MemPrev.length === 0 || !isInMemPrev(id))
+                addNewProduct(id, selectedData);
             else
-                updateProduct(id, Valore, tipo);
+                updateProduct(id, selectedData);
         if (_MemPrev.length === 0) //ho eliminato ogni elemento dal carrello, disabilito
             DisableQuotePart(true);//true disabilita
         else
@@ -31,16 +31,16 @@ function isInMemPrev(id) {
     return false;
 }
 /* aggiungo un nuovo prodotto */
-function addNewProduct(id, Valore, tipo) {
+function addNewProduct(id, selectedData) {
     try {
         _MemPrev.push({
             prodotto: GetProduct(id),
-            ProdottoScelto: tipo === 'Prodotto' ? Valore : '',
-            quantiaScelta: tipo === 'quantita' ? Valore : 0
+            ProdottoScelto: selectedData.type,
+            quantiaScelta: selectedData.quantity
         });
         var lastelem = _MemPrev[_MemPrev.length - 1];
         if (lastelem.ProdottoScelto == '') {
-            lastelem.ProdottoScelto = lastelem.prodotto.coloriDispoibili[0].Prodotto;
+            lastelem.ProdottoScelto = lastelem.prodotto.varianti[0].Prodotto;
         }
     } catch (e) {
         window.alert(e.message);
@@ -48,16 +48,13 @@ function addNewProduct(id, Valore, tipo) {
 }
 
 /* aggiorno un nuovo già esistente */
-function updateProduct(id, valore, tipo) {
+function updateProduct(id, selectedData) {
     try {
 
         for (idx = 0; idx < _MemPrev.length; idx++)
             if (_MemPrev[idx].prodotto.id === id) {
-                switch (tipo) {
-                    case "Prodotto": _MemPrev[idx].ProdottoScelto = valore; break;
-                    case "quantita": _MemPrev[idx].quantiaScelta = parseInt(valore); break;
-                    default: throw 'Tipo Valore non supportato contattare l\' assistenza'; // genera un'eccezione caso che non dovrebbe mai verificarsi lanciamo un'eccezione nontroviamo il prodotto che stiamo modificando
-                }
+                _MemPrev[idx].ProdottoScelto = selectedData.type;
+                _MemPrev[idx].quantiaScelta = selectedData.quantity;
                 return;// inutile continuare ho trovato il prodotto
             }
     } catch (e) {
@@ -120,8 +117,8 @@ function refreshTableQuote() {
 }
 //creo una cella fake per la spaziatura
 function fakeNode() {
-    var fake=document.createElement("td")
-        fake.className = "fakeTd"
+    var fake = document.createElement("td")
+    fake.className = "fakeTd"
     return fake;
 }
 /* Pulisco il Preventivo Rimuovendo i dati precedenti */
@@ -205,15 +202,15 @@ function addSummaryOfQuote() {
         var quantity = document.createElement("td");
         indx.className = "colw4";
         indx.colspan = "1";
-        quantity.appendChild(document.createTextNode(Number(totale-(totale / 1.22)).toFixed(2)));
+        quantity.appendChild(document.createTextNode(Number(totale - (totale / 1.22)).toFixed(2)));
         var price = document.createElement("td");
         price.className = "colw2";
         price.colspan = "1";
-        price.appendChild(document.createTextNode( Number(totale / 1.22).toFixed(2) + " €"));
+        price.appendChild(document.createTextNode(Number(totale / 1.22).toFixed(2) + " €"));
         var total = document.createElement("td");
         indx.className = "colw2";
         indx.colspan = "1";
-        total.appendChild(document.createTextNode( Number(totale).toFixed(2) + " €"));
+        total.appendChild(document.createTextNode(Number(totale).toFixed(2) + " €"));
         rowTitlefinal.appendChild(indx);
         rowTitlefinal.appendChild(quantity);
         rowTitlefinal.appendChild(price);
@@ -233,8 +230,8 @@ function addTitleSummaryOfQuote() {
         var indx = document.createElement("th");
         indx.className = "colw4";
         indx.colspan = "2";
-        indx.appendChild(document.createTextNode("N° Prodott" + (_MemPrev.length === 0 ? "o" : "i") ));
-      
+        indx.appendChild(document.createTextNode("N° Prodott" + (_MemPrev.length === 0 ? "o" : "i")));
+
         var quantity = document.createElement("th");
         indx.className = "colw4";
         indx.colspan = "1";
@@ -263,8 +260,11 @@ function DisableQuotePart(disabled) {
     var child = curTab.querySelectorAll("input, textarea, button");
     for (i = 0; i < child.length; i++) {
         if (!disabled && (child[i].id === "inp_mail")) child[i].disabled = false
-        else child[i].disabled = true;//equivalente ad setAttribute("disabled", disabled?"true":"false");
-        if (disabled) child[i].title = "Per abilitare inserire un prodotto nel carrello o validare i campi";
+        else child[i].disabled = disabled;//equivalente ad setAttribute("disabled", disabled?"true":"false");
+        if (disabled) {
+            child[i].value = child[i].type != "button" ? "" : child[i].value;
+            child[i].title = "Per abilitare inserire un prodotto nel carrello o validare i campi";
+        }
         else child[i].title = "";
     }
 }

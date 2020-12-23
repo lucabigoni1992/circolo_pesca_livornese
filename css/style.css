@@ -30,6 +30,7 @@ ul {
     margin: 0;
     padding: 0;
 }
+
 .PartnerLeftMap {
     background-color: transparent;
     float: left;
@@ -37,6 +38,7 @@ ul {
     width: 35%;
     min-width: 400px;
 }
+
 .PartnerLeftTran {
     background-color: transparent;
     float: left;
@@ -83,6 +85,7 @@ ul {
     -moz-box-shadow: 5px 5px 10px 0px #000000;
     box-shadow: 5px 5px 10px 0px #000000;
 }
+
 .basePartner {
     border-radius: 5px 5px;
     padding: 15px;
@@ -270,7 +273,7 @@ section {
         color: var(--constcolor);
         font-size: 25px;
         margin-bottom: 6px;
-        margin-left: 105px;
+        margin-left: 75px;
         margin-right: 25px;
         padding: 0 0 4px 6px;
         border-left: 7px solid #035387;
@@ -364,8 +367,9 @@ div#main-col {
     float: left;
     width: 80%;
 }
-.MainContainer{
-    display:flex
+
+.MainContainer {
+    display: flex
 }
 
 footer {
@@ -391,9 +395,7 @@ footer {
     footer {
         position: relative;
     }
-}
-/* Media Queries serve per adattare lo scenario mostrato a schermi più piccoli di 768 px*/
-@media(max-width: 1200px) {
+
     aside#sidebarNoMargin,
     aside.basePreventivo,
     div#main-col,
@@ -432,6 +434,14 @@ footer {
 
     footer {
         position: relative;
+    }
+
+
+    .PartnerLeftTran {
+        background-color: transparent;
+        float: left;
+        width: unset;
+        min-width: unset;
     }
 }
 
@@ -478,7 +488,6 @@ select {
 
     .fill img {
         flex-shrink: 0;
-        min-width: 100%;
         height: 250px;
         border: 1px solid var(--baseFg);
     }
