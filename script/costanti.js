@@ -1,23 +1,23 @@
 const _event = [
     {
-        id: 0, datainizio: new Date('2020-11-25T00:00:00'), datafine: new Date('2020-12-02T00:00:00'), tipologia: "PESCA"
+        id: 0, datainizio: new Date('2020-11-25T00:00:00'), datafine: new Date('2020-12-02T00:00:00'), tipologia: "pesca"
         , titolo: "Corso di pesca a fondo "
         , descrizione: "Sessioni di un ora di pesca dalle banchine del porto.\n Vi insegleremo le basi della pesca a fondo!\n tutti i giorni dalle 15 alle 17."
     }
     , {
-        id: 1, datainizio: new Date('2020-12-29T00:00:00'), datafine: new Date('2021-01-03T00:00:00'), tipologia: "BARCA", titolo: "Gara di pesca a traina"
+        id: 1, datainizio: new Date('2020-12-29T00:00:00'), datafine: new Date('2021-01-03T00:00:00'), tipologia: "barca", titolo: "Gara di pesca a traina"
         , descrizione: "La gara si svolgera a 7 miglia dal porto.\n chi lo prenderà più grosso vincerà 300 Euro"
     }
     , {
-        id: 2, datainizio: new Date('2021-01-17T00:00:00'), datafine: new Date('2021-01-23T00:00:00'), tipologia: "PESCA", titolo: "Corso di pesca per bambini"
+        id: 2, datainizio: new Date('2021-01-17T00:00:00'), datafine: new Date('2021-01-23T00:00:00'), tipologia: "pesca", titolo: "Corso di pesca per bambini"
         , descrizione: "Sessioni di un ora di pesca dalle banchine del porto.\n Vi insegleremo le basi della pesca a fondo!\n tutti i giorni dalle 15 alle 17."
     }
     , {
-        id: 3, datainizio: new Date('2020-02-10T00:00:00'), datafine: new Date('2020-02-17T00:00:00'), tipologia: "BARCA", titolo: "Gara di pesca a bollentino"
+        id: 3, datainizio: new Date('2020-02-10T00:00:00'), datafine: new Date('2020-02-17T00:00:00'), tipologia: "barca", titolo: "Gara di pesca a bollentino"
         , descrizione: "La gara si svolgera a 3 miglia dal porto.\n chi lo prenderà più grosso vincerà 300 Euro"
     }
     , {
-        id: 4, datainizio: new Date('2021-01-28T00:00:00'), datafine: new Date('2021-02-17T00:00:00'), tipologia: "BARCA", titolo: "Gara di pesca alla Meloria"
+        id: 4, datainizio: new Date('2021-01-28T00:00:00'), datafine: new Date('2021-02-17T00:00:00'), tipologia: "barca", titolo: "Gara di pesca alla Meloria"
         , descrizione: "La gara si svolgera nell'area protetta della Meloria 3.5 miglia dal porto.\n chi lo prenderà più grosso vincerà 300 Euro"
     }
 
@@ -25,8 +25,8 @@ const _event = [
 
 const _month = ["Gennaio", "Febbraio", "Marzo", "Aprile", "Maggio", "Giugno", "Luglio", "Agosto", "Settembre", "Ottobre", "Novembre", "Dicembre"];
 const _listEvent = [
-    { id: 0, tipologia: "PESCA", titolo: "Corsi di pesca", descrizione: "Organiziamo periodicamente corsi di pesca <b>gratuiti</b> Per grandi e bambini" }
-    , { id: 1, tipologia: "BARCA", titolo: "Uscite in barca", descrizione: "Organiziamo spesso uscite e gare di pesca riservate ai soci del circolo" }
+    { id: 0, tipologia: "pesca", titolo: "Corsi di pesca", descrizione: "Organiziamo periodicamente corsi di pesca <b>gratuiti</b> Per grandi e bambini" }
+    , { id: 1, tipologia: "barca", titolo: "Uscite in barca", descrizione: "Organiziamo spesso uscite e gare di pesca riservate ai soci del circolo" }
 ]
 
 const _quote = [

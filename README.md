@@ -1,4 +1,4 @@
 info uma fondamenti informatica
 
 
-icone scaricate da : https://icons8.it/icons/set/barca
+icone scaricate da : https://uxwing.com/  -->  https://uxwing.com/license/
