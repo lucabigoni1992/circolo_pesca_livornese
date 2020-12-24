@@ -192,6 +192,10 @@ function mouseOver(event,eventId) {
 function mouseOut(event,eventId) {
     try {
         addOrRemoveClss(eventId, false)
+
+        var didascalia = document.getElementById("didascalia");
+        didascalia.firstChild.data = "Seleziona un'evento";
+
     } catch (e) {
         alert("gestoreConverti " + e);
     }
@@ -201,14 +205,14 @@ function mouseOut(event,eventId) {
 function addOrRemoveClss(eventId, addOrRemove) {
 
     var curEv = getEventById(eventId);
-
+    document.querySelector('.section.collapsible').classList.toggle('collapsed');
+    var expand = document.getElementById("expand");
     var dt = new Date(curEv.datainizio.getFullYear(), curEv.datainizio.getMonth(), curEv.datainizio.getDate())
     while (dt <= curEv.datafine) {
         var currDay = document.getElementById("event_" + eventId.toString() + "_" + dt.toLocaleDateString('en-US', { year: 'numeric', month: '2-digit', day: '2-digit' }));
 
         dt.setDate(dt.getDate() + 1);
-        console.log("event_" + eventId.toString() + "_" + dt.toLocaleDateString('en-US', { year: 'numeric', month: '2-digit', day: '2-digit' }));
-        if (!currDay) continue;
+         if (!currDay) continue;
         if (addOrRemove)
             currDay.classList.add("fakehover");
         else

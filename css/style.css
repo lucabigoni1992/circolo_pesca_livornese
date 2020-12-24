@@ -418,7 +418,7 @@ select {
 
     .fill img {
         flex-shrink: 0;
-        height: 250px;
+        height: 400px;
         border: 1px solid var(--baseFg);
     }
 

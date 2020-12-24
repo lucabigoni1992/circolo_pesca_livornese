@@ -14,9 +14,9 @@ body {
 .month {
     padding: 15px 15px;
     width: 100%;
-    border-top-left-radius:5px;
-    border-top-right-radius:5px;
-        background: var(--constBorder);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    background: var(--constBorder);
     text-align: center;
 }
 
@@ -93,6 +93,7 @@ body {
             color: #87ceebad !important;
             border-radius: 5px;
         }
+
     .days .currentLast,
     .days .currentFirst,
     .days .current {
@@ -100,47 +101,59 @@ body {
         background-color: #87ceebad;
         color: var(--constBorder) !important;
     }
-        
+
     .days .currentFirst {
         border-top-left-radius: 5px;
     }
+
     .days .currentLast {
         border-bottom-right-radius: 5px;
     }
-    .days .current:hover,
-    .days .currentLast:hover,
-    .days .currentFirst:hover {
+
+        .days .current:hover,
+        .days .currentLast:hover,
+        .days .currentFirst:hover {
             background: -moz-linear-gradient(top, #87ceebad 0%, #3f7399 50%, #87ceebad 100%);
             background: -webkit-linear-gradient(top, #87ceebad 0%, #3f7399 50%, #87ceebad 100%);
             background: linear-gradient(to bottom,#87ceebad 0%, #3f7399 50%,#87ceebad 100%);
         }
+
     .days .currentFirstSunday {
         border-top-right-radius: 5px;
     }
+
     .days .currentLastSunday {
         border-bottom-right-radius: 5px;
     }
+
     .days .currentFirstMonday {
         border-top-left-radius: 5px;
     }
+
     .days .currentLastMonday {
         border-bottom-left-radius: 5px;
     }
+
     .days .currentSunday {
         background-color: #1f5ec67d
     }
+
         .days .currentSunday:hover {
             background: linear-gradient(to bottom, #1f5ec67d 0%, #3f7399 50%,#1f5ec67d 100%);
         }
+
     .days .currentMonday {
         background-color: #44855e7d
     }
+
         .days .currentMonday:hover {
             background: linear-gradient(to bottom, #95be95 0%, #3f7399 50%,#95be95 100%);
         }
+
     .days .padd {
         padding: 5px;
     }
+
     .days .evento {
         background: -moz-linear-gradient(top, #c8393959 0%, #fa00007a 50%,#c8393959 100%);
         background: -webkit-linear-gradient(top, #c8393959 0%, #fa00007a 50%,#c8393959 100%);
@@ -148,6 +161,7 @@ body {
         padding: 5px;
         border-radius: unset;
     }
+
         .days .evento:hover,
         .days .fakehover {
             background: -moz-linear-gradient(top,#c8393999 0%, #fa0000e6 50%,#c8393999 100%);
@@ -165,6 +179,7 @@ body {
         background: -webkit-linear-gradient(top, #393d3e00 0%, #657989 50%,#393d3e00 100%);
         background: linear-gradient(to bottom, #393d3e00 0%, #657989 50%,#393d3e00 100%);
     }
+
     .days .currentRest:hover {
         padding: 5px !important;
         background-color: #1f5ec67d !important;
@@ -184,14 +199,21 @@ body {
     }
 
 
-.smalldesc {
+.section {
     overflow: hidden;
-    transition: all .10s ease;
+    transition: transform 2s ease-out;
+    height: auto;
+    transform: scaleY(1);
+    transform-origin: top;
 }
 
-    .smalldesc.expand {
-        max-height:  100%;
+    .section.collapsed {
+        transition: transform 1s ease-out;
+        transform: scaleY(0);
     }
+.fakeDisplayNone {
+    transform: scaleY(0);
+}
 
 /* Add media queries for smaller screens */
 @media screen and (max-width:720px) {

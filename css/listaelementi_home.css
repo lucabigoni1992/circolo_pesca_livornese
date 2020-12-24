@@ -44,6 +44,9 @@
             #showcase ul li h3 {
                 margin-left: 25px;
             }
+            #showcase ul li p {
+                display: none;
+            }
 }
 
     #showcase h3 {
