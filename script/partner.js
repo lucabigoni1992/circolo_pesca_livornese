@@ -52,7 +52,7 @@ function getAddressByParam(locazione) {
 function GenerateSalesFromAddress(regione, address) {
     var region = document.getElementById("Regioni_lista");
     cleanAllRow(region);
-    region.appendChild(GenerateRegionNode(regione));
+    GenerateRegionNode(regione);
     if (!regione) return;
     var provincheSorth = OrderArrayForProvince(address);
     createShopTree(provincheSorth, region);
@@ -121,10 +121,9 @@ function createShopTree(dictionary, regionNode) {
 
 /*genero il nodo regione*/
 function GenerateRegionNode(region) {
-    var province = document.createElement("P");
-    if (!region) province.appendChild(document.createTextNode("Clicca sulla mappa"));
-    else province.appendChild(document.createTextNode(region));
-    return province;
+
+    var didascalia = document.getElementById("didascalia");
+    didascalia.firstChild.data = region;
 }
 /*genero il nodo provincia*/
 function GeneratePorvinceNode(provincia) {

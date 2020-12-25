@@ -16,7 +16,7 @@ body {
     font: 15px/1.1 Arial, sans-serif;
     padding: 0;
     margin: 0;
-    background: url('../resource/sfondo.jpg') no-repeat;
+    background: #d5f2ff;
     background-attachment: fixed;
 }
 /* Global */
@@ -54,25 +54,17 @@ body {
         margin-right: 10px;
         margin-left: 10px;
         color: var(--baseBg);
-        margin-bottom: 10px;
         border: 1px solid #6a6a6a;
-        -webkit-box-shadow: 5px 5px 10px 0px #000000;
         -moz-box-shadow: 5px 5px 10px 0px #000000;
-        box-shadow: 5px 5px 10px 0px #000000;
     }
 
 .base {
     border-radius: 5px 5px;
     padding: 15px;
-    background: #87ceebad;
     margin-right: 10px;
     margin-left: 10px;
     color: var(--baseBg);
     margin-bottom: 10px;
-    border: 1px solid #6a6a6a;
-    -webkit-box-shadow: 5px 5px 10px 0px #000000;
-    -moz-box-shadow: 5px 5px 10px 0px #000000;
-    box-shadow: 5px 5px 10px 0px #000000;
 }
 
 .containerhomeHome {
@@ -440,4 +432,5 @@ select {
 .borderLine {
     border-bottom: #035387 1px solid;
     margin-bottom: 15px;
+    margin-top: 5px;
 }
