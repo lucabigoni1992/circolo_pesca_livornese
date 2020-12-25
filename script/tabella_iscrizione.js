@@ -27,7 +27,7 @@ function drop(ev) {
         var data = ev.dataTransfer.getData("dataDrag");
         if (!data || data === "") return;
         var elem = getLabelAndPrice(data);
-        ev.target.textContent += (ev.target.textContent !== "" ? "\n" : "") +"Vi inoltro la mia richiesta d'iscrizione per il Seguente Abbonamento:\n"+ (elem.label + "  " + elem.prezzo+"€");
+        ev.target.textContent += (ev.target.textContent !== "" ? "\n" : "") + "Vi inoltro la mia richiesta d'iscrizione per il Seguente Abbonamento:\n" + (elem.label + "  " + elem.prezzo + "€");
     } catch (e) {
         window.alert(e.message);
         console.log(e.message, e.name);

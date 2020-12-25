@@ -30,8 +30,8 @@ function madeArea(area) {
     areaMap.addEventListener("click", () => { GenerateAddressList(event, area.tipologia); mouseOver(event, area.zona); return false; });
     areaMap.coords = area.coors.join(",");
     areaMap.shape = area.type;
-    areaMap.addEventListener("mouseover", () => { mouseOver(event,area.zona) });
-    areaMap.addEventListener("mouseout", () => { mouseOut(event,area.zona) });
+    areaMap.addEventListener("mouseover", () => { mouseOver(event, area.zona) });
+    areaMap.addEventListener("mouseout", () => { mouseOut(event, area.zona) });
     return areaMap;
 }
 
@@ -42,13 +42,13 @@ function madeRegione(area) {
     var img = document.createElement("img");
     var a = document.createElement("a");
     img.alt = area.zona;
-    img.addEventListener("click", () => { return GenerateAddressList(event,area.zona); });
-    img.addEventListener("mouseover", () => { GenerateAddressList(event,area.zona) });
+    img.addEventListener("click", () => { return GenerateAddressList(event, area.zona); });
+    img.addEventListener("mouseover", () => { GenerateAddressList(event, area.zona) });
     img.src = "./resource/icone/icona-" + area.zona.toLowerCase() + ".png";
     li.appendChild(img);
     var h3 = document.createElement("h3");
-    h3.addEventListener("mouseover", () => { GenerateAddressList(event,area.zona) });
-  
+    h3.addEventListener("mouseover", () => { GenerateAddressList(event, area.zona) });
+
     h3.id = "h3_" + area.zona;
     h3.innerText = area.zona;
     a.appendChild(h3);
@@ -61,18 +61,18 @@ function madeRegione(area) {
 
 
 /**movimento del cursore sull'area della mappa*/
-function mouseOver(event,zona) {
+function mouseOver(event, zona) {
     try {
         var elem = document.getElementById("h3_" + zona);
         elem.style.background = '#eee';
-        GenerateAddressList(event,zona);
+        GenerateAddressList(event, zona);
     } catch (e) {
         alert("gestoreConverti " + e);
     }
 }
 
 /**movimento del cursore fuori dall'area della mappa*/
-function mouseOut(event,zona) {
+function mouseOut(event, zona) {
     try {
         document.getElementById("h3_" + zona).style.background = '';
     } catch (e) {

@@ -97,7 +97,7 @@ const _elencoPartner = [
 ]
 
 const _prodotti = {
-    quantita: 6,
+    quantita: 8,
     prodotti: [
         {
             id: 0,
@@ -230,6 +230,52 @@ const _prodotti = {
             ]
             ,
             Titolo: "uova al pomodoro"
+        },
+        {
+            id: 6,
+            prezzi: [
+
+                { quantita: 1, prezzo: 10 },
+                { quantita: 2, prezzo: 9.50 },
+                { quantita: 6, prezzo: 8.5 }
+            ],
+            disponibile: true,
+            alPeso: "Porzione",
+            varianti: [
+                { Prodotto: "Cannelloni ricotta e spinaci" }
+                , { Prodotto: "Cannelloni di carne" }
+                , { Prodotto: "Cannelloni di pesce" }
+            ],
+            descrizione: [
+                "Per i più golosi che non si fanno problemi per la linea",
+                "I cannelloni sono fatti dal pastificio PataMatta",
+                "Prodotti e cotti in giornata"
+            ]
+            ,
+            Titolo: "cannelloni al forno"
+        },
+        {
+            id: 7,
+            prezzi: [
+
+                { quantita: 1, prezzo: 14 },
+                { quantita: 2, prezzo: 12.75 },
+                { quantita: 6, prezzo: 10.5 }
+            ],
+            disponibile: true,
+            alPeso: "Porzione",
+            varianti: [
+                { Prodotto: "Carote" }
+                , { Prodotto: "Olive" }
+                , { Prodotto: "Carote e olive" }
+            ],
+            descrizione: [
+                "Prodotto semplice della tradizione Livornese",
+                "Cinghiale cacciato nelle nostre colline",
+                "La carne è rimasta a marinare per 7giorni in vino rosso ed aceto con odori freschi"
+            ]
+            ,
+            Titolo: "cinghiale alla cacciatora"
         }
     ]
 }

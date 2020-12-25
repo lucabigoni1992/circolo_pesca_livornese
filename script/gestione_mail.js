@@ -41,7 +41,7 @@ function inviaPreventivo(ProductsRow, ClientMail, ClientName, CientNote) {
     mailBody += "Prezzo finale dell'acquisto: \n";
     mailBody += "IVA(22%)  :" + Number(totale - (totale / 1.22)).toFixed(2) + " €\n";
     mailBody += "Senza IVA :" + Number(totale / 1.22).toFixed(2) + " €\n";
-    mailBody += "Totale       :" + totale+ " €\n\n";
+    mailBody += "Totale       :" + totale + " €\n\n";
 
     mailBody += "Note:\n";
     mailBody += CientNote.value.replace("\n\r", "\n");
@@ -51,9 +51,9 @@ function inviaPreventivo(ProductsRow, ClientMail, ClientName, CientNote) {
 function inviaRichiestaEvento(descrizione, titolo, datainizio, datafine) {
     var mailBody = 'Salve, \n\n';
     mailBody += 'vorrei iscrivermi all\'evento ' + titolo + " che si terrà dal "
-        + datainizio.toLocaleDateString('en-US', { year: 'numeric', month: '2-digit', day: '2-digit' })+ " al "
+        + datainizio.toLocaleDateString('en-US', { year: 'numeric', month: '2-digit', day: '2-digit' }) + " al "
         + datafine.toLocaleDateString('en-US', { year: 'numeric', month: '2-digit', day: '2-digit' }) + ": \n\n";
-   
+
 
     mailBody += "Cordiali saluti\n\n";
     window.open('mailto:l.bigoni@studenti.unipi.it?&subject=Preventivo&body=' + encodeURI(mailBody));

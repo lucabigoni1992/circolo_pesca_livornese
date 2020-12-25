@@ -198,6 +198,18 @@ body {
         border-color: transparent;
     }
 
+.boxFilter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
+input[type="radio"] {
+    margin-left: 20px;
+    margin-right: 5px;
+}
+
 
 .section {
     overflow: hidden;
@@ -211,6 +223,7 @@ body {
         transition: transform 1s ease-out;
         transform: scaleY(0);
     }
+
 .fakeDisplayNone {
     transform: scaleY(0);
 }

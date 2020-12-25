@@ -9,6 +9,7 @@
     margin-left: 25px;
     text-align: left;
 }
+
 .Provincia {
     border-radius: 5px 5px;
     background-color: var(--constBorder);
@@ -25,13 +26,16 @@
     margin-top: 15px;
     margin-bottom: 5px;
 }
+
     .listaPartner:last-child {
         border-bottom: none;
     }
+
 .Partner {
     font-weight: bold;
     padding: 1px 5px 5px 5px;
 }
+
     .Partner:first-child {
         border-bottom: none;
         padding-top: 5px;

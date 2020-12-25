@@ -7,14 +7,22 @@ var _MemCalendar = {
 
 /* Quando la pagina è caricata si parte a popolare il calendario */
 window.onload = function () {
-    var ParamsStr = getUrlParams(window.location.search.substring(1),"evento");
+    var ParamsStr = getUrlParams(window.location.search.substring(1), "evento");
+    if (ParamsStr !== undefined && ParamsStr === "barca")
+        radio_Barca.checked = true;
+    else if (ParamsStr !== undefined && ParamsStr === "barca")
+        radio_Pesca.checked = true;
+    start(ParamsStr);
+};
+
+function start(filter) {
     var dt = new Date();
-    _MemCalendar.filterBy = ParamsStr;
+    _MemCalendar.filterBy = filter;
     _MemCalendar.year = dt.getFullYear();
     _MemCalendar.month = dt.getMonth();
     _MemCalendar.days = new Date(_MemCalendar.year, _MemCalendar.month + 1, 0).getDate();
     StartToPopulateCalendar();
-};
+}
 /*prendo ed elaboro i parametri passati*/
 function getUrlParams(ParamsStr, parName) {
     var vars = ParamsStr.split("&");
@@ -152,7 +160,7 @@ function chekAndSetEvent(elem, year, month, day) {
     for (eventi = 0; eventi < _event.length; eventi++) {
         var event = _event[eventi];
         if (((_MemCalendar.filterBy !== "" && _MemCalendar.filterBy == event.tipologia) && (currDay >= event.datainizio && currDay <= event.datafine))
-            || (_MemCalendar.filterBy === ""  && (currDay >= event.datainizio && currDay <= event.datafine))) {
+            || (_MemCalendar.filterBy === "" && (currDay >= event.datainizio && currDay <= event.datafine))) {
             elem.classList.add("evento");
             elem.id = "event_" + event.id.toString() + "_" + currDay.toLocaleDateString('en-US', { year: 'numeric', month: '2-digit', day: '2-digit' });
             elem.addEventListener("mouseover", () => { mouseOver(event, event.id) });
@@ -178,7 +186,7 @@ function cleanNode(node) {
 
 
 /**movimento del cursore sull'area dell'evento gestico i vari eventi che vi voglio associare*/
-function mouseOver(event,eventId) {
+function mouseOver(event, eventId) {
     try {
         addOrRemoveClss(eventId, true)
         document.getElementById("expand").classList.toggle("expand");
@@ -189,7 +197,7 @@ function mouseOver(event,eventId) {
 
 }
 /**movimento del cursore fuori dall'area dell'evento*/
-function mouseOut(event,eventId) {
+function mouseOut(event, eventId) {
     try {
         addOrRemoveClss(eventId, false)
 
@@ -212,7 +220,7 @@ function addOrRemoveClss(eventId, addOrRemove) {
         var currDay = document.getElementById("event_" + eventId.toString() + "_" + dt.toLocaleDateString('en-US', { year: 'numeric', month: '2-digit', day: '2-digit' }));
 
         dt.setDate(dt.getDate() + 1);
-         if (!currDay) continue;
+        if (!currDay) continue;
         if (addOrRemove)
             currDay.classList.add("fakehover");
         else

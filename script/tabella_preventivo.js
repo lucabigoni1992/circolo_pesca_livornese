@@ -93,9 +93,13 @@ function impostaColonna1(tdCol, elem, indx) {
     img.id = "img" + indx.toString();
     img.src = "./resource/img/" + elem.Titolo.toString().toLowerCase().replaceAll(" ", "_") + "1.jpg";
     img.setAttribute("alt", elem.Titolo);
+    img.classList.add("imageGallery");
     if (!elem.disponibile) img.className = "imgOffuscataNonDisponibile";
+    var div = document.createElement("div");
+    div.classList.add("gallery");
+    div.appendChild(img)
     tdCol.appendChild(h4);
-    tdCol.appendChild(img);
+    tdCol.appendChild(div);
     return tdCol;
 }
 /*setto colonna2 con delle descrizioni uso una funzione ricorsiva
@@ -136,6 +140,7 @@ function addElement(elem, indx) {
     impostaColonna2(newCol2, elem)
     newRow.appendChild(newCol2);//uso un modo differente da prima per settare la colonna il contenuto di newCol2 è stato modificato all'interno della funzione impostaColonna2
     newRow.appendChild(impostaColonna3(newCol3, elem, indx));
+
     return newRow;
 }
 //gestisco i bottoni che vanno a gestire la paginazione della griglia <<  0  1  2  3 ...>>
@@ -209,6 +214,8 @@ function addProductElement(showN, currpage) {
             curUl.appendChild(elem); //li appendo al babbo
         }
         AggiornaPreventivo();//dopo aver caricato tutto provvedo a resettare il preventivo
+
+        gallery();
     } catch (e) {
         window.alert(e.message);
         console.log(e.message, e.name);
@@ -221,9 +228,54 @@ function changeShowProduct(ProdNumber) {
     var currpage = getCurrPage();
     generatePageManu(showN);
     addProductElement(showN, currpage);
+  //  gallery();
 }
 
 /* Quando la pagina è caricata si parte a popolare la griglia */
 window.onload = function () {
     changeShowProduct(document.getElementById("ProdNumber"));
 };
+
+var numberImage = 3;
+var currPage = 1;
+
+/*viene gestita la gallery*/
+function gallery() {
+    currPage = 0;
+    var buttons = document.querySelectorAll('.gallery');
+    var overlay = document.querySelector('.overlay');
+    buttons.forEach(button => button.addEventListener('click', open));
+    overlay.addEventListener('click', close);
+    var scorriL = document.getElementById('scorriL');
+    var scorriR = document.getElementById('scorriR');
+    scorriL.addEventListener('click', function () { scorri(-1) }, false);
+    scorriR.addEventListener('click', function () { scorri(1) }, false)
+}
+/*apro l'immagine*/
+function scorri(currPage) {
+    var overlayImage = document.getElementById('gallery');
+    if (overlayImage.src === "") return;
+    var src = overlayImage.src.substring(0, overlayImage.src.length - 5);
+    var number = parseInt(overlayImage.src.substring(src.length, src.length + 1)) + currPage;
+    if (number <= 0) number = numberImage;
+    else if (number > numberImage) number = 1;
+    var src = src + (number).toString() + ".jpg";
+    overlayImage.src = src;
+}
+/*apro l'immagine*/
+function open(e) {
+    var overlay = document.querySelector('.overlay');
+    var overlayImage = document.getElementById('gallery');
+    overlay.classList.add('open');
+    var src = e.currentTarget.querySelector('img').src;
+    overlayImage.src = src;
+}
+
+/*chiudo l'immagine*/
+function close(e) {
+    var overlay = document.querySelector('.overlay');
+    if (e.target.id !== "scorriL" &&
+        e.target.id !== "scorriR" &&
+        e.target.id !== "gallery")
+        overlay.classList.remove('open');
+}

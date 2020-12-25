@@ -1,19 +1,21 @@
 ﻿<!DOCTYPE html>
-
 <html lang="it">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Welcome to Per iscriversi</title>
+    <title>Welcome to Prodotti</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="./css/style.css">
-    <link rel="stylesheet" type="text/css" media="screen" href="./css/partner.css">
-    <link rel="stylesheet" type="text/css" media="screen" href="./css/listaelementi.css">
-    <script src="./script/partner.js"></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="./css/table.css">
+
     <script src="./script/costanti.js"></script>
-    <script src="./script/indice.js"></script>
+    <script src="./script/tabella_preventivo.js"></script>
+    <script src="./script/preventivo.js"></script>
+    <script src="./script/gestione_mail.js"></script>
 </head>
+
 <body>
+
     <header>
         <div class="container">
             <div id="branding">
@@ -26,10 +28,10 @@
                     <li><a href="index.html">Home</a></li>
                     <li><a href="ristorante.html">Ristorante</a></li>
                     <li><a href="richiesta_iscrizione.html">Iscriviti</a></li>
-                    <li class="current"><a href="partner.html">Partner</a></li>
+                    <li><a href="partner.html">Partner</a></li>
                     <li><a href="calendario_eventi.html">Eventi</a></li>
-                    <li><a href="chi_siamo.html">Chi siamo</a></li>
-                    <li><a href="progetto.html">Progetto</a></li>
+                    <li><a href="chi_siamo.html">Chi siamo</a>
+                    <li class="current"><a href="progetto.html">Progetto</a></li>
                 </ul>
             </nav>
         </div>
@@ -37,26 +39,31 @@
 
     <section id="showcase">
         <div class="container">
-            <h2 class="classeTitolo">Associazioni gemellate</h2>
-            <article id="main-col">
-                <div class="base">
-                    <p>
-                        Movendo il Mouse sull'area indicata vi comparirità la lista dell'asociazioni con le quali abbiamo stretto un gemellaggio.
-                    </p>
-                    <div class=" PartnerLeftTran  " id="Regioni"></div>
-                    <img alt="Clicca per vedere la lista dei nostri Partner" src="./resource/italia.png" usemap="#image-map">
-                    <map id="mapCoord" name="image-map">
-                    </map>
+            <h2 class="classeTitolo">I nostri piatti!</h2>
+            <div id="main-col">
+                <div id="Prodotti">
+                    <div class="base">
+                        <p>
+                            Il nostro circolo mette a disposizione dei soci e dei loro ospiti l'acquisto diretto di alcuni prodotti locali.
+                        </p>
+                        <p>
+                            Ogni prodotto qua elencato è garantito da noi come proveniente da una filiera sicura e controllata.
+                        </p>
+                        <span>Scegli i piatti</span>
+
+                        <div class="borderLine"></div>
+                        
+                    </div>
                 </div>
-            </article>
+            </div>
+
             <aside id="sidebar">
-                <div class="base smalldesc">
-                    <span id="didascalia">Seleziona una Regione</span>
+                <div class="base">
+                    <span id="didascalia">Preventivo</span>
                     <div class="borderLine"></div>
-                    <div id="Regioni_lista"></div>
+                   
                 </div>
             </aside>
-
         </div>
     </section>
 
@@ -65,4 +72,5 @@
         <p class="circolo">Circolo Nautico Livorno</p>
     </footer>
 </body>
+
 </html>

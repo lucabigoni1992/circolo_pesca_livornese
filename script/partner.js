@@ -4,18 +4,18 @@
 window.onload = function () {
     var ParamsStr = window.location.search.substring(1);
     var regione = getUrlParams(ParamsStr, "Regioni_lista");
-    GenerateAddressList( undefined ,regione);
+    GenerateAddressList(undefined, regione);
 };
 
 /*la chiamo dalla on load e dall'html sulla pagina all'evento click*/
 function GenerateAddressList(e, regione) {
-    if(e)    e.preventDefault();
+    if (e) e.preventDefault();
     var address = getAddressByParam(regione);
     GenerateSalesFromAddress(regione, address);
     return false;
 }
 /*prendo ed elaboro i parametri passati*/
-function getUrlParams(ParamsStr,parName) {
+function getUrlParams(ParamsStr, parName) {
     var vars = ParamsStr.split("&");
     for (var i = 0; i < vars.length; i++) {
         var pair = vars[i].split("=");
@@ -130,9 +130,9 @@ function GenerateRegionNode(region) {
 function GeneratePorvinceNode(provincia) {
     var provinceList = document.createElement("div");
     provinceList.addEventListener('click', function (event) {
-        slide( event.toElement.value);
+        slide(event.toElement.value);
     });
-    provinceList. className="listaProvince,slideup";
+    provinceList.className = "listaProvince,slideup";
     var province = document.createElement("div");
     province.className = "Provincia";
     province.appendChild(document.createTextNode(provincia));
@@ -145,10 +145,10 @@ function GenerateCityNode(citta) {
     cittaList.className = "listaPartner";
     var PartnerCitta = document.createElement("div");
     PartnerCitta.className = "Partner";
-    PartnerCitta.appendChild(document.createTextNode("Citta: " +citta.citta));
+    PartnerCitta.appendChild(document.createTextNode("Citta: " + citta.citta));
     var PartnerIndirizzo = document.createElement("div");
     PartnerIndirizzo.className = "Partner";
-    PartnerIndirizzo.appendChild(document.createTextNode("Indirizzo: " +citta.indirizzo));
+    PartnerIndirizzo.appendChild(document.createTextNode("Indirizzo: " + citta.indirizzo));
     cittaList.appendChild(PartnerCitta)
     cittaList.appendChild(PartnerIndirizzo)
     return cittaList;

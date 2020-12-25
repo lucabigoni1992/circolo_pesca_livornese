@@ -25,10 +25,11 @@
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="ristorante.html">Ristorante</a></li>
-                    <li><a href="richiesta_iscrizione.html">Per iscriversi</a></li>
+                    <li><a href="richiesta_iscrizione.html">Iscriviti</a></li>
                     <li><a href="partner.html">Partner</a></li>
                     <li class="current"><a href="calendario_eventi.html">Eventi</a></li>
                     <li><a href="chi_siamo.html">Chi siamo</a></li>
+                    <li><a href="progetto.html">Progetto</a></li>
                 </ul>
             </nav>
         </div>
@@ -39,16 +40,24 @@
             <article id="main-col">
                 <div class="base">
                     <p>
-                        Ecco l'elenco dei nosti prossimi <i>Eventi in programma </i>
-                        Cliccndo sulla data ci potrete inviare un'email per la prenotazione all'evento.
+                        Ecco l'elenco dei nosti prossimi Eventi in programma.
                     </p>
                     <p>
-                        Per creare automaticamente un'email precompilata trascinare il prezzo nella sezione di destra
+                        Cliccndo su di un'evento potrete inviarci un'email per poter partecipare all'evento.
                     </p>
                     <span>Eventi</span>
-
                     <div class="borderLine"></div>
+                    <div class="boxFilter">
+                        <div>
+                            <input type="radio" id="radio_Barca" onclick="start('barca')" name="filter" value="radio_Barca">
+                            <label for="radio_Barca">Gare in barca</label>
+                        </div>
 
+                        <div>
+                            <input type="radio" id="radio_Pesca" onclick="start('pesca')" name="filter" value="radio_Pesca">
+                            <label for="radio_Pesca">Corsi di pesca</label>
+                        </div>
+                    </div>
                     <div class="month">
                         <ul>
                             <li class="prev">
@@ -61,7 +70,6 @@
                             </li>
                         </ul>
                     </div>
-
                     <ul class="weekdays">
                         <li>Lu</li>
                         <li>Ma</li>
@@ -71,13 +79,8 @@
                         <li>Sa</li>
                         <li>Do</li>
                     </ul>
-
                     <ul id="Days" class="days">
-                        <!--<li><span class="active">10</span></li>-->
-
                     </ul>
-
-
                 </div>
             </article>
             <aside id="sidebar">
@@ -87,7 +90,7 @@
 
                     <div id="expand" class="section collapsible collapsed">
                         <p id="eventDescription"></p>
-                        <div id="divImmagine" class="fill">
+                        <div id="divImmagine" class="fillheigth">
                         </div>
                     </div>
                 </div>

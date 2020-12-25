@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="./css/style.css">
     <link rel="stylesheet" type="text/css" media="screen" href="./css/table.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="./css/griglia_immagini.css">
 
     <script src="./script/costanti.js"></script>
     <script src="./script/tabella_preventivo.js"></script>
@@ -27,18 +28,19 @@
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li class="current"><a href="ristorante.html">Ristorante</a></li>
-                    <li><a href="richiesta_iscrizione.html">Per iscriversi</a></li>
+                    <li><a href="richiesta_iscrizione.html">Iscriviti</a></li>
                     <li><a href="partner.html">Partner</a></li>
-                    <li ><a href="calendario_eventi.html">Eventi</a></li>
+                    <li><a href="calendario_eventi.html">Eventi</a></li>
                     <li><a href="chi_siamo.html">Chi siamo</a></li>
+                    <li><a href="progetto.html">Progetto</a></li>
                 </ul>
             </nav>
         </div>
     </header>
-        
+
     <section id="showcase">
         <div class="container">
-            <h2 class="classeTitolo">Prodotti acquistabili da noi</h2>
+            <h2 class="classeTitolo">I nostri piatti!</h2>
             <div id="main-col">
                 <div id="Prodotti">
                     <div class="base">
@@ -100,8 +102,8 @@
                             </tfoot>
                         </table>
                     </div>
-                    </div>
                 </div>
+            </div>
 
             <aside id="sidebar">
                 <div class="base">
@@ -138,7 +140,16 @@
                         <input id="btn_sendQuote" type="button" class="OrangeButton" onClick="inviaPreventivo(normalizeData(),inp_mail,inp_richiedente,inp_message);" value="Richiedi" />
                     </div>
                 </div>
+                <div class="overlay">
+                    <div class="overlay__inner">
+                        <button id="close" class="close">close X</button>
+                        <input type="image" id="scorriL" class="scorriL" src="./resource/icone/double-arrow-left.svg" />
+                        <input type="image" id="scorriR" class="scorriR" src="./resource/icone/double-arrow-right.svg" />
+                        <img id="gallery" />
+                    </div>
+                </div>
             </aside>
+
         </div>
     </section>
 
