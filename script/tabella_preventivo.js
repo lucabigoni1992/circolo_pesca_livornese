@@ -91,7 +91,7 @@ function impostaColonna1(tdCol, elem, indx) {
     h4.appendChild(document.createTextNode(elem.Titolo.length > 0 ? (elem.Titolo[0].toUpperCase() + elem.Titolo.slice(1)) : ""));
     var img = document.createElement("img");
     img.id = "img" + indx.toString();
-    img.src = "./resource/img/" + elem.Titolo.toString().toLowerCase().replaceAll(" ", "_") + "1.jpg";
+    img.src = "./resource/img/" + elem.Titolo.toString().toLowerCase().replaceAll(" ", "_") + "Min.jpg";
     img.setAttribute("alt", elem.Titolo);
     img.classList.add("imageGallery");
     if (!elem.disponibile) img.className = "imgOffuscataNonDisponibile";
