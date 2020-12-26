@@ -124,8 +124,6 @@ header {
 }
 
     header .container {
-        padding-top: 5px;
-        padding-bottom: 5px;
         width: 80%;
         margin: auto;
         overflow: hidden;
@@ -141,6 +139,7 @@ header {
 
     header ul {
         margin: 0;
+        padding-left: 0px;
         height: 100%;
         display: table;
         width: 100%;
@@ -393,11 +392,6 @@ select:active {
 }
 
 
-.genericLogo {
-    width: 100px;
-    height: auto;
-    margin-right: 10px;
-}
 
 
 .fill {
