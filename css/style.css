@@ -369,6 +369,7 @@ select {
     font: 400 12px/1.3 sans-serif;
     -webkit-appearance: none;
     color: var(--constScritta);
+    width: 120px;
     border: 1px solid var(--baseFg);
     line-height: 1;
     outline: 0;
@@ -384,10 +385,12 @@ select {
     select:hover {
         background-image: linear-gradient(var(--constFg), var(--constFg)), linear-gradient(-135deg, transparent 50%, var(--constFg) 50%), linear-gradient(-225deg, transparent 50%, var(--constFg) 50%), linear-gradient(var(--constFg) 42%, var(--constBg) 42%);
     }
-
-    select:active {
-        border-color: var(--constBh);
-    }
+#linksLf select {
+    width: unset;
+}
+select:active {
+    border-color: var(--constBh);
+}
 
 
 .genericLogo {

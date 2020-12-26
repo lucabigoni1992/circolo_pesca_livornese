@@ -84,6 +84,7 @@ table.TabellaProdotti {
         font-size: 15px;
         font-weight: bold;
         color: var(--baseBg);
+        height: 20px;
         border: none;
     }
 

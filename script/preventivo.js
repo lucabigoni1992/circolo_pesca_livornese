@@ -156,7 +156,7 @@ function addSecondRow(Prod, idProd) {
         var indx = document.createElement("td");
         indx.className = "colw4";
         indx.colspan = "2";
-        indx.appendChild(document.createTextNode(idProd + ") Prodotto: " + Prod.ProdottoScelto));
+        indx.appendChild(document.createTextNode(idProd + ") Variante: " + Prod.ProdottoScelto));
 
         var quantity = document.createElement("td");
         indx.className = "colw4";

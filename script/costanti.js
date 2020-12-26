@@ -85,12 +85,12 @@ const _elencoPartner = [
     { via: "Milano", civico: "58", cap: "22365", citta: "Palermo", provincia: "Palermo", regione: "Sicilia", },
     { via: "Dei mille", civico: "88", cap: "22365", citta: "Palermo", provincia: "Palermo", regione: "Sicilia", },
     { via: "Dei caduti", civico: "59", cap: "22266", citta: "Catania", provincia: "Catania", regione: "Sicilia", },
-    { via: "di Spagna", civico: "58", cap: "22312", citta: "Santa Maria di Licodia", provincia: "Catania", regione: "Sicilia", },
-    { via: "dei Mille", civico: "54", cap: "99864", citta: "Scordia", provincia: "Catania", regione: "Sicilia", },
+    { via: "Di Spagna", civico: "58", cap: "22312", citta: "Santa Maria di Licodia", provincia: "Catania", regione: "Sicilia", },
+    { via: "Dei Mille", civico: "54", cap: "99864", citta: "Scordia", provincia: "Catania", regione: "Sicilia", },
     { via: "via Crispi", civico: "12", cap: "98755", citta: "Catania", provincia: "Catania", regione: "Sardegna", },
     { via: "Vico Vetriera Vecchia", civico: "3", cap: "80142", citta: "Napoli", provincia: "Napoli", regione: "Campania", },
     { via: "S.Giovanni", civico: "30", cap: "80142", citta: "Napoli", provincia: "Napoli", regione: "Campania", },
-    { via: "livornese", civico: "99", cap: "56037", citta: "Pisa", provincia: "Pisa", regione: "Toscana", },
+    { via: "Livornese", civico: "99", cap: "56037", citta: "Pisa", provincia: "Pisa", regione: "Toscana", },
     { via: "Mascagni", civico: "58", cap: "63827", citta: "Fermo", provincia: "Fermo", regione: "Marche", },
     { via: "Francia", civico: "58", cap: "20100", citta: "Milano", provincia: "Milano", regione: "Piombino", },
     { via: "San Quirico", civico: "34", cap: "24342", citta: "Torino", provincia: "Torino", regione: "Lombardia", }
@@ -138,7 +138,7 @@ const _prodotti = {
                 "Pesce pescato in giornata dai nostri pescatori locali",
                 "Piatto servito con patate al forno e limone",
                 "Eco Friendly! le barche che pescano questi pesci usano carburanti eco compatibili",
-                "pesci da 300 a 400 gr"
+                "Pesci da 300 a 400 gr"
             ],
             Titolo: "pesce al forno"
         },

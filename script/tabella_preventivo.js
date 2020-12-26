@@ -70,7 +70,8 @@ function impostaSceltaProdotto(ul, elem, indx) {
 
         try {
             var productQuantity = document.getElementById("id_" + elem.id + "_inputQuantita");
-            var selectedData = { type: input.value, quantity: parseInt(productQuantity) }
+            var inputProdotto = document.getElementById("id_" + elem.id + "_inputProdotto");
+            var selectedData = { type: inputProdotto.value, quantity: parseInt(productQuantity.value) }
             AggiornaPreventivo(selectedData, elem.id)
 
         } catch (e) {

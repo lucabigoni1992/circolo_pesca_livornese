@@ -64,7 +64,7 @@ function madeRegione(area) {
 function mouseOver(event, zona) {
     try {
         var elem = document.getElementById("h3_" + zona);
-        elem.style.background = '#eee';
+        elem.style.background = '#6a9dbfc9';
         GenerateAddressList(event, zona);
     } catch (e) {
         alert("gestoreConverti " + e);
