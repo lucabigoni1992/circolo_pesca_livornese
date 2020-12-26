@@ -10,7 +10,7 @@ window.onload = function () {
     var ParamsStr = getUrlParams(window.location.search.substring(1), "evento");
     if (ParamsStr !== undefined && ParamsStr === "barca")
         radio_Barca.checked = true;
-    else if (ParamsStr !== undefined && ParamsStr === "barca")
+    else if (ParamsStr !== undefined && ParamsStr === "pesca")
         radio_Pesca.checked = true;
     start(ParamsStr);
 };
