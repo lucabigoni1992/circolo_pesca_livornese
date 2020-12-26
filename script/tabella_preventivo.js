@@ -228,7 +228,7 @@ function changeShowProduct(ProdNumber) {
     var currpage = getCurrPage();
     generatePageManu(showN);
     addProductElement(showN, currpage);
-  //  gallery();
+    //  gallery();
 }
 
 /* Quando la pagina è caricata si parte a popolare la griglia */
@@ -255,10 +255,19 @@ function gallery() {
 function scorri(currPage) {
     var overlayImage = document.getElementById('gallery');
     if (overlayImage.src === "") return;
-    var src = overlayImage.src.substring(0, overlayImage.src.length - 5);
-    var number = parseInt(overlayImage.src.substring(src.length, src.length + 1)) + currPage;
-    if (number <= 0) number = numberImage;
-    else if (number > numberImage) number = 1;
+    var src = overlayImage.src;
+    var number = 1;
+    if (src.endsWith("Min.jpg")) {
+        src = src.substring(0, overlayImage.src.length - 7);
+    }
+    else {
+
+        src = src.substring(0, overlayImage.src.length - 5);
+        var number = parseInt(overlayImage.src.substring(src.length, src.length + 1)) + currPage;
+        if (number <= 0) number = numberImage;
+        else if (number > numberImage) number = 1;
+    }
+
     var src = src + (number).toString() + ".jpg";
     overlayImage.src = src;
 }

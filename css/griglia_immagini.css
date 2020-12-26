@@ -38,37 +38,51 @@ body {
     }
 
 .overlay__inner {
-    width: 700px;
-    padding: 20px;
+    width: 100%;
     position: relative;
     opacity: 1;
 }
     .overlay__inner img {
-        width: 80%;
+        width: 550px;
         border: 3px solid #6a6a6a;
         border-radius: 25px;
     }
 
+
+@media screen and (max-width: 1000px) {
+    .overlay__inner img {
+        width: 400px;
+    }
+
+}
+
+@media screen and (max-width: 700px) {
+    .overlay__inner img {
+        width: 300px;
+    }
+ 
+}
 .close {
     position: absolute;
-    top: 3px;
-    right: 80px;
+    top: 00px;
     background: none;
     outline: 0;
-    color: black;
-    border: 0;
+    color: wheat;
+    background-color: rgba(128, 128, 128, 0.70);
+    border: 3px solid #6a6a6a;    
     text-transform: uppercase;
     letter-spacing: 2px;
 }
 
     .close:hover {
-        color: #D1A39E;
+        color: black;
+        cursor:pointer;
     }
 
 .scorriR {
     position: absolute;
     height: 50px;
-    right: 20px;
+    right: 5px;
     background: none;
     outline: 0;
     color: #002c63;
@@ -81,7 +95,7 @@ body {
 .scorriL {
     position: absolute;
     height: 50px;
-    left: 20px;
+    left: 5px;
     background: none;
     outline: 0;
     BOTTOM: 50%;
