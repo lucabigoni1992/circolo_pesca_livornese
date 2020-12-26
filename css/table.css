@@ -40,7 +40,7 @@ table.TabellaProdotti {
     }
 
         table.TabellaProdotti thead tr {
-            display: flex;
+            display: inline-table;
         }
 
         table.TabellaProdotti thead th {
