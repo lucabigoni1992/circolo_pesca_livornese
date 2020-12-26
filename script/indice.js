@@ -24,7 +24,7 @@ function generateMapItaly() {
 function madeArea(area) {
     var areaMap = document.createElement("area");
     areaMap.alt = area.zona;
-    areaMap.id = "image-map" + area.zona;
+    areaMap.id = "mapCoord" + area.zona;
     areaMap.title = area.zona;
     areaMap.href = "";
     areaMap.addEventListener("click", () => { GenerateAddressList(event, area.tipologia); mouseOver(event, area.zona); return false; });
