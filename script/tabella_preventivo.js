@@ -225,10 +225,16 @@ function addProductElement(showN, currpage) {
 
 /*cambio il numero di prodotti che visualizzo a griglia*/
 function changeShowProduct(ProdNumber) {
-    var showN = parseInt(ProdNumber.value);
-    var currpage = getCurrPage();
-    generatePageManu(showN);
-    addProductElement(showN, currpage);
+    try {
+        var showN = parseInt(ProdNumber.value);
+        var currpage = getCurrPage();
+        generatePageManu(showN);
+        addProductElement(showN, currpage);
+
+    } catch (e) {
+        window.alert(e.message);
+        console.log(e.message, e.name);
+    }
     //  gallery();
 }
 
@@ -238,19 +244,23 @@ window.onload = function () {
 };
 
 var numberImage = 3;
-var currPage = 1;
 
 /*viene gestita la gallery*/
 function gallery() {
-    currPage = 0;
-    var buttons = document.querySelectorAll('.gallery');
-    var overlay = document.querySelector('.overlay');
-    buttons.forEach(button => button.addEventListener('click', open));
-    overlay.addEventListener('click', close);
-    var scorriL = document.getElementById('scorriL');
-    var scorriR = document.getElementById('scorriR');
-    scorriL.addEventListener('click', function () { scorri(-1) }, false);
-    scorriR.addEventListener('click', function () { scorri(1) }, false)
+    try {
+        var buttons = document.querySelectorAll('.gallery');
+        var overlay = document.querySelector('.overlay');
+        buttons.forEach(button => button.addEventListener('click', openGallery));
+        overlay.addEventListener('click', close);
+        var scorriL = document.getElementById('scorriL');
+        var scorriR = document.getElementById('scorriR');
+        scorriL.addEventListener('click', function () { scorri(-1) }, false);
+        scorriR.addEventListener('click', function () { scorri(1) }, false)
+
+    } catch (e) {
+        window.alert(e.message);
+        console.log(e.message, e.name);
+    }
 }
 /*apro l'immagine*/
 function scorri(currPage) {
@@ -266,25 +276,37 @@ function scorri(currPage) {
     overlayImage.src = src;
 }
 /*apro l'immagine*/
-function open(e) {
-    var src = e.currentTarget.querySelector('img').src;
-    if (src.endsWith("Min.jpg"))
-        src = src.substring(0, src.length - 7);
-    else
-        return;
-    var overlay = document.querySelector('.overlay');
-    var overlayImage = document.getElementById('gallery');
-    overlay.classList.add('open');
+function openGallery(e) {
+    try {
+        var src = e.currentTarget.querySelector('img').src;
+        if (src.endsWith("Min.jpg"))
+            src = src.substring(0, src.length - 7);
+        else
+            return;
+        var overlay = document.querySelector('.overlay');
+        var overlayImage = document.getElementById('gallery');
+        overlay.classList.add('open');
 
-    src = src + "1.jpg";
-    overlayImage.src = src;
+        src = src + "1.jpg";
+        overlayImage.src = src;
+
+    } catch (e) {
+        window.alert(e.message);
+        console.log(e.message, e.name);
+    }
 }
 
 /*chiudo l'immagine*/
 function close(e) {
-    var overlay = document.querySelector('.overlay');
-    if (e.target.id !== "scorriL" &&
-        e.target.id !== "scorriR" &&
-        e.target.id !== "gallery")
-        overlay.classList.remove('open');
+    try {
+        var overlay = document.querySelector('.overlay');
+        if (e.target.id !== "scorriL" &&
+            e.target.id !== "scorriR" &&
+            e.target.id !== "gallery")
+            overlay.classList.remove('open');
+
+    } catch (e) {
+        window.alert(e.message);
+        console.log(e.message, e.name);
+    }
 }

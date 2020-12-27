@@ -259,8 +259,10 @@ function DisableQuotePart(disabled) {
     var curTab = document.getElementById("PreventivoDataInput");
     var child = curTab.querySelectorAll("input, textarea, button");
     for (i = 0; i < child.length; i++) {
-        if (!disabled && (child[i].id === "inp_mail")) child[i].disabled = false
-        else child[i].disabled = disabled;//equivalente ad setAttribute("disabled", disabled?"true":"false");
+        if (!disabled && (child[i].id === "inp_mail")) {
+            child[i].disabled = false;
+            controllaEmail(child[i].value);
+        }
         if (disabled) {
             child[i].value = child[i].type != "button" ? "" : child[i].value;
             child[i].title = "Per abilitare inserire un prodotto nel carrello o validare i campi";
