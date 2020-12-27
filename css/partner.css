@@ -1,5 +1,5 @@
 #Regione {
-    color: var(--constBorder) !important;
+    color: #035387 !important;
     text-transform: uppercase;
     font-weight: bold;
     text-align: left;
@@ -12,7 +12,7 @@
 
 .Provincia {
     border-radius: 5px 5px;
-    background-color: var(--constBorder);
+    background-color: #035387;
     color: #fff;
     text-transform: uppercase;
     font-weight: bold;
@@ -22,7 +22,7 @@
 .listaPartner {
     margin-left: 25px;
     text-align: left;
-    border-bottom: 2px solid var(--constBorder);
+    border-bottom: 2px solid #035387;
     margin-top: 15px;
     margin-bottom: 5px;
 }

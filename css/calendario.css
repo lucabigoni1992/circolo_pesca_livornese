@@ -12,7 +12,7 @@ ul {
     width: 100%;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
-    background: var(--constBorder);
+    background: #035387;
     text-align: center;
 }
 
@@ -78,7 +78,7 @@ ul {
     }
 
         .days li .active {
-            background: var(--constBorder);
+            background: #035387;
             color: #87ceebad !important;
             border-radius: 5px;
         }
@@ -88,7 +88,7 @@ ul {
     .days .current {
         padding: 5px;
         background-color: #87ceebad;
-        color: var(--constBorder) !important;
+        color: #035387 !important;
     }
 
     .days .currentFirst {
@@ -102,8 +102,6 @@ ul {
         .days .current:hover,
         .days .currentLast:hover,
         .days .currentFirst:hover {
-            background: -moz-linear-gradient(top, #87ceebad 0%, #3f7399 50%, #87ceebad 100%);
-            background: -webkit-linear-gradient(top, #87ceebad 0%, #3f7399 50%, #87ceebad 100%);
             background: linear-gradient(to bottom,#87ceebad 0%, #3f7399 50%,#87ceebad 100%);
         }
 
@@ -144,8 +142,6 @@ ul {
     }
 
     .days .evento {
-        background: -moz-linear-gradient(top, #c8393959 0%, #fa00007a 50%,#c8393959 100%);
-        background: -webkit-linear-gradient(top, #c8393959 0%, #fa00007a 50%,#c8393959 100%);
         background: linear-gradient(to bottom, #c8393959 0%, #fa00007a 50%,#c8393959 100%);
         padding: 5px;
         border-radius: unset;
@@ -153,8 +149,6 @@ ul {
 
         .days .evento:hover,
         .days .fakehover {
-            background: -moz-linear-gradient(top,#c8393999 0%, #fa0000e6 50%,#c8393999 100%);
-            background: -webkit-linear-gradient(top, #c8393999 0%, #fa0000e6 50%,#c8393999 100%);
             background: linear-gradient(to bottom, #c8393999 0%, #fa0000e6 50%,#c8393999 100%);
             padding: 5px;
             border-radius: unset;
@@ -162,10 +156,8 @@ ul {
 
     .days li:hover {
         padding: 5px !important;
-        background: var(--constBorder);
+        background: #035387;
         color: black !important;
-        background: -moz-linear-gradient(top, #393d3e00 0%, #657989 50%,#393d3e00 100%);
-        background: -webkit-linear-gradient(top, #393d3e00 0%, #657989 50%,#393d3e00 100%);
         background: linear-gradient(to bottom, #393d3e00 0%, #657989 50%,#393d3e00 100%);
     }
 
@@ -173,8 +165,6 @@ ul {
         padding: 5px !important;
         background-color: #1f5ec67d !important;
         color: black !important;
-        background: -moz-linear-gradient(top, #1f5ec67d 0%, #3f7399 50%, #1f5ec67d 100%);
-        background: -webkit-linear-gradient(top, #1f5ec67d 0%, #3f7399 50%, #1f5ec67d 100%);
         background: linear-gradient(to bottom,#1f5ec67d 0%, #3f7399 50%,#1f5ec67d 100%);
     }
 
@@ -184,7 +174,7 @@ ul {
 }
 
     #prev, #next:hover {
-        border-color: transparent;
+        border-color: none;
     }
 
 .boxFilter {

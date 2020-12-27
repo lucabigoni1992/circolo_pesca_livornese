@@ -1,11 +1,9 @@
 table.TabellaProdotti {
     border-radius: 5px 5px;
-    background: var(--constBh);
+    background: #87ceeb69;
     margin-bottom: 10px;
     border: 1px solid #6a6a6a;
     width: 100%;
-    -webkit-box-shadow: 5px 5px 10px 0px #000000;
-    -moz-box-shadow: 5px 5px 10px 0px #000000;
     box-shadow: 5px 5px 10px 0px #000000;
     text-align: center;
 }
@@ -28,13 +26,11 @@ table.TabellaProdotti {
     }
 
     table.TabellaProdotti thead {
-        background: var(--constBh);
+        background: #87ceeb69;
         font-size: 14px;
         font-weight: bold;
-        color: var(--baseBg);
-        background: -moz-linear-gradient(top, #035387 0%, #3f7399 50%, var(--constBh) 100%);
-        background: -webkit-linear-gradient(top, #035387 0%, #3f7399 50%, var(--constBh) 100%);
-        background: linear-gradient(to bottom,#035387 0%, #3f7399 50%, var(--constBh) 100%);
+        color: black;
+        background: linear-gradient(to bottom,#035387 0%, #3f7399 50%, #87ceeb69 100%);
     }
 
         table.TabellaProdotti thead tr {
@@ -44,7 +40,7 @@ table.TabellaProdotti {
         table.TabellaProdotti thead th {
             font-size: 15px;
             font-weight: bold;
-            color: var(--baseBg);
+            color: black;
             border: none;
         }
 
@@ -55,10 +51,8 @@ table.TabellaProdotti {
     table.TabellaProdotti tfoot {
         font-size: 14px;
         font-weight: bold;
-        color: var(--baseBg);
-        background: -moz-linear-gradient(top, #035387 0%, #3f7399 50%, var(--constBh) 100%);
-        background: -webkit-linear-gradient(top, #035387 0%, #3f7399 50%, var(--constBh) 100%);
-        background: var(--constBh);
+        color: black;
+        background: #87ceeb69;
         margin: 5px;
     }
 
@@ -81,7 +75,7 @@ table.TabellaProdotti {
     table.TabellaProdotti tbody h4 {
         font-size: 15px;
         font-weight: bold;
-        color: var(--baseBg);
+        color: black;
         height: 20px;
         border: none;
     }
@@ -97,7 +91,7 @@ table.TabellaProdotti {
     }
 
         table.TabellaProdotti tbody ul li:not(:last-child) {
-            border-bottom: var(--constBg) solid 1px;
+            border-bottom: #cccccc solid 1px;
         }
 
     table.TabellaProdotti tfoot #links {
@@ -107,16 +101,16 @@ table.TabellaProdotti {
     }
 
         table.TabellaProdotti tfoot #links input {
-            background: var(--constFg);
-            color: var(--baseBg);
+            background: #82898d;
+            color: black;
             padding: 2px 8px;
             border-radius: 5px;
             height: auto;
         }
 
         table.TabellaProdotti tfoot #links input {
-            background: var(--constbgSfum);
-            color: var(--baseBg);
+            background: linear-gradient(to bottom,#3e5d6f 0%,#3f7399 50%, #3e5d6f 100%);
+            color: black;
             padding: 2px 8px;
             border-radius: 5px;
             margin: 1px;
@@ -126,7 +120,7 @@ table.TabellaProdotti {
 
             table.TabellaProdotti tfoot #links input:hover {
                 background-color: #46000D;
-                color: var(--baseBg);
+                color: black;
             }
 
     table.TabellaProdotti tfoot #linksLf {
@@ -136,8 +130,8 @@ table.TabellaProdotti {
     }
 
         table.TabellaProdotti tfoot #linksLf div {
-            background: var(--constbgSfum);
-            color: var(--baseBg);
+            background: linear-gradient(to bottom,#3e5d6f 0%,#3f7399 50%, #3e5d6f 100%);
+            color: black;
             padding: 2px 6px;
             margin: 5px;
             border-radius: 5px;
@@ -148,7 +142,7 @@ table.TabellaProdotti {
 ul#Prodotti li {
     list-style: none;
     padding: 5px;
-    border: var(--constBg) solid 1px;
+    border: #cccccc solid 1px;
     margin-bottom: 5px;
     background: #e6e6e6;
 }
