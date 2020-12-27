@@ -276,7 +276,7 @@ footer {
     border-top: 1px solid var(--constBorder);
     background-color: lightblue;
     width: 100%;
-    min-height: 50px;
+    min-height: 70px;
     position: fixed;
 }
 
@@ -298,9 +298,6 @@ footer {
 }
 /* Media Queries serve per adattare lo scenario mostrato a schermi più piccoli di 768 px*/
 @media(max-width: 1450px) {
-    .baseInvisible ul li div {
-        padding: 0px 15px 0px 15px;
-    }
 
     aside#sidebarNoMargin,
     aside.base,
@@ -358,11 +355,47 @@ footer {
     .PartnerLeftTran {
         background-color: transparent;
         float: left;
-        width: unset;
+        width: 100%;
+        min-width:unset;
     }
 }
 
+@media(max-width: 500px) {
+    #showcase ul li {
+        display: unset;
+    }
 
+    h3 {
+        font: 200 15px/1.5 Georgia, Times New Roman, serif !important;
+        margin-right: unset;
+    }
+
+    #showcase h2 {
+        font: 200 19px/1.5 Georgia, Times New Roman, serif !important;
+    }
+
+    p {
+        font: 200 12px/1.5 Georgia, Times New Roman, serif !important;
+    }
+}
+@media(max-width: 350px) {
+    #showcase ul li {
+        display: unset;
+    }
+
+    h3 {
+        font: 200 13px/1.5 Georgia, Times New Roman, serif !important;
+        margin-right: unset;
+    }
+
+    #showcase h2 {
+        font: 200 15px/1.5 Georgia, Times New Roman, serif !important;
+    }
+
+    p {
+        font: 200 10px/1.5 Georgia, Times New Roman, serif !important;
+    }
+}
 
 select {
     font: 400 12px/1.3 sans-serif;
@@ -384,9 +417,11 @@ select {
     select:hover {
         background-image: linear-gradient(var(--constFg), var(--constFg)), linear-gradient(-135deg, transparent 50%, var(--constFg) 50%), linear-gradient(-225deg, transparent 50%, var(--constFg) 50%), linear-gradient(var(--constFg) 42%, var(--constBg) 42%);
     }
+
 #linksLf select {
     width: unset;
 }
+
 select:active {
     border-color: var(--constBh);
 }
@@ -402,8 +437,8 @@ select:active {
 }
 
     .fill img {
-        flex-shrink: 0;
-        width: 400px;
+        max-width: 400px;
+        width: 80%;
         border: 2px solid var(--baseFg);
     }
 

@@ -28,13 +28,6 @@ ul {
             letter-spacing: 3px;
         }
 
-        .month ul li {
-            color: white;
-            font-size: 20px;
-            text-transform: uppercase;
-            letter-spacing: 3px;
-        }
-
             .month ul li p {
                 text-align: center;
                 font-style: italic;
@@ -227,22 +220,34 @@ input[type="radio"] {
 /* Add media queries for smaller screens */
 @media screen and (max-width:720px) {
     .weekdays li, .days li {
+        display: inline-block!important;
         width: 13.1%;
     }
 }
 
 @media screen and (max-width: 420px) {
     .weekdays li, .days li {
-        width: 12.5%;
+        width: 12.75%;
     }
 
         .days li .active {
             padding: 2px;
         }
+    .base span {
+        font: italic small-caps bold 12px Georgia, serif;
+    }
 }
 
-@media screen and (max-width: 290px) {
+@media screen and (max-width: 375px) {
     .weekdays li, .days li {
-        width: 12.2%;
+        width: 12.75%;
     }
+    ul * {
+        padding: unset;
+    }
+    .base span {
+        font: italic small-caps bold 8px Georgia, serif;
+    }
+
+
 }

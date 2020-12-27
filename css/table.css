@@ -235,3 +235,8 @@ table.TabellaProdotti th {
         width: 100%;
     }
 }
+@media(max-width: 500px) {
+    #showcase ul li {
+        display:list-item;
+    }
+}

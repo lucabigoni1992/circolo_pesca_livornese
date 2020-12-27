@@ -60,7 +60,11 @@ body {
     .overlay__inner img {
         width: 300px;
     }
- 
+}
+@media screen and (max-width: 500px) {
+    .overlay__inner img {
+        width: 150px;
+    }
 }
 .close {
     position: absolute;
