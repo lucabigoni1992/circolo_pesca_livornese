@@ -440,6 +440,11 @@ select:active {
     .fill img {
         border: 2px solid var(--baseFg);
     }
+@media(max-width: 1800px) {
+    .fill img {
+        height: 360px
+    }
+}
 @media(max-width: 800px) {
     .fill img {
         height: 250px
