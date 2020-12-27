@@ -80,19 +80,35 @@
         display: unset;
     }
 
-        #showcase ul li h3 {
-            font: 200 15px/1.5 Georgia, Times New Roman, serif;
-            margin-right: unset;
-            margin-left: 35px;
-        }
+    h3 {
+        font: 15px/1.5, 'Times New Roman', serif !important;
+        margin-right: unset;
+    }
 
-        #showcase ul li p {
-            font: 200 12px/1.5 Georgia, Times New Roman, serif;
-        }
-        #showcase ul li img {
-            float: left;
-            padding-top: 5px;
-            margin: 0 15px 0 0;
-            height: 25px;
-        }
+    #showcase h2 {
+        font: 19px/1.5, 'Times New Roman', serif !important;
+    }
+
+    p {
+        font: 12px/1.5, 'Times New Roman', serif !important;
+    }
+}
+
+@media(max-width: 350px) {
+    #showcase ul li {
+        display: unset;
+    }
+
+    h3 {
+        font: 13px/1.5, 'Times New Roman', serif !important;
+        margin-right: unset;
+    }
+
+    #showcase h2 {
+        font: 15px/1.5, 'Times New Roman', serif !important;
+    }
+
+    p {
+        font: 10px/1.5, 'Times New Roman', serif !important;
+    }
 }
