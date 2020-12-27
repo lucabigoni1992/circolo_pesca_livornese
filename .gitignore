@@ -2,3 +2,7 @@
 .vs/circolo_pesca_livornese/config/
 
 .vs/
+
+*.tmp
+
+documentazione/~$inioni degli utenti.docx
