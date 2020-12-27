@@ -2,31 +2,31 @@ const _event = [
     {
         id: 0, datainizio: new Date('2020-11-25T00:00:00'), datafine: new Date('2020-12-02T00:00:00'), tipologia: "pesca"
         , titolo: "Corso di pesca a fondo "
-        , descrizione: "Sessioni di un ora di pesca dalle banchine del porto.\n Vi insegleremo le basi della pesca a fondo!\n tutti i giorni dalle 15 alle 17."
+        , descrizione: "Sessioni di un’ora di pesca dalle banchine del porto.\n Vi insegneremo le basi della pesca a fondo! \n tutti i giorni dalle 15 alle 17."
     }
     , {
         id: 1, datainizio: new Date('2020-12-29T00:00:00'), datafine: new Date('2021-01-03T00:00:00'), tipologia: "barca", titolo: "Gara di pesca a traina"
-        , descrizione: "La gara si svolgera a 7 miglia dal porto.\n chi lo prenderà più grosso vincerà 300 Euro"
+        , descrizione: "La gara si svolgerà a 7 miglia dal porto.\n chi lo prenderà più grosso vincerà 300 Euro"
     }
     , {
         id: 2, datainizio: new Date('2021-01-17T00:00:00'), datafine: new Date('2021-01-23T00:00:00'), tipologia: "pesca", titolo: "Corso di pesca per bambini"
-        , descrizione: "Sessioni di un ora di pesca dalle banchine del porto.\n Vi insegleremo le basi della pesca a fondo!\n tutti i giorni dalle 15 alle 17."
+        , descrizione: "Sessioni di un ora di pesca dalle banchine del porto.\n Vi insegneremo le basi della pesca a fondo!\n tutti i giorni dalle 15 alle 17."
     }
     , {
         id: 3, datainizio: new Date('2020-02-10T00:00:00'), datafine: new Date('2020-02-17T00:00:00'), tipologia: "barca", titolo: "Gara di pesca a bollentino"
-        , descrizione: "La gara si svolgera a 3 miglia dal porto.\n chi lo prenderà più grosso vincerà 300 Euro"
+        , descrizione: "La gara si svolgerà a 3 miglia dal porto.\n chi lo prenderà più grosso vincerà 300 Euro"
     }
     , {
         id: 4, datainizio: new Date('2021-03-28T00:00:00'), datafine: new Date('2021-04-07T00:00:00'), tipologia: "barca", titolo: "Gara di pesca alla Meloria"
-        , descrizione: "La gara si svolgera nell'area protetta della Meloria 3.5 miglia dal porto.\n chi lo prenderà più grosso vincerà 300 Euro"
+        , descrizione: "La gara si svolgerà nell'area protetta della Meloria 3.5 miglia dal porto.\n chi lo prenderà più grosso vincerà 300 Euro"
     }
 
 ]
 
 const _month = ["Gennaio", "Febbraio", "Marzo", "Aprile", "Maggio", "Giugno", "Luglio", "Agosto", "Settembre", "Ottobre", "Novembre", "Dicembre"];
 const _listEvent = [
-    { id: 0, tipologia: "pesca", titolo: "Corsi di pesca", descrizione: "Organiziamo periodicamente corsi di pesca <b>gratuiti</b> Per grandi e bambini" }
-    , { id: 1, tipologia: "barca", titolo: "Uscite in barca", descrizione: "Organiziamo spesso uscite e gare di pesca riservate ai soci del circolo" }
+    { id: 0, tipologia: "pesca", titolo: "Corsi di pesca", descrizione: "Organizziamo periodicamente corsi di pesca <b>gratuiti</b> Per grandi e bambini" }
+    , { id: 1, tipologia: "barca", titolo: "Uscite in barca", descrizione: "Organizziamo spesso uscite e gare di pesca riservate ai soci del circolo" }
 ]
 
 const _quote = [
@@ -158,7 +158,7 @@ const _prodotti = {
             ],
             descrizione: [
                 "Pesce pescato in giornata dai nostri pescatori locali",
-                "Il primo sarà servito con un filo d'olio polpad'orata e pomodorini freschi",
+                "Il primo sarà servito con un filo d'olio polpa d’orata e pomodorini freschi",
                 "Eco Friendly! le barche che pescano questi pesci usano carburanti eco compatibili"
             ],
             Titolo: "pasta all'orata"
@@ -179,7 +179,7 @@ const _prodotti = {
             ],
             descrizione: [
                 "Pesce pescato in giornata dai nostri pescatori locali",
-                "Il piatto sarà servito con un filo d'olio polpa d'del pesce sceto contornato da piselli e pomodoti freschi",
+                "Il piatto sarà servito con un filo d'olio polpa d'del pesce scelto contornato da piselli e pomodori freschi",
                 "Eco Friendly! le barche che pescano questi pesci usano carburanti eco compatibili"
             ],
             Titolo: "pesce piselli e pomodorini"
@@ -200,7 +200,7 @@ const _prodotti = {
                 , { Prodotto: "Bietola" }
             ],
             descrizione: [
-                "Il pollo sarà servito ripieno d'una vertura a scelta tra quelle diponibili al momento",
+                "Il pollo sarà servito ripieno d'una verdura a scelta tra quelle disponibili al momento",
                 "Il piatto sarà servito con una porzione abbondante di fagioli",
                 "Eco Friendly! le coltivazioni da cui provengono le verdure sono prive di pesticidi"
             ]
@@ -224,7 +224,7 @@ const _prodotti = {
             ],
             descrizione: [
                 "Prodotto semplice della tradizione Livornese",
-                "Le vuova vengono portate freesche ogni mattina così come i pomodori",
+                "Le uova vengono portate fresche ogni mattina così come i pomodori",
                 "Il prodotto sarò contornato da una porzione di pane abbrustolito e abbondanti verdure",
                 "Ottimo dopo una dura giornata in mare"
             ]
@@ -248,7 +248,7 @@ const _prodotti = {
             ],
             descrizione: [
                 "Per i più golosi che non si fanno problemi per la linea",
-                "I cannelloni sono fatti dal pastificio PataMatta",
+                "I cannelloni sono fatti dal pastificio Pasta Matta",
                 "Prodotti e cotti in giornata"
             ]
             ,

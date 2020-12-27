@@ -201,8 +201,6 @@ function mouseOut(event, eventId) {
     try {
         addOrRemoveClss(eventId, false)
 
-        var didascalia = document.getElementById("didascalia");
-        didascalia.firstChild.data = "Seleziona un'evento";
 
     } catch (e) {
         alert("gestoreConverti " + e);
@@ -213,7 +211,7 @@ function mouseOut(event, eventId) {
 function addOrRemoveClss(eventId, addOrRemove) {
 
     var curEv = getEventById(eventId);
-    document.querySelector('.section.collapsible').classList.toggle('collapsed');
+    document.querySelector('.section.collapsible').classList.remove('collapsed');
     var expand = document.getElementById("expand");
     var dt = new Date(curEv.datainizio.getFullYear(), curEv.datainizio.getMonth(), curEv.datainizio.getDate())
     while (dt <= curEv.datafine) {
