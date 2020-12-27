@@ -27,5 +27,9 @@ https://github.com/lucabigoni1992/circolo_pesca_livornese
 Publicazione del sito:
 Avviene in automatico un deploy a seguito di ognni Pull su Git LINK-> https://circolopescalivornese.herokuapp.com/
 
+Sito indicizzato su Google tramite Robots.txt e sitemap Aggiunto nel'Index.html il metatag per farsi riconscere come roprietario.
+
+Avviene in automatico un deploy a seguito di ognni Pull su Git LINK-> https://circolopescalivornese.herokuapp.com/
+
 Test con gli utenti:
-woking progress...
+file presente nella cartella './documentazione/opinioni_degli_utenti.docx'
