@@ -92,7 +92,7 @@ function impostaColonna1(tdCol, elem, indx) {
     h4.appendChild(document.createTextNode(elem.Titolo.length > 0 ? (elem.Titolo[0].toUpperCase() + elem.Titolo.slice(1)) : ""));
     var img = document.createElement("img");
     img.id = "img" + indx.toString();
-    img.src = "./resource/img/" + elem.Titolo.toString().toLowerCase().replaceAll(" ", "_") + "Min.jpg";
+    img.src = "./resource/img/pietanze/" + elem.Titolo.toString().toLowerCase().replaceAll(" ", "_") + "Min.jpg";
     img.setAttribute("alt", elem.Titolo);
     img.classList.add("imageGallery");
     if (!elem.disponibile) img.className = "imgOffuscataNonDisponibile";
@@ -257,27 +257,26 @@ function scorri(currPage) {
     var overlayImage = document.getElementById('gallery');
     if (overlayImage.src === "") return;
     var src = overlayImage.src;
-    var number = 1;
-    if (src.endsWith("Min.jpg")) {
-        src = src.substring(0, overlayImage.src.length - 7);
-    }
-    else {
-
-        src = src.substring(0, overlayImage.src.length - 5);
-        var number = parseInt(overlayImage.src.substring(src.length, src.length + 1)) + currPage;
-        if (number <= 0) number = numberImage;
-        else if (number > numberImage) number = 1;
-    }
+    src = src.substring(0, overlayImage.src.length - 5);
+    var number = parseInt(overlayImage.src.substring(src.length, src.length + 1)) + currPage;
+    if (number <= 0) number = numberImage;
+    else if (number > numberImage) number = 1;
 
     var src = src + (number).toString() + ".jpg";
     overlayImage.src = src;
 }
 /*apro l'immagine*/
 function open(e) {
+    var src = e.currentTarget.querySelector('img').src;
+    if (src.endsWith("Min.jpg"))
+        src = src.substring(0, src.length - 7);
+    else
+        return;
     var overlay = document.querySelector('.overlay');
     var overlayImage = document.getElementById('gallery');
     overlay.classList.add('open');
-    var src = e.currentTarget.querySelector('img').src;
+
+    src = src + "1.jpg";
     overlayImage.src = src;
 }
 

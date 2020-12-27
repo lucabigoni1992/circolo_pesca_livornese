@@ -377,7 +377,8 @@ footer {
     p {
         font: 200 12px/1.5 Georgia, Times New Roman, serif !important;
     }
-}
+
+    }
 @media(max-width: 350px) {
     #showcase ul li {
         display: unset;
@@ -437,11 +438,18 @@ select:active {
 }
 
     .fill img {
-        max-width: 400px;
-        width: 80%;
         border: 2px solid var(--baseFg);
     }
-
+@media(max-width: 800px) {
+    .fill img {
+        height: 250px
+    }
+}
+@media(max-width: 600px) {
+    .fill img {
+        height: 225px
+    }
+}
 .fillheigth {
     display: flex;
     justify-content: center;

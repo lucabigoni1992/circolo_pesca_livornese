@@ -17,7 +17,7 @@ const _event = [
         , descrizione: "La gara si svolgera a 3 miglia dal porto.\n chi lo prenderà più grosso vincerà 300 Euro"
     }
     , {
-        id: 4, datainizio: new Date('2021-01-28T00:00:00'), datafine: new Date('2021-02-17T00:00:00'), tipologia: "barca", titolo: "Gara di pesca alla Meloria"
+        id: 4, datainizio: new Date('2021-03-28T00:00:00'), datafine: new Date('2021-04-07T00:00:00'), tipologia: "barca", titolo: "Gara di pesca alla Meloria"
         , descrizione: "La gara si svolgera nell'area protetta della Meloria 3.5 miglia dal porto.\n chi lo prenderà più grosso vincerà 300 Euro"
     }
 
