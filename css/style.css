@@ -360,16 +360,16 @@ footer {
     }
 
     h3 {
-        font: 200 13px/1.5 Georgia, Times New Roman, serif !important;
+        font: 13px/1.5, 'Times New Roman', serif !important;
         margin-right: unset;
     }
 
     #showcase h2 {
-        font: 200 15px/1.5 Georgia, Times New Roman, serif !important;
+        font: 15px/1.5, 'Times New Roman', serif !important;
     }
 
     p {
-        font: 200 10px/1.5 Georgia, Times New Roman, serif !important;
+        font: 10px/1.5, 'Times New Roman', serif !important;
     }
 }
 
