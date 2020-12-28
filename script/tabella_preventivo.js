@@ -59,7 +59,7 @@ function enabeOrDisabeProductList(productList, quantity) {
 function impostaSceltaProdotto(ul, elem, indx) {
     var li = document.createElement("li");
     var label = document.createElement("label");
-    label.appendChild(document.createTextNode("Prodotto:"));
+    label.appendChild(document.createTextNode("Variante:"));
     var select = document.createElement("select");
     var id = "id_" + elem.id + "_inputProdotto";
     select.id = id;

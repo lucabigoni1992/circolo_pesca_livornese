@@ -36,7 +36,6 @@ body {
 
 .overlay__inner {
     width: 100%;
-    position: relative;
     opacity: 1;
 }
     .overlay__inner img {
@@ -65,7 +64,6 @@ body {
 }
 .close {
     position: absolute;
-    top: 00px;
     background: none;
     outline: 0;
     color: wheat;
