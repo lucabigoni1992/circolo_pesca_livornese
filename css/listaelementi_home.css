@@ -37,7 +37,7 @@
 }
 
     #showcase ul li p {
-        font: 200 18px/1.5 Georgia, Times New Roman, serif;
+        font-size: 18px;
     }
 
     #showcase ul li h3:hover {
@@ -73,12 +73,12 @@
     #showcase ul li {display:unset;
     }
         #showcase ul li h3 {
-            font: 200 15px/1.5 Georgia, Times New Roman, serif;
+            font-size: 15px;
             margin-right: unset;
             margin-left: 35px;
         }
         #showcase ul li p {
-            font: 200 12px/1.5 Georgia, Times New Roman, serif;
+            font-size: 12px;
         }
         #showcase ul li img {
             float: left;

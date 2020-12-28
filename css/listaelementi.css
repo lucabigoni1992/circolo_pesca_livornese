@@ -73,7 +73,7 @@
 
 
 #showcase ul li p {
-    font: 200 18px/1.5 Georgia, Times New Roman, serif;
+    font-size: 18px;
 }
 
 #showcase ul li h3:hover {
@@ -86,16 +86,16 @@
     }
 
     h3 {
-        font: 15px/1.5, 'Times New Roman', serif !important;
+        font-size: 15px;
         margin-right: unset;
     }
 
     #showcase h2 {
-        font: 19px/1.5, 'Times New Roman', serif !important;
+        font-size: 19px;
     }
 
     p {
-        font: 12px/1.5, 'Times New Roman', serif !important;
+        font-size: 12px;
     }
 }
 
@@ -105,15 +105,15 @@
     }
 
     h3 {
-        font: 13px/1.5, 'Times New Roman', serif !important;
+        font-size: 13px;
         margin-right: unset;
     }
 
     #showcase h2 {
-        font: 15px/1.5, 'Times New Roman', serif !important;
+        font-size: 15px;
     }
 
     p {
-        font: 10px/1.5, 'Times New Roman', serif !important;
+        font-size: 10px;
     }
 }
