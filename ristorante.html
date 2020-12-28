@@ -40,128 +40,117 @@
     </header>
 
     <section id="showcase">
-        <div class="container">
-            <h2 class="classeTitolo">Ristorante</h2>
-            <div id="main-col">
-                <div id="Prodotti">
-                    <div class="base">
-                        <p>
-                            Il nostro circolo mette a disposizione dei soci e dei loro ospiti Il suo ristorante.
-                        </p>
-                        <p>
-                           Nella sezione sottostante potrete preordinare i piatti che preferite, così da poteli mangiare take-away in pratiche vaschette!
-                        </p>
-                        <span>Scegli i piatti</span>
+        <h1>Ristorante</h1>
+        <div id="main-col" class="Prodotti base">
+            <p>
+                Il nostro circolo mette a disposizione dei soci e dei loro ospiti il suo ristorante.
+            </p>
+            <p>
+                Nella sezione sottostante potrete preordinare i piatti che preferite, così da poteli mangiare take-away in pratiche vaschette!
+            </p>
+            <H2>Scegli i piatti</H2>
 
-                        <div class="borderLine"></div>
-                        <table id="scrollTab" class="TabellaProdotti">
-                            <thead>
-                                <tr>
-                                    <th class="colw2">Modello</th>
-                                    <th class="colw6">Descrizione</th>
-                                    <th class="colw2">Numero/Prodotto</th>
-                                </tr>
-                            </thead>
-                            <tbody id="tabBody" class="table-wrapper-scroll-y my-custom-scrollbar">
-                                <tr>
-                                    <td>
-                                    </td>
-                                    <td>
-                                    </td>
-                                    <td>
-                                    </td>
-                                </tr>
-                            </tbody>
-                            <tfoot>
-                                <tr>
-                                    <td class="colw2">
-                                        <div id="linksLf">
-                                            <div>
-                                                <label for="ProdNumber">N°Prodotti</label>
-                                                <select onchange="changeShowProduct(ProdNumber)" name="ProdNumber" id="ProdNumber">
-                                                    <option value="2" selected="selected">2</option>
-                                                    <option value="5">5</option>
-                                                    <option value="10">10</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="colw2">
-                                    </td>
-                                    <td class="colw6">
+            <table id="scrollTab" class="TabellaProdotti">
+                <thead>
+                    <tr>
+                        <th class="colw2">Modello</th>
+                        <th class="colw6">Descrizione</th>
+                        <th class="colw2">Numero/Prodotto</th>
+                    </tr>
+                </thead>
+                <tbody id="tabBody" class="table-wrapper-scroll-y my-custom-scrollbar">
+                    <tr>
+                        <td>
+                        </td>
+                        <td>
+                        </td>
+                        <td>
+                        </td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td class="colw2">
+                            <div id="linksLf">
+                                <div>
+                                    <label for="ProdNumber">N°Prodotti</label>
+                                    <select onchange="changeShowProduct(ProdNumber)" name="ProdNumber" id="ProdNumber">
+                                        <option value="2" selected="selected">2</option>
+                                        <option value="5">5</option>
+                                        <option value="10">10</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="colw2">
+                        </td>
+                        <td class="colw6">
 
-                                        <div id="links">
-                                            <input type="button" value="<<" />
-                                            <input type="button" value="0" />
-                                            <input type="button" value="1" />
-                                            <input type="button" value="2" />
-                                            <input type="button" value="3" />
-                                            <input type="button" value=">>" />
-                                        </div>
-                                    </td>
-                                </tr>
-                            </tfoot>
-                        </table>
+                            <div id="links">
+                                <input type="button" value="<<" />
+                                <input type="button" value="0" />
+                                <input type="button" value="1" />
+                                <input type="button" value="2" />
+                                <input type="button" value="3" />
+                                <input type="button" value=">>" />
+                            </div>
+                        </td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+
+        <aside id="sidebar">
+            <div class="base">
+                <span id="didascalia" class="didascaliaTitolo">Preventivo</span>
+                <div class="borderLine"></div>
+                <table class="TabellaPreventivo">
+                    <thead id="TabPreventivoHead">
+                        <tr>
+                            <td>
+                            </td>
+                            <td>
+                            </td>
+                            <td>
+                            </td>
+                            <td>
+                            </td>
+                        </tr>
+                    </thead>
+                    <tbody id="TabPreventivo">
+                        <tr>
+                            <td>
+                            </td>
+                            <td>
+                            </td>
+                            <td>
+                            </td>
+                            <td>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div id="PreventivoDataInput">
+                    <div>
+                        <input id="inp_mail" type="email" name="name" onkeyup="controllaEmail(inp_mail)" placeholder="Email del Richiedente">
                     </div>
+                    <div>
+                        <input id="inp_richiedente" type="text" name="name" onkeyup="controllaRichiedente(inp_richiedente)" placeholder="Nome del Richiedente" disabled>
+                    </div>
+                    <div>
+                        <textarea id="inp_message" name="message" onkeyup="controllaMessage(inp_message)" placeholder="Note D'allegare" disabled></textarea>
+                    </div>
+                    <input id="btn_sendQuote" type="button" class="OrangeButton" onClick="inviaPreventivo(normalizeData(),inp_mail,inp_richiedente,inp_message);" value="Richiedi" disabled />
                 </div>
             </div>
-
-            <aside id="sidebar">
-                <div class="base">
-                    <span id="didascalia">Preventivo</span>
-                    <div class="borderLine"></div>
-                    <table class="TabellaPreventivo">
-                        <thead id="TabPreventivoHead">
-                            <tr>
-                                <td>
-                                </td>
-                                <td>
-                                </td>
-                                <td>
-                                </td>
-                                <td>
-                                </td>
-                            </tr>
-                        </thead>
-                        <tbody id="TabPreventivo">
-                            <tr>
-                                <td>
-                                </td>
-                                <td>
-                                </td>
-                                <td>
-                                </td>
-                                <td>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <div id="PreventivoDataInput">
-                        <div>
-                            <input id="inp_mail" type="email" name="name" onkeyup="controllaEmail(inp_mail)" placeholder="Email del Richiedente" >
-                        </div>
-                        <div>
-                            <input id="inp_richiedente" type="text" name="name" onkeyup="controllaRichiedente(inp_richiedente)" placeholder="Nome del Richiedente" disabled>
-                        </div>
-                        <div>
-                            <textarea id="inp_message" name="message" onkeyup="controllaMessage(inp_message)" placeholder="Note D'allegare" disabled></textarea>
-                        </div>
-                        <input id="btn_sendQuote" type="button" class="OrangeButton" onClick="inviaPreventivo(normalizeData(),inp_mail,inp_richiedente,inp_message);" value="Richiedi" disabled />
-                    </div>
-                </div>
-                <div class="overlay">
-                    <div class="overlay__inner">
-                        <button id="close" class="close">close X</button>
-                        <input type="image" alt="Scorri" id="scorriL" class="scorriL" src="./resource/icone/double-arrow-left.svg" />
-                        <input type="image" alt="Scorri" id="scorriR" class="scorriR" src="./resource/icone/double-arrow-right.svg" />
-                        <img alt="gallery" src="mappa.png" id="gallery" />
-                    </div>
-                </div>
-            </aside>
-
-        </div>
+            <div class="overlay overlay__inner">
+                <button id="close" class="close">close X</button>
+                <input type="image" alt="Scorri" id="scorriL" class="scorriL" src="./resource/icone/double-arrow-left.svg" />
+                <input type="image" alt="Scorri" id="scorriR" class="scorriR" src="./resource/icone/double-arrow-right.svg" />
+                <img alt="gallery" src="mappa.png" id="gallery" />
+            </div>
+        </aside>
     </section>
-
     <footer>
         <p class="copyright">&copy; Copyright 2020 Luca Bigoni</p>
         <p class="circolo">Circolo Nautico Livorno</p>

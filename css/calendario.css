@@ -1,5 +1,5 @@
 
- section * {
+section * {
     box-sizing: border-box;
 }
 
@@ -175,11 +175,9 @@ ul {
 
 
 .boxFilter {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 20px 0;
+     margin-bottom: 20px ;
 }
+
 
 input[type="radio"] {
     margin-left: 20px;
@@ -207,7 +205,7 @@ input[type="radio"] {
 /* Add media queries for smaller screens */
 @media screen and (max-width:720px) {
     .weekdays li, .days li {
-        display: inline-block!important;
+        display: inline-block !important;
         width: 13.1%;
     }
 }
@@ -220,6 +218,7 @@ input[type="radio"] {
         .days li .active {
             padding: 2px;
         }
+
     .base span {
         font: italic small-caps bold 12px Georgia, serif;
     }
@@ -229,12 +228,12 @@ input[type="radio"] {
     .weekdays li, .days li {
         width: 12.75%;
     }
+
     ul * {
         padding: unset;
     }
+
     .base span {
         font: italic small-caps bold 8px Georgia, serif;
     }
-
-
 }

@@ -1,26 +1,28 @@
 /*modifico la select option*/
 
 body {
-    font: 15px/1.1 Arial, sans-serif;
+    font-size: 15px;
+    font-family: 'Times New Roman';
     padding: 0;
     margin: 0;
-    background: #d5f2ff;
+    background: #e5f7ff;
     background-attachment: fixed;
 }
-/* Global */
-.container {
-    width: 80%;
-    margin: auto;
-    overflow: hidden;
-}
-
 
 .PartnerLeftTran {
     background-color: transparent;
     float: left;
-    width: 30%;
+    width: 100%;
     min-width: 400px;
 }
+
+    .PartnerLeftTran img {
+        float: right;
+    }
+    .PartnerLeftTran ul {
+        width: 50% !important;
+        float: left;
+    }
 
 
 .baseInvisible {
@@ -51,16 +53,25 @@ body {
     margin-bottom: 10px;
 }
 
-.containerhomeHome {
+    .base p {
+        text-align: left;
+    }
+
+.didascalia {
+    font-size: 18px;
+    font-style: italic;
+    border-bottom: #035387 1px solid;
 }
 
-.base p {
-    text-align: left;
+.didascaliaTitolo {
+    font-size: 25px;
+    font-weight: bold;
 }
 
-.base span {
+.base ul span {
     font-weight: 900;
-    font: italic small-caps bold 22px Georgia, serif;
+    font-size: 18px;
+    font-style: unset;
 }
 
 
@@ -166,25 +177,32 @@ section {
 
 /* Showcase */
 #showcase {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
     min-height: 400px;
-    text-align: center;
     color: black;
 }
 
-    #showcase h2 {
-        margin-top: 10px;
-        color: black;
-        font-size: 35px;
-        margin-bottom: 10px;
-        margin-right: 10px;
-        margin-left: 10px;
-        padding: 0 0 6px 10px;
-        border-left: 10px solid #035387;
-        border-bottom: 2px solid #035387;
-        text-align: left;
-        background-color: #f5fffa73;
-        box-shadow: 5px 5px 10px 0px #000000;
+    #showcase h1 {
+        font-size: 75px;
+        padding: unset;
+        color: #035387;
+        text-align: center;
+        margin: auto;
+        padding-top: 15px;
+        text-shadow: 1px 1px 0px #000000;
     }
+
+    #showcase h2 {
+        font-size: 35px;
+        padding: unset;
+        color: #035387;
+        margin-bottom: 20PX;
+        margin-top: 0px;
+    }
+
+
 
     #showcase h3 {
         /* margin-top: 100px; */
@@ -224,6 +242,7 @@ section {
 /* Sidebar */
 aside#sidebar {
     float: right;
+    text-align: center;
     min-height: 400px;
     width: 30%;
 }
@@ -234,14 +253,12 @@ aside#sidebar {
         padding: 5px;
     }
 
-article#main-col {
-    float: left;
-    width: 65%;
-}
 
-div#main-col {
+#main-col {
     float: left;
-    width: 65%;
+    width: 60%;
+    padding: unset;
+    margin: unset;
 }
 
 
@@ -274,6 +291,10 @@ footer {
 /* Media Queries serve per adattare lo scenario mostrato a schermi più piccoli di 768 px*/
 @media(max-width: 1450px) {
 
+    #showcase h1 {
+        font-size: 55px;
+    }
+
     aside#sidebarNoMargin,
     aside.base,
     div#main-col {
@@ -302,6 +323,8 @@ footer {
         float: none;
         text-align: center;
         width: 100%;
+        padding: unset;
+        margin: unset;
     }
 
 
@@ -331,7 +354,7 @@ footer {
         background-color: transparent;
         float: left;
         width: 100%;
-        min-width:unset;
+        min-width: unset;
     }
 }
 
@@ -340,36 +363,44 @@ footer {
         display: unset;
     }
 
+    #showcase h1 {
+        font-size: 35px;
+    }
+
     h3 {
-        font: 15px/1.5 , 'Times New Roman', serif !important;
+        font: 15px;
         margin-right: unset;
     }
 
     #showcase h2 {
-        font: 19px/1.5 , 'Times New Roman', serif !important;
+        font: 19px;
     }
 
     p {
-        font: 12px/1.5 , 'Times New Roman', serif !important;
+        font: 12px;
     }
+}
 
-    }
 @media(max-width: 350px) {
     #showcase ul li {
         display: unset;
     }
 
+    #showcase h1 {
+        font: 15px;
+    }
+
     h3 {
-        font: 13px/1.5, 'Times New Roman', serif !important;
+        font: 13px;
         margin-right: unset;
     }
 
     #showcase h2 {
-        font: 15px/1.5, 'Times New Roman', serif !important;
+        font: 15px;
     }
 
     p {
-        font: 10px/1.5, 'Times New Roman', serif !important;
+        font: 10px;
     }
 }
 
@@ -408,27 +439,32 @@ select:active {
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden
+    overflow: hidden;
+    padding-top: 5px
 }
 
     .fill img {
         border: 2px solid dimgray;
     }
+
 @media(max-width: 1800px) {
     .fill img {
         height: 360px
     }
 }
+
 @media(max-width: 800px) {
     .fill img {
         height: 250px
     }
 }
+
 @media(max-width: 600px) {
     .fill img {
         height: 225px
     }
 }
+
 .fillheigth {
     display: flex;
     justify-content: center;

@@ -40,7 +40,12 @@
 
     #showcase ul {
         list-style-type: none;
-        width: 100%;
+        width: 100% !important;
+        display: list-item;
+    }
+    #showcase img {
+        list-style-type: none;
+        float: none;
         display: list-item;
     }
 }

@@ -13,7 +13,6 @@ table.TabellaProdotti {
     }
 
     table.TabellaProdotti tbody td {
-        font-size: 13px;
         border: 1px solid #6a6a6a;
     }
 
@@ -35,6 +34,7 @@ table.TabellaProdotti {
 
         table.TabellaProdotti thead tr {
             display: inline-table;
+            width: inherit;
         }
 
         table.TabellaProdotti thead th {
@@ -139,7 +139,7 @@ table.TabellaProdotti {
 
 
 /*  OverRide for table*/
-ul#Prodotti li {
+ul.Prodotti li {
     list-style: none;
     padding: 5px;
     border: #cccccc solid 1px;
@@ -219,8 +219,9 @@ table.TabellaProdotti th {
         width: 100%;
     }
 }
+
 @media(max-width: 500px) {
     #showcase ul li {
-        display:list-item;
+        display: list-item;
     }
 }

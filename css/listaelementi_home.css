@@ -8,8 +8,7 @@
 
     #showcase ul li {
         width: 45%;
-        padding: 25px;
-        /* height: 250px; */
+        padding: 5px;
         display: inline-table;
     }
 #showcase h3 {

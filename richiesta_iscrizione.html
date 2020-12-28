@@ -35,94 +35,74 @@
         </div>
     </header>
     <section id="showcase">
-        <div class="container">
-            <h2 class="classeTitolo">Iscriviti</h2>
-            <div id="main-col">
-                <div class="base">
-                    <p>
-                        Per iscriversi al nostro <i>Circolo Nautico</i> vi basterà inviarci un email cliccando <a href="mailto:luca.bigoni@live.it">qui</a>.
-                        L'email dovrà contenere il vostro Nome e Cognome e sopratutto, non scordatevi d'allegate anche la copia del versamento e la vostra carta d'identità.
-                    </p>
-                    <p>
-                        Se invece preferite creare automaticamente un'email precompilata trascinare il prezzo nel campo Messaggio a destra.
-                    </p>
-                    <span>Quote per l'iscrizione</span>
+        <h1>Iscriviti</h1>
+        <div id="main-col" class="base">
+            <p>
+                Per iscriversi al nostro <i>Circolo Nautico</i> vi basterà inviarci un email cliccando <a href="mailto:luca.bigoni@live.it">qui</a>.
+                L'email dovrà contenere il vostro Nome e Cognome e sopratutto, non scordatevi d'allegate anche la copia del versamento e la vostra carta d'identità.
+            </p>
+            <p>
+                Se invece preferite creare automaticamente un'email precompilata trascinare il prezzo nel campo Messaggio a destra.
+            </p>
+            <H2>Quote per l'iscrizione</H2>
 
-                    <div class="borderLine"></div>
-                    <table id="noScrollTab" class="TabellaProdotti">
-                        <thead>
-                            <tr>
-                                <th class="colw8">Abbonamento</th>
-                                <th class="colw2">Quota</th>
-                            </tr>
-                        </thead>
-                        <tbody id="tabBody" class="table-wrapper-scroll-y my-custom-scrollbar">
-                            <tr>
-                                <td>
-                                </td>
-                                <td>
-                                </td>
-                            </tr>
-                        </tbody>
-                        <tfoot>
-                            <tr>
-                                <td>
-                                </td>
-                                <td>
-                                </td>
-                            </tr>
-                        </tfoot>
-                    </table>
-
-                </div>
-            </div>
-            <aside id="sidebar">
-                <div class="base">
-                    <span>Richiedi d'iscrizione</span>
-                    <div class="borderLine"></div>
-
-                    <form id="contact-form" onsubmit="submitContactForm('Richiedi un preventivo');" class="margin-top">
-
-                        <div class="row">
-                            <div class="form-group">
-                                <i class="fa fa-check-circle fa-2 check" aria-hidden="true"></i>
-                                <input id="form_name" type="text" name="name" placeholder="Nome" required="required"
-                                       data-error="Nome è obligatorio.">
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <div class="form-group">
-                                <i class="fa fa-check-circle fa-2 check" aria-hidden="true"></i>
-                                <input id="form_email" type="email" name="email" placeholder="Email" required="required"
-                                       data-error="E-mail è obligatorio.">
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <div class="form-group">
-                                <i class="fa fa-check-circle fa-2 check" aria-hidden="true"></i>
-                                <input id="form_phone" type="tel" pattern="[\+]\d{2}-\d{10}" placeholder="+39-123456789"
-                                       name="phone" required="required"
-                                       data-error="numero di telefono obbligatorio.">
-                                <!--ho usato una regular expression carattere+ 2 numeri trattino e nove numeri-->
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <div class="form-group">
-                                <i class="fa fa-check-circle fa-2 check" aria-hidden="true"></i>
-                                <textarea id="form_message" ondrop="drop(event)" ondragover="allowDrop(event)" name="message" placeholder="Message" rows="2"
-                                          required="required"
-                                          data-error="Inserisci il messaggio che vuoi inviarmi."></textarea>
-                            </div>
-                        </div>
-                        <input class="" type="submit" value="Inoltra" />
-                    </form>
-                </div>
-            </aside>
+            <table id="noScrollTab" class="TabellaProdotti">
+                <thead>
+                    <tr>
+                        <th class="colw8">Abbonamento</th>
+                        <th class="colw2">Quota</th>
+                    </tr>
+                </thead>
+                <tbody id="tabBody" class="table-wrapper-scroll-y my-custom-scrollbar">
+                    <tr>
+                        <td>
+                        </td>
+                        <td>
+                        </td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td>
+                        </td>
+                        <td>
+                        </td>
+                    </tr>
+                </tfoot>
+            </table>
 
         </div>
+        <aside id="sidebar" class="base">
+            <span class="didascaliaTitolo">Richiedi d'iscrizione</span>
+            <div class="borderLine"></div>
+
+            <form id="contact-form" onsubmit="submitContactForm('Richiedi un preventivo');" class="margin-top">
+                <div class="row form-group">
+                    <i class="fa fa-check-circle fa-2 check" aria-hidden="true"></i>
+                    <input id="form_name" type="text" name="name" placeholder="Nome" required="required"
+                           data-error="Nome è obligatorio.">
+                </div>
+                <div class="row form-group">
+                    <i class="fa fa-check-circle fa-2 check" aria-hidden="true"></i>
+                    <input id="form_email" type="email" name="email" placeholder="Email" required="required"
+                           data-error="E-mail è obligatorio.">
+                </div>
+                <div class="row form-group">
+                    <i class="fa fa-check-circle fa-2 check" aria-hidden="true"></i>
+                    <input id="form_phone" type="tel" pattern="[\+]\d{2}-\d{10}" placeholder="+39-123456789"
+                           name="phone" required="required"
+                           data-error="numero di telefono obbligatorio.">
+                </div>
+
+                <div class="row form-group">
+                    <i class="fa fa-check-circle fa-2 check" aria-hidden="true"></i>
+                    <textarea id="form_message" ondrop="drop(event)" ondragover="allowDrop(event)" name="message" placeholder="Message" rows="2"
+                              required="required"
+                              data-error="Inserisci il messaggio che vuoi inviarmi."></textarea>
+                </div>
+                <input type="submit" value="Inoltra" />
+            </form>
+        </aside>
     </section>
     <footer>
         <p class="copyright">&copy; Copyright 2020 Luca Bigoni</p>
