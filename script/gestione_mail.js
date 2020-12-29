@@ -22,7 +22,6 @@ function submitContactForm(subject) {
 
         window.open('mailto:l.bigoni@studenti.unipi.it?cc=' + MailData.mittente + '&subject=' + subject + '&body=Salve,%0A%0A' + MailData.message.replace('\r', '%0A') + '%0A' + MailData.phone + '%0A%0A' + MailData.name);
 
-        return false;
     } catch (e) {
         alert("gestoreLoad " + e);
     }
@@ -63,9 +62,9 @@ function inviaPreventivo(ProductsRow, ClientMail, ClientName, CientNote) {
 function inviaRichiestaEvento(descrizione, titolo, datainizio, datafine) {
     try {
         var mailBody = 'Salve, \n\n';
-        mailBody += 'vorrei iscrivermi all\'evento ' + titolo + " che si terrà dal "
+        mailBody += 'vorrei iscrivermi all\'evento: \'' + titolo + '\' che si terrà dal '
             + datainizio.toLocaleDateString('en-US', { year: 'numeric', month: '2-digit', day: '2-digit' }) + " al "
-            + datafine.toLocaleDateString('en-US', { year: 'numeric', month: '2-digit', day: '2-digit' }) + ": \n\n";
+            + datafine.toLocaleDateString('en-US', { year: 'numeric', month: '2-digit', day: '2-digit' }) + "\n\n";
 
 
         mailBody += "Cordiali saluti\n\n";

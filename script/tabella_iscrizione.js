@@ -12,6 +12,7 @@ function allowDrop(ev) {
 /**mi salvo in memoria l'id dell'oggetto che intendo andare a spostare */
 function drag(ev) {
     try {
+        if (ev.target.id === undefined) return false;
         ev.dataTransfer.setData("dataDrag", ev.target.id.split("_")[1]);
     } catch (e) {
         window.alert(e.message);
@@ -27,11 +28,11 @@ function drop(ev) {
         var data = ev.dataTransfer.getData("dataDrag");
         if (!data || data === "") return;
         var elem = getLabelAndPrice(data);
-        if (elem.tipo =="Abbonamento")
+        if (elem.tipo == "Abbonamento")
             ev.target.textContent = "Vi inoltro la mia richiesta d'iscrizione per il Seguente Abbonamento:\n" + (elem.label + "  " + elem.prezzo + "€");
         else
             window.alert("Tipologia d'iscrizione non accatta non è un'abbonamento");
-            
+
     } catch (e) {
         window.alert(e.message);
         console.log(e.message, e.name);
@@ -100,7 +101,7 @@ function addElement(elem, indx) {
     span.appendChild(document.createTextNode(elem.conRiserva));
     span.title = getMessage(elem.conRiserva);
     newColPrice.appendChild(span);
-    newColPrice.appendChild(document.createTextNode(elem.prezzo +".00 €"));
+    newColPrice.appendChild(document.createTextNode(elem.prezzo + ".00 €"));
     newRow.appendChild(newColLab);
     newRow.appendChild(newColType);
     newRow.appendChild(newColPrice);
