@@ -262,7 +262,7 @@ function DisableQuotePart(disabled) {
     for (i = 0; i < child.length; i++) {
         if (!disabled && (child[i].id === "inp_mail")) 
             controllaEmail(child[i]);        
-        if (disabled) 
+        if (disabled && (child[i].id !== "inp_mail")) 
             child[i].title = "Per abilitare inserire un prodotto nel carrello e validare gli altri campi";
         
         else
