@@ -231,6 +231,9 @@ table.TabellaProdotti th {
         text-align: center;
         width: 100%;
     }
+    .floatRight{
+        float:unset;
+    }
 }
 @media(max-width: 800px) {
     #noScrollTab {
