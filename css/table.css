@@ -210,6 +210,20 @@ table.TabellaProdotti th {
     padding-top: 5px;
     border-bottom: 1px solid #035387;
 }
+.alignLefth {
+    text-align: left
+}
+.alignRight {
+    text-align: right
+}
+.noMargin {
+    border: unset !important;
+    margin-right: 5px ;
+    margin-left:5px
+}
+#noScrollTab {
+    width: 600px ;
+}
 /* Media Queries serve per adattare lo scenario mostrato a schermi più piccoli di 768 px*/
 @media(max-width: 1400px) {
     #scrollTab {
@@ -218,9 +232,26 @@ table.TabellaProdotti th {
         width: 100%;
     }
 }
-
-@media(max-width: 500px) {
-    #showcase ul li {
-        display: list-item;
+@media(max-width: 800px) {
+    #noScrollTab {
+        width: 450px;
+        font-size: 14px
     }
 }
+@media(max-width: 600px) {
+    #noScrollTab {
+        width: 400px;
+        font-size: 12px
+    }
+}
+
+    @media(max-width: 500px) {
+        #noScrollTab {
+            width:300px;
+            font-size: 10px
+        }
+
+        #showcase ul li {
+            display: list-item;
+        }
+    }

@@ -3,7 +3,8 @@ var _MemPrev = [];
 function AggiornaPreventivo(selectedData, id) {
     try {
         if (selectedData === undefined) {
-            if (_MemPrev.length === 0) DisableQuotePart(true);
+            if (_MemPrev.length === 0)
+                DisableQuotePart(true);
             return;
         }
         if (selectedData.quantity <= 0)
@@ -50,7 +51,6 @@ function addNewProduct(id, selectedData) {
 /* aggiorno un nuovo già esistente */
 function updateProduct(id, selectedData) {
     try {
-
         for (idx = 0; idx < _MemPrev.length; idx++)
             if (_MemPrev[idx].prodotto.id === id) {
                 _MemPrev[idx].ProdottoScelto = selectedData.type;
@@ -64,7 +64,6 @@ function updateProduct(id, selectedData) {
 /* aggiorno un nuovo già esistente */
 function removeProduct(id) {
     try {
-
         for (idx = 0; idx < _MemPrev.length; idx++)
             if (_MemPrev[idx].prodotto.id === id) {
                 _MemPrev.splice(idx, 1);
@@ -101,7 +100,6 @@ function refreshTableQuote() {
         curTab.appendChild(elemPrices);
     }
     if (_MemPrev.length > 0) {
-
         var newCol3 = document.createElement("tr");
         var fakenode
         newCol3.appendChild(fakeNode());
@@ -185,12 +183,11 @@ function addSummaryOfQuote() {
     try {
 
         var rowTitlefinal = document.createElement("tr");
-
         var indx = document.createElement("td");
+        var totale = 0;
         indx.className = "colw4";
         indx.colspan = "2";
         indx.appendChild(document.createTextNode("N° Prodott" + (_MemPrev.length === 0 ? "o" : "i") + " (" + _MemPrev.length + ") Totale: "));
-        var totale = 0;
         for (ProdIx = 0; ProdIx < _MemPrev.length; ProdIx++) {
             var prodotto = _MemPrev[ProdIx];
             var product = prodotto.prodotto;
@@ -198,20 +195,22 @@ function addSummaryOfQuote() {
             var CorrectPrice = GetPrice(prodotto.quantiaScelta, prices);
             totale = totale + (CorrectPrice * prodotto.quantiaScelta)
         }
-
         var quantity = document.createElement("td");
         indx.className = "colw4";
         indx.colspan = "1";
         quantity.appendChild(document.createTextNode(Number(totale - (totale / 1.22)).toFixed(2)));
+
         var price = document.createElement("td");
         price.className = "colw2";
         price.colspan = "1";
         price.appendChild(document.createTextNode(Number(totale / 1.22).toFixed(2) + " €"));
+
         var total = document.createElement("td");
         indx.className = "colw2";
         indx.colspan = "1";
         total.appendChild(document.createTextNode(Number(totale).toFixed(2) + " €"));
         rowTitlefinal.appendChild(indx);
+
         rowTitlefinal.appendChild(quantity);
         rowTitlefinal.appendChild(price);
         rowTitlefinal.appendChild(total);
@@ -226,7 +225,6 @@ function addTitleSummaryOfQuote() {
     try {
 
         var newCol3 = document.createElement("tr");
-
         var indx = document.createElement("th");
         indx.className = "colw4";
         indx.colspan = "2";
@@ -236,14 +234,17 @@ function addTitleSummaryOfQuote() {
         indx.className = "colw4";
         indx.colspan = "1";
         quantity.appendChild(document.createTextNode("IVA (22%) "));
+
         var price = document.createElement("th");
         price.className = "colw2";
         price.colspan = "1";
         price.appendChild(document.createTextNode("Senza IVA"));
+
         var total = document.createElement("th");
         indx.className = "colw2";
         indx.colspan = "1";
         total.appendChild(document.createTextNode("Totale"));
+
         newCol3.appendChild(indx);
         newCol3.appendChild(quantity);
         newCol3.appendChild(price);
@@ -259,15 +260,13 @@ function DisableQuotePart(disabled) {
     var curTab = document.getElementById("PreventivoDataInput");
     var child = curTab.querySelectorAll("input, textarea, button");
     for (i = 0; i < child.length; i++) {
-        if (!disabled && (child[i].id === "inp_mail")) {
-            child[i].disabled = false;
-            controllaEmail(child[i].value);
-        }
-        if (disabled) {
-            child[i].value = child[i].type != "button" ? "" : child[i].value;
-            child[i].title = "Per abilitare inserire un prodotto nel carrello o validare i campi";
-        }
-        else child[i].title = "";
+        if (!disabled && (child[i].id === "inp_mail")) 
+            controllaEmail(child[i]);        
+        if (disabled) 
+            child[i].title = "Per abilitare inserire un prodotto nel carrello e validare gli altri campi";
+        
+        else
+            child[i].title = "";
     }
 }
 /*Funzioni Generiche*/
@@ -320,11 +319,8 @@ function controllaEmail(emailField) {
         var inp_richiedente = document.getElementById("inp_richiedente");
         var ris = !(/^([A-Za-z0-9_\-.])+@([A-Za-z0-9_\-.])+\.([A-Za-z]{2,4})$/).test(emailField.value)
         inp_richiedente.disabled = ris;
-        if (ris)
-            inp_richiedente.value = '';
-
-
-        controllaRichiedente(inp_richiedente)
+        inp_richiedente.title = ris ? "Per abilitare inserire un prodotto nel carrello e validare gli altri campi" : "";
+        controllaRichiedente(inp_richiedente);
         controllaMessage(document.getElementById("inp_message"));
     } catch (e) {
         alert("gestoreLoad " + e);
@@ -336,8 +332,7 @@ function controllaRichiedente(customerField) {
         var inp_message = document.getElementById("inp_message");
         var ris = !(customerField && customerField.value !== "");
         inp_message.disabled = ris;
-        if (ris)
-            inp_message.value = '';
+        inp_message.title = ris ? "Per abilitare inserire un prodotto nel carrello e validare gli altri campi" : "";
         controllaMessage(inp_message);
     } catch (e) {
         alert("gestoreLoad " + e);
@@ -348,6 +343,10 @@ function controllaMessage(noteField) {
     try {
         var btn_sendQuote = document.getElementById("btn_sendQuote");
         btn_sendQuote.disabled = !(noteField && noteField.value !== "");
+        if (btn_sendQuote.disabled)
+            btn_sendQuote.title = "Per abilitare inserire un prodotto nel carrello e validare gli altri campi"
+        else
+            btn_sendQuote.title = "";
     } catch (e) {
         alert("gestoreLoad " + e);
     }

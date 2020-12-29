@@ -27,7 +27,11 @@ function drop(ev) {
         var data = ev.dataTransfer.getData("dataDrag");
         if (!data || data === "") return;
         var elem = getLabelAndPrice(data);
-        ev.target.textContent = (ev.target.textContent !== "" ? "\n" : "") + "Vi inoltro la mia richiesta d'iscrizione per il Seguente Abbonamento:\n" + (elem.label + "  " + elem.prezzo + "€");
+        if (elem.tipo =="Abbonamento")
+            ev.target.textContent = "Vi inoltro la mia richiesta d'iscrizione per il Seguente Abbonamento:\n" + (elem.label + "  " + elem.prezzo + "€");
+        else
+            window.alert("Tipologia d'iscrizione non accatta non è un'abbonamento");
+            
     } catch (e) {
         window.alert(e.message);
         console.log(e.message, e.name);
@@ -64,13 +68,29 @@ function impostaColonna3(tdCol, elem, indx) {
 function addElement(elem, indx) {
 
     var newRow = document.createElement("tr");
+    newRow.className = "noMargin";
     var newColLab = document.createElement("td");
-    newColLab.className = "colw8";
+    newColLab.classList.add("colw6");
+    newColLab.classList.add("noMargin");
+    newColLab.classList.add("alignLefth");
+    var newColType = document.createElement("td");
+    newColType.classList.add("colw2");
+    newColType.classList.add("noMargin");
+    newColType.classList.add("alignLefth");
+    newColType.appendChild(document.createTextNode(elem.tipo));
     var newColPrice = document.createElement("td");
-    newColPrice.className = "colw2";
+    newColPrice.classList.add("colw2");
+    newColPrice.classList.add("noMargin");
+    newColPrice.classList.add("alignRight");
     newColLab.appendChild(document.createTextNode(elem.label));
-    newColPrice.appendChild(document.createTextNode(elem.prezzo));
-    newColPrice.draggable = "true"
+    if (elem.tipo == "Abbonamento") {
+        newColPrice.draggable = true;
+        newColPrice.classList.add("grab");
+    }
+    else {
+        newColPrice.draggable = false;
+        newColPrice.classList.add("no-drop");
+    }
     newColPrice.id = "price_" + elem.id;
     newColPrice.addEventListener('dragstart', function (event) {
         drag(event)
@@ -80,7 +100,9 @@ function addElement(elem, indx) {
     span.appendChild(document.createTextNode(elem.conRiserva));
     span.title = getMessage(elem.conRiserva);
     newColPrice.appendChild(span);
+    newColPrice.appendChild(document.createTextNode(elem.prezzo +".00 €"));
     newRow.appendChild(newColLab);
+    newRow.appendChild(newColType);
     newRow.appendChild(newColPrice);
     return newRow;
 }

@@ -30,16 +30,17 @@ const _listEvent = [
 ]
 
 const _quote = [
-    { id: 0, label: "Socio Ordinario(primo anno di iscrizione)", prezzo: 500, conRiserva: "" }
-    , { id: 1, label: "Socio Ordinario(secondo anno di iscrizione)", prezzo: 750, conRiserva: "" }
-    , { id: 2, label: "Socio Ordinario", prezzo: 1050, conRiserva: "" }
-    , { id: 3, label: "Socio Under 26", prezzo: 300, conRiserva: true, conRiserva: "**" }
-    , { id: 4, label: "Socio Under 32", prezzo: 420, conRiserva: true, conRiserva: "**" }
-    , { id: 5, label: "Socio Over 75", prezzo: 800, conRiserva: true, conRiserva: "**" }
-    , { id: 6, label: "Socio Over 80", prezzo: 480, conRiserva: true, conRiserva: "**" }
-    , { id: 7, label: "Socio Frequentatore Estivo", prezzo: 350, conRiserva: "*" }
-    , { id: 8, label: "Socio Frequentatore Estivo Under 16", prezzo: 200, conRiserva: "*" }
-    , { id: 9, label: "Quota Ospite (al giorno)", prezzo: 10, conRiserva: "*" }
+    { id: 0,  tipo:"Abbonamento", label: "Socio Ordinario (primo anno di iscrizione)", prezzo: 500, conRiserva: "" }
+    , { id: 1,tipo:"Abbonamento", label: "Socio Ordinario (secondo anno di iscrizione)", prezzo: 750, conRiserva: "" }
+    , { id: 2,tipo:"Abbonamento", label: "Socio Ordinario", prezzo: 1050, conRiserva: "" }
+    , { id: 3,tipo:"Abbonamento", label: "Socio Under 26", prezzo: 300, conRiserva: true, conRiserva: "**" }
+    , { id: 4,tipo:"Abbonamento", label: "Socio Under 32", prezzo: 420, conRiserva: true, conRiserva: "**" }
+    , { id: 5,tipo:"Abbonamento", label: "Socio Over 75", prezzo: 800, conRiserva: true, conRiserva: "**" }
+    , { id: 6,tipo:"Abbonamento", label: "Socio Over 80", prezzo: 480, conRiserva: true, conRiserva: "**" }
+    , { id: 7,tipo:"Abbonamento", label: "Socio Frequentatore Estivo", prezzo: 350, conRiserva: "*" }
+    , { id: 8,tipo:"Abbonamento", label: "Socio Frequentatore Estivo Under 16", prezzo: 200, conRiserva: "*" }
+    , { id: 9, tipo:"Giornaliero",label: "Ospite Giornaliero", prezzo: 10, conRiserva: "*" }
+    , { id: 10, tipo:"Giornaliero", label: "Ospite Giornaliero Under 16", prezzo: 8, conRiserva: "*" }
 ]
 
 const _riserva = [
@@ -114,9 +115,9 @@ const _prodotti = {
                 { Prodotto: "Umbrina" }
             ],
             descrizione: [
-                "Pesce pescato in giornata dai nostri pescatori locali",
-                "Eco Friendly! le barche che pescano questi pesci usano carburanti eco compatibili",
-                "Orate da 300 a 400 gr"
+                "Pesce pescato in giornata dai nostri pescatori locali.",
+                "Eco Friendly! le barche che pescano questi pesci usano carburanti eco compatibili.",
+                "Orate da 300 a 400 gr."
             ],
             Titolo: "filetto di pesce al limone"
         },
@@ -135,10 +136,10 @@ const _prodotti = {
                 { Prodotto: "Umbrina" }
             ],
             descrizione: [
-                "Pesce pescato in giornata dai nostri pescatori locali",
-                "Piatto servito con patate al forno e limone",
-                "Eco Friendly! le barche che pescano questi pesci usano carburanti eco compatibili",
-                "Pesci da 300 a 400 gr"
+                "Pesce pescato in giornata dai nostri pescatori locali.",
+                "Piatto servito con patate al forno e limone.",
+                "Eco Friendly! le barche che pescano questi pesci usano carburanti eco compatibili.",
+                "Pesci da 300 a 400 gr."
             ],
             Titolo: "pesce al forno"
         },
@@ -157,9 +158,9 @@ const _prodotti = {
                 { Prodotto: "Penne" }
             ],
             descrizione: [
-                "Pesce pescato in giornata dai nostri pescatori locali",
-                "Il primo sarà servito con un filo d'olio polpa d’orata e pomodorini freschi",
-                "Eco Friendly! le barche che pescano questi pesci usano carburanti eco compatibili"
+                "Pesce pescato in giornata dai nostri pescatori locali.",
+                "Il primo sarà servito con un filo d'olio polpa d’orata e pomodorini freschi.",
+                "Eco Friendly! le barche che pescano questi pesci usano carburanti eco compatibili."
             ],
             Titolo: "pasta all'orata"
         },
@@ -178,9 +179,9 @@ const _prodotti = {
                 { Prodotto: "Umbrina" }
             ],
             descrizione: [
-                "Pesce pescato in giornata dai nostri pescatori locali",
-                "Il piatto sarà servito con un filo d'olio polpa d'del pesce scelto contornato da piselli e pomodori freschi",
-                "Eco Friendly! le barche che pescano questi pesci usano carburanti eco compatibili"
+                "Pesce pescato in giornata dai nostri pescatori locali.",
+                "Il piatto sarà servito con un filo d'olio polpa d'del pesce scelto contornato da piselli e pomodori freschi.",
+                "Eco Friendly! le barche che pescano questi pesci usano carburanti eco compatibili."
             ],
             Titolo: "pesce piselli e pomodorini"
         },
@@ -200,9 +201,9 @@ const _prodotti = {
                 , { Prodotto: "Bietola" }
             ],
             descrizione: [
-                "Il pollo sarà servito ripieno d'una verdura a scelta tra quelle disponibili al momento",
-                "Il piatto sarà servito con una porzione abbondante di fagioli",
-                "Eco Friendly! le coltivazioni da cui provengono le verdure sono prive di pesticidi"
+                "Il pollo sarà servito ripieno d'una verdura a scelta tra quelle disponibili al momento.",
+                "Il piatto sarà servito con una porzione abbondante di fagioli.",
+                "Eco Friendly! le coltivazioni da cui provengono le verdure sono prive di pesticidi."
             ]
             ,
             Titolo: "pollo e fagioli"
@@ -223,10 +224,10 @@ const _prodotti = {
                 , { Prodotto: "Insalata radicchio" }
             ],
             descrizione: [
-                "Prodotto semplice della tradizione Livornese",
-                "Le uova vengono portate fresche ogni mattina così come i pomodori",
-                "Il prodotto sarò contornato da una porzione di pane abbrustolito e abbondanti verdure",
-                "Ottimo dopo una dura giornata in mare"
+                "Prodotto semplice della tradizione Livornese.",
+                "Le uova vengono portate fresche ogni mattina così come i pomodori.",
+                "Il prodotto sarò contornato da una porzione di pane abbrustolito e abbondanti verdure.",
+                "Ottimo dopo una dura giornata in mare."
             ]
             ,
             Titolo: "uova al pomodoro"
@@ -247,9 +248,9 @@ const _prodotti = {
                 , { Prodotto: "Cannelloni di pesce" }
             ],
             descrizione: [
-                "Per i più golosi che non si fanno problemi per la linea",
-                "I cannelloni sono fatti dal pastificio Pasta Matta",
-                "Prodotti e cotti in giornata"
+                "Per i più golosi che non si fanno problemi per la linea.",
+                "I cannelloni sono fatti dal pastificio Pasta Matta.",
+                "Prodotti e cotti in giornata."
             ]
             ,
             Titolo: "cannelloni al forno"
@@ -270,9 +271,9 @@ const _prodotti = {
                 , { Prodotto: "Carote e olive" }
             ],
             descrizione: [
-                "Prodotto semplice della tradizione Livornese",
-                "Cinghiale cacciato nelle nostre colline",
-                "La carne è rimasta a marinare per 7giorni in vino rosso ed aceto con odori freschi"
+                "Prodotto semplice della tradizione Livornese.",
+                "Cinghiale cacciato nelle nostre colline.",
+                "La carne è rimasta a marinare per 7giorni in vino rosso ed aceto con odori freschi."
             ]
             ,
             Titolo: "cinghiale alla cacciatora"

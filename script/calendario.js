@@ -12,6 +12,8 @@ window.onload = function () {
         radio_Barca.checked = true;
     else if (ParamsStr !== undefined && ParamsStr === "pesca")
         radio_Pesca.checked = true;
+    else
+        radio_Annulla.checked = true;
     start(ParamsStr);
 };
 
@@ -163,6 +165,7 @@ function chekAndSetEvent(elem, year, month, day) {
             || (_MemCalendar.filterBy === "" && (currDay >= event.datainizio && currDay <= event.datafine))) {
             elem.classList.add("evento");
             elem.id = "event_" + event.id.toString() + "_" + currDay.toLocaleDateString('en-US', { year: 'numeric', month: '2-digit', day: '2-digit' });
+            elem.title = event.titolo; 
             elem.addEventListener("mouseover", () => { mouseOver(event, event.id) });
             elem.addEventListener("mouseout", () => { mouseOut(event, event.id) });
             elem.addEventListener("click", () => { inviaRichiestaEvento(event.descrizione, event.titolo, event.datainizio, event.datafine) });
@@ -249,6 +252,7 @@ function setDescription(eventId) {
         image.src = "./resource/img/eventi/" + curEv.tipologia + ".jpg";
         image.alt = curEv.tipologia;
         image.title = curEv.tipologia;
+        image.title = curEv.tipologia === "barca" ? "Gara di pesca in barca" : "Corso di pesca"; 
     }
     else {
         var divImmagine = document.getElementById("divImmagine");
@@ -256,7 +260,7 @@ function setDescription(eventId) {
         img.id = "imageEventImmagine";
         img.src = "./resource/img/eventi/" + curEv.tipologia + ".jpg";
         img.alt = curEv.tipologia;
-        img.title = curEv.tipologia;
+        img.title = curEv.tipologia === "barca" ? "Gara di pesca in barca" : "Corso di pesca"; 
         divImmagine.appendChild(img);
 
     }
