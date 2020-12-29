@@ -42,6 +42,7 @@ function madeRegione(area) {
     var img = document.createElement("img");
     var a = document.createElement("a");
     img.alt = area.zona;
+    img.title = area.zona;
     img.addEventListener("click", () => { return GenerateAddressList(event, area.zona); });
     img.addEventListener("mouseover", () => { GenerateAddressList(event, area.zona) });
     img.src = "./resource/icone/icona-" + area.zona.toLowerCase() + ".png";

@@ -2,12 +2,10 @@
     color: #035387 !important;
     text-transform: uppercase;
     font-weight: bold;
-    text-align: left;
 }
 
 .listaProvince {
     margin-left: 25px;
-    text-align: left;
 }
 
 .Provincia {
@@ -21,7 +19,6 @@
 
 .listaPartner {
     margin-left: 25px;
-    text-align: left;
     border-bottom: 2px solid #035387;
     margin-top: 15px;
     margin-bottom: 5px;

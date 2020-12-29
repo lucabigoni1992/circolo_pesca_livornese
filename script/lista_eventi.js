@@ -20,6 +20,7 @@ function madeEvent(area) {
     var a = document.createElement("a");
     var p = document.createElement("p");
     img.alt = area.tipologia;
+    img.title = area.tipologia;
     img.src = "./resource/icone/icona-" + area.tipologia + ".svg";
     li.appendChild(img);
     a.href = "calendario_eventi.html?evento=" + area.tipologia;

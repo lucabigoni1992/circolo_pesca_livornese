@@ -2,7 +2,7 @@
 
 body {
     font-size: 15px;
-    font-family: 'Times New Roman';
+    font-family: "Times New Roman", Times, serif;
     padding: 0;
     margin: 0;
     background: #e5f7ff;
@@ -53,9 +53,6 @@ body {
     margin-bottom: 10px;
 }
 
-    .base p {
-        text-align: left;
-    }
 
 .didascalia {
     font-size: 18px;
@@ -187,10 +184,12 @@ section {
         font-size: 75px;
         padding: unset;
         color: #035387;
-        text-align: center;
         margin: auto;
         padding-top: 15px;
         text-shadow: 1px 1px 0px #000000;
+    }
+    .h1Homepage {
+        text-align:center;
     }
 
     #showcase h2 {
@@ -241,7 +240,6 @@ section {
 /* Sidebar */
 aside#sidebar {
     float: right;
-    text-align: center;
     min-height: 400px;
     width: 30%;
 }
@@ -298,7 +296,6 @@ footer {
     aside.base,
     div#main-col {
         float: left;
-        text-align: center;
         width: 100%;
     }
 
@@ -320,7 +317,6 @@ footer {
     aside#sidebar,
     aside#sidebarNoMargin {
         float: none;
-        text-align: center;
         width: 100%;
         padding: unset;
         margin: unset;
@@ -436,8 +432,6 @@ select:active {
 
 .fill {
     display: flex;
-    justify-content: center;
-    align-items: center;
     overflow: hidden;
     padding-top: 5px
 }
@@ -466,8 +460,6 @@ select:active {
 
 .fillheigth {
     display: flex;
-    justify-content: center;
-    align-items: center;
     overflow: hidden
 }
 

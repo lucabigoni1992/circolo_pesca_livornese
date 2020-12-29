@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <LINK REL="ICON" href="./resource/icone/logo.ico">
-    <title>Circolo Nautico Livorno | Eventi</title>
+    <title>Circolo pesca Livorno | Eventi</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="./css/style.css">
     <link rel="stylesheet" type="text/css" media="screen" href="./css/table.css">
@@ -19,7 +19,7 @@
         <div class="container">
             <div id="branding">
                 <a href="index.html">
-                    <img alt="Circolo pesca Livorno" class="genericLogo " src="./resource/logo.png">
+                    <img title="Logo" alt="Circolo pesca Livorno" class="genericLogo " src="./resource/logo.png">
                 </a>
             </div>
             <nav>
@@ -38,50 +38,52 @@
     <section id="showcase">
         <h1 class="classeTitolo">Eventi</h1>
         <div class="container">
-            <div id="main-col">
-                <div class="base">
-                    <p>
-                        Ecco l'elenco dei nosti prossimi Eventi in programma.
-                    </p>
-                    <p>
-                        Cliccndo su un'evento potrete inviarci un'email per poter partecipare all'evento.
-                    </p>
-                    <h2>Calendario Eventi</h2>
-                    <div class="boxFilter">
-                        <div>
-                            <input type="radio" id="radio_Barca" onclick="start('barca')" name="filter" value="radio_Barca">
-                            <label for="radio_Barca">Gare in barca</label>
-                        </div>
+            <div id="main-col" class="base">
+                <p>
+                    Ecco l'elenco dei nosti prossimi Eventi in programma.
+                </p>
+                <p>
+                    Cliccndo su un'evento potrete inviarci un'email per poter partecipare all'evento.
+                </p>
+                <h2>Calendario Eventi</h2>
+                <div class="boxFilter">
+                    <div>
+                        <input type="radio" id="radio_Annulla" onclick="start('')" name="filter" value="radio_Annulla" checked>
+                        <label for="radio_Annulla">Anulla filtro</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="radio_Barca" onclick="start('barca')" name="filter" value="radio_Barca">
+                        <label for="radio_Barca">Gare in barca</label>
+                    </div>
 
-                        <div>
-                            <input type="radio" id="radio_Pesca" onclick="start('pesca')" name="filter" value="radio_Pesca">
-                            <label for="radio_Pesca">Corsi di pesca</label>
-                        </div>
+                    <div>
+                        <input type="radio" id="radio_Pesca" onclick="start('pesca')" name="filter" value="radio_Pesca">
+                        <label for="radio_Pesca">Corsi di pesca</label>
                     </div>
-                    <div class="month">
-                        <ul>
-                            <li class="prev">
-                                <input type="button" id="prev" onclick="Month(-1)" value="&#10094;" />
-                            </li>
-                            <li class="next">
-                                <input type="button" id="next" onclick="Month(+1)" value="&#10095;" />
-                            </li>
-                            <li id="Month">
-                            </li>
-                        </ul>
-                    </div>
-                    <ul class="weekdays">
-                        <li>Lu</li>
-                        <li>Ma</li>
-                        <li>Me</li>
-                        <li>Gi</li>
-                        <li>Ve</li>
-                        <li>Sa</li>
-                        <li>Do</li>
-                    </ul>
-                    <ul id="Days" class="days">
+                </div>
+                <div class="month">
+                    <ul>
+                        <li class="prev">
+                            <input type="button" id="prev" onclick="Month(-1)" value="&#10094;" />
+                        </li>
+                        <li class="next">
+                            <input type="button" id="next" onclick="Month(+1)" value="&#10095;" />
+                        </li>
+                        <li id="Month">
+                        </li>
                     </ul>
                 </div>
+                <ul class="weekdays">
+                    <li>Lu</li>
+                    <li>Ma</li>
+                    <li>Me</li>
+                    <li>Gi</li>
+                    <li>Ve</li>
+                    <li>Sa</li>
+                    <li>Do</li>
+                </ul>
+                <ul id="Days" class="days">
+                </ul>
             </div>
             <aside id="sidebar">
                 <div class="base smalldesc">
@@ -98,7 +100,7 @@
     </section>
     <footer>
         <p class="copyright">&copy; Copyright 2020 Luca Bigoni</p>
-        <p class="circolo">Circolo Nautico Livorno</p>
+        <p class="circolo">Circolo pesca Livorno</p>
     </footer>
 </body>
 </html>

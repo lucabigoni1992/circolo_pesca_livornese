@@ -175,7 +175,8 @@ ul {
 
 
 .boxFilter {
-     margin-bottom: 20px ;
+    margin-bottom: 20px;
+    display: inline-flex;
 }
 
 

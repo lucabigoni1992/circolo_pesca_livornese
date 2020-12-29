@@ -92,7 +92,9 @@ function impostaColonna1(tdCol, elem, indx) {
     h4.appendChild(document.createTextNode(elem.Titolo.length > 0 ? (elem.Titolo[0].toUpperCase() + elem.Titolo.slice(1)) : ""));
     var img = document.createElement("img");
     img.id = "img" + indx.toString();
-    img.src = "./resource/img/pietanze/" + elem.Titolo.toString().toLowerCase().replaceAll(" ", "_") + "Min.jpg";
+    img.title = elem.Titolo.toString().toLowerCase() ;
+    img.alt = img.title;
+    img.src = "./resource/img/pietanze/" + img.title.replaceAll(" ", "_") +"Min.jpg" ;
     img.setAttribute("alt", elem.Titolo);
     img.classList.add("imageGallery");
     if (!elem.disponibile) img.className = "imgOffuscataNonDisponibile";
@@ -286,7 +288,10 @@ function openGallery(e) {
         var overlay = document.querySelector('.overlay');
         var overlayImage = document.getElementById('gallery');
         overlay.classList.add('open');
-
+        var split = src.split('/');
+        var name = split[split.length - 1].replaceAll('_',' ');
+        overlayImage.title = name;
+        overlayImage.alt = name;
         src = src + "1.jpg";
         overlayImage.src = src;
 

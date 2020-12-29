@@ -248,6 +248,7 @@ function setDescription(eventId) {
         if (image.alt === curEv.tipologia) return;
         image.src = "./resource/img/eventi/" + curEv.tipologia + ".jpg";
         image.alt = curEv.tipologia;
+        image.title = curEv.tipologia;
     }
     else {
         var divImmagine = document.getElementById("divImmagine");
@@ -255,6 +256,7 @@ function setDescription(eventId) {
         img.id = "imageEventImmagine";
         img.src = "./resource/img/eventi/" + curEv.tipologia + ".jpg";
         img.alt = curEv.tipologia;
+        img.title = curEv.tipologia;
         divImmagine.appendChild(img);
 
     }
