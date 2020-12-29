@@ -233,7 +233,9 @@ input[type="radio"] {
     ul * {
         padding: unset;
     }
-
+    .base ul span {
+    font-size:12px
+    }
     .base span {
         font: italic small-caps bold 8px Georgia, serif;
     }

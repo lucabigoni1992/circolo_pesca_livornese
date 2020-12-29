@@ -32,7 +32,7 @@ const _listEvent = [
 const _quote = [
     { id: 0,  tipo:"Abbonamento", label: "Socio Ordinario (primo anno di iscrizione)", prezzo: 500, conRiserva: "" }
     , { id: 1,tipo:"Abbonamento", label: "Socio Ordinario (secondo anno di iscrizione)", prezzo: 750, conRiserva: "" }
-    , { id: 2,tipo:"Abbonamento", label: "Socio Ordinario", prezzo: 1050, conRiserva: "" }
+    , { id: 2,tipo:"Abbonamento", label: "Socio Ordinario", prezzo: 900, conRiserva: "" }
     , { id: 3,tipo:"Abbonamento", label: "Socio Under 26", prezzo: 300, conRiserva: true, conRiserva: "**" }
     , { id: 4,tipo:"Abbonamento", label: "Socio Under 32", prezzo: 420, conRiserva: true, conRiserva: "**" }
     , { id: 5,tipo:"Abbonamento", label: "Socio Over 75", prezzo: 800, conRiserva: true, conRiserva: "**" }

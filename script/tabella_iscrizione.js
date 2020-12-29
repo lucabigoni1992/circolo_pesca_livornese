@@ -77,12 +77,12 @@ function addElement(elem, indx) {
     var newColType = document.createElement("td");
     newColType.classList.add("colw2");
     newColType.classList.add("noMargin");
-    newColType.classList.add("alignLefth");
+ //   newColType.classList.add("alignLefth");
     newColType.appendChild(document.createTextNode(elem.tipo));
     var newColPrice = document.createElement("td");
     newColPrice.classList.add("colw2");
     newColPrice.classList.add("noMargin");
-    newColPrice.classList.add("alignRight");
+  //  newColPrice.classList.add("alignRight");
     newColLab.appendChild(document.createTextNode(elem.label));
     if (elem.tipo == "Abbonamento") {
         newColPrice.draggable = true;
@@ -100,8 +100,8 @@ function addElement(elem, indx) {
     span.className = "required";
     span.appendChild(document.createTextNode(elem.conRiserva));
     span.title = getMessage(elem.conRiserva);
+    newColPrice.appendChild(document.createTextNode(elem.prezzo + ".00"));
     newColPrice.appendChild(span);
-    newColPrice.appendChild(document.createTextNode(elem.prezzo + ".00 €"));
     newRow.appendChild(newColLab);
     newRow.appendChild(newColType);
     newRow.appendChild(newColPrice);

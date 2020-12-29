@@ -43,6 +43,7 @@
         width: 100% !important;
         display: list-item;
     }
+
     #showcase img {
         list-style-type: none;
         float: none;
@@ -66,7 +67,6 @@
 
 #showcase li img {
     float: left;
-    padding-top: 10px;
     margin: 0 15px 0 0;
     height: 50px;
 }
@@ -80,15 +80,15 @@
     background: #6a9dbfc9;
     cursor: pointer;
 }
+
 @media(max-width: 500px) {
-    #showcase ul li {
-        display: unset;
+    #mapItalia {
+        height: 300px
     }
 
-    h3 {
-        font-size: 15px;
-        margin-right: unset;
-    }
+        #showcase ul li h3 {
+            font-size: 15px;
+        }
 
     #showcase h2 {
         font-size: 19px;
@@ -100,13 +100,16 @@
 }
 
 @media(max-width: 350px) {
-    #showcase ul li {
-        display: unset;
+    #mapItalia {
+        height: 200px
     }
+        #showcase ul li h3 {
+            font-size: 13px;
+            margin-left: 45px;
+        }
 
-    h3 {
-        font-size: 13px;
-        margin-right: unset;
+    #showcase li img {
+        height: 35px;
     }
 
     #showcase h2 {

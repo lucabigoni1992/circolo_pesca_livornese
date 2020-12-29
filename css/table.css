@@ -76,7 +76,6 @@ table.TabellaProdotti {
         font-size: 15px;
         font-weight: bold;
         color: black;
-        height: 20px;
         border: none;
     }
 
@@ -190,7 +189,7 @@ table.TabellaProdotti th {
 
 #scrollTab tbody {
     overflow: auto;
-    height: 390px;
+    max-height: 400px;
 }
 
 #noScrollTab tbody {
@@ -210,20 +209,21 @@ table.TabellaProdotti th {
     padding-top: 5px;
     border-bottom: 1px solid #035387;
 }
+
 .alignLefth {
     text-align: left
 }
+
 .alignRight {
     text-align: right
 }
+
 .noMargin {
     border: unset !important;
-    margin-right: 5px ;
-    margin-left:5px
+    margin-right: 5px;
+    margin-left: 5px
 }
-#noScrollTab {
-    width: 600px ;
-}
+
 /* Media Queries serve per adattare lo scenario mostrato a schermi più piccoli di 768 px*/
 @media(max-width: 1400px) {
     #scrollTab {
@@ -231,30 +231,100 @@ table.TabellaProdotti th {
         text-align: center;
         width: 100%;
     }
-    .floatRight{
-        float:unset;
+
+    .floatRight {
+        float: unset;
     }
 }
-@media(max-width: 800px) {
-    #noScrollTab {
-        width: 450px;
+
+@media(max-width: 1500px) {
+    #scrollTab *,
+    #noScrollTab * {
+        font-size: 16px
+    }
+
+    table.TabellaProdotti tbody img { /*immagine  nella tabella e*/
+        width: 100px;
+    }
+
+    table.TabellaProdotti tfoot #links input {
+        width: 25px;
+        height: 20px
+    }
+}
+@media(max-width: 1000px) {
+    #scrollTab *,
+    #noScrollTab * {
         font-size: 14px
     }
+
+
 }
+@media(max-width: 800px) {
+    #scrollTab *,
+    #noScrollTab *{
+        font-size: 13px
+    }
+
+    table.TabellaProdotti tbody img { /*immagine  nella tabella e*/
+        width: 90px;
+    }
+
+}
+
 @media(max-width: 600px) {
-    #noScrollTab {
-        width: 400px;
+    #scrollTab *,
+    #noScrollTab * {
         font-size: 12px
     }
+    table.TabellaProdotti tbody img { /*immagine  nella tabella e*/
+        width: 75px;
+    }
+    table.TabellaProdotti tfoot #links input {
+        width: 15px;
+        height: 12px
+    }
 }
 
-    @media(max-width: 500px) {
-        #noScrollTab {
-            width:300px;
-            font-size: 10px
-        }
-
-        #showcase ul li {
-            display: list-item;
-        }
+@media(max-width: 500px) {
+    #noScrollTab * {
+        font-size: 10px
     }
+    #scrollTab * {
+        font-size: 10px
+    }
+
+    #showcase ul li {
+        display: list-item;
+    }
+    table.TabellaProdotti tbody img { /*immagine  nella tabella e*/
+        width: 50px;
+    }
+    table.TabellaProdotti tfoot #links input {
+        width: 12px;
+        height: 10px; padding: unset;
+    }
+}
+@media(max-width: 400px) {
+    #noScrollTab * {
+        font-size: 7px;
+        padding: unset;
+    }
+    #scrollTab *{
+        font-size: 7px;
+        padding: unset;
+    }
+    table.TabellaProdotti tbody img { /*immagine  nella tabella e*/
+        width: 35px;
+    }
+}
+@media(max-width: 300px) {
+    #scrollTab *,
+    #noScrollTab * {
+        font-size: 5px
+    }
+    table.TabellaProdotti tfoot #links input {
+        width: 10px;
+        height: 8px
+    }
+}

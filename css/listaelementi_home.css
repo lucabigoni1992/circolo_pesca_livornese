@@ -52,7 +52,7 @@
 
         #showcase ul li {
             width: 100%;
-            padding: 15px;
+            padding: 5px 0px;
         }
 
             #showcase ul li img {
@@ -70,8 +70,6 @@
 }
 
 @media(max-width: 500px) {
-    #showcase ul li {display:unset;
-    }
         #showcase ul li h3 {
             font-size: 15px;
             margin-right: unset;
