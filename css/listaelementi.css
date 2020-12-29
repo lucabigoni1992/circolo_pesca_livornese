@@ -32,6 +32,9 @@
 }
 
 @media(max-width: 1000px) {
+    #mapItalia {
+        display: unset!important
+    }
     .Eventi {
         list-style-type: none;
         width: 100%;

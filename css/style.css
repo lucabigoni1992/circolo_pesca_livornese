@@ -19,6 +19,8 @@ ul li {
     float: left;
     width: 100%;
     min-width: 400px;
+    text-align: center;
+    display: block;
 }
 
     .PartnerLeftTran img {
