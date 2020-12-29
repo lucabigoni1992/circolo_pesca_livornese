@@ -486,6 +486,10 @@ select:active {
     margin-top: 5px;
 }
 
+.floatRight {
+    float: right;
+}
+
 
 .grab {
     cursor: grab;
