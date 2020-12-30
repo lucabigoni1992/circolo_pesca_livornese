@@ -1,335 +1,309 @@
-/*modifico la select option*/
-
 body {
-    font-size: 15px;
-    font-family: Arial, Helvetica, sans-serif;
-    padding: 0;
-    margin: 0;
     background: #e9f4f9;
     background-attachment: fixed;
+    font: 15px Arial,Helvetica,sans-serif;
+    margin: 0;
+    padding: 0
 }
 
 ul li {
     font-size: 18px;
-    padding-top: 3px;
+    padding-top: 3px
 }
 
-.PartnerLeftTran {
+.partnerlefttran {
     background-color: transparent;
+    display: block;
     float: left;
-    width: 100%;
     min-width: 400px;
     text-align: center;
-    display: block;
+    width: 100%
 }
 
-    .PartnerLeftTran img {
-        float: right;
+    .partnerlefttran img {
+        float: right
     }
 
-    .PartnerLeftTran ul {
-        width: 50% !important;
+    .partnerlefttran ul {
         float: left;
+        width: 50% !important
     }
 
-
-.baseInvisible {
-    margin-right: 10px;
-    margin-left: 10px;
+.baseinvisible {
     background-color: transparent;
     border: none;
     box-shadow: none;
+    margin-left: 10px;
+    margin-right: 10px
 }
 
-    .baseInvisible ul li div {
-        border-radius: 5px 5px;
-        padding: 15px;
-        min-height: 160px;
+    .baseinvisible ul li div {
         background: #87ceebad;
-        margin-right: 10px;
-        margin-left: 10px;
-        color: black;
         border: 1px solid #6a6a6a;
+        border-radius: 5px 5px;
+        color: black;
+        margin-left: 10px;
+        margin-right: 10px;
+        min-height: 160px;
+        padding: 15px
     }
 
 .base {
     border-radius: 5px 5px;
-    padding: 15px;
-    margin-right: 10px;
-    margin-left: 10px;
     color: black;
     margin-bottom: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 15px
 }
-
 
 .didascalia {
     font-size: 18px;
-    font-style: italic;
+    font-style: italic
 }
 
-.didascaliaTitolo {
+.didascaliatitolo {
     font-size: 25px;
-    font-weight: bold;
+    font-weight: bold
 }
 
 .base ul span {
-    font-weight: 900;
     font-size: 18px;
     font-style: unset;
+    font-weight: 900
 }
 
-
-textarea,
-input[type=text],
-input[type='email'],
-input[type='tel'] {
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
+textarea, input[type=text], input[type='email'], input[type='tel'] {
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
+    display: inline-block;
+    margin: 8px 0;
+    padding: 12px 20px;
+    width: 100%
 }
 
 input[type='number'], select {
-    margin-left: 5px;
+    margin-left: 5px
 }
 
 input[type='number'] {
-    width: 30px;
+    width: 30px
 }
 
 textarea {
-    height: 100px;
+    height: 100px
 }
 
-input[type='button'],
-input[type='submit'] {
-    height: 38px;
+input[type='button'], input[type='submit'] {
     background: #035387;
     border: 0;
-    padding-left: 20px;
-    padding-right: 20px;
-    color: black;
     border-radius: 10px 10px;
+    color: black;
+    height: 38px;
+    padding-left: 20px;
+    padding-right: 20px
 }
 
     input[type='button']:hover {
         background-color: seagreen;
         color: black;
         padding-left: 20px;
-        padding-right: 20px;
+        padding-right: 20px
     }
 
     input[type='button']:disabled {
-        background-color: #59727c;
+        background-color: #59727c
     }
-/* Header **/
+
 header {
     background: lightblue;
+    border-bottom: #035387 3px solid;
     color: black;
     min-height: 70px;
-    border-bottom: #035387 3px solid;
-    vertical-align: middle;
+    vertical-align: middle
 }
 
     header .container {
-        width: 80%;
         margin: auto;
         overflow: hidden;
+        width: 80%
     }
-
 
     header a {
         color: black;
-        text-decoration: none;
-        text-transform: uppercase;
         font-size: 16px;
+        text-decoration: none;
+        text-transform: uppercase
     }
 
     header ul {
-        margin: 0;
-        padding-left: 0px;
-        height: 100%;
         display: table;
-        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding-left: 0;
+        width: 100%
     }
 
         header ul li {
-            float: left;
-            padding: 0 10px 0 10px;
-            list-style: none;
             color: black;
+            float: left;
+            list-style: none;
+            padding: 0 10px
         }
 
     header #branding {
-        float: left;
+        float: left
     }
 
         header #branding h1 {
-            margin: 0;
+            margin: 0
         }
 
     header nav {
-        right: 50%;
         float: right;
         margin-top: 35px;
+        right: 50%
     }
 
     header .highlight, header .current a {
         color: #035387;
-        font-weight: bold;
+        font-weight: bold
     }
 
     header a:hover {
-        color: #75827a;
+        color: #75827a
     }
 
 section {
     min-height: 400px;
-    padding-bottom: 60PX;
+    padding-bottom: 60PX
 }
 
-/* Showcase */
 #showcase {
-    width: 80%;
-    margin: auto;
-    overflow: hidden;
-    min-height: 400px;
     color: black;
+    margin: auto;
+    min-height: 400px;
+    overflow: hidden;
+    width: 80%
 }
 
     #showcase h1 {
-        font-size: 75px;
-        padding: unset;
         color: #035387;
+        font-size: 75px;
         margin: auto;
-        padding-top: 15px;
-        text-shadow: 1px 1px 0px #000000;
+        padding: unset;
+        text-shadow: 1px 1px 0 #000000
     }
 
-.h1Homepage {
-    text-align: center;
+.h1homepage {
+    text-align: center
 }
 
 #showcase h2 {
-    font-size: 35px;
-    padding: unset;
     color: #035387;
+    font-size: 35px;
     margin-bottom: 20PX;
-    margin-top: 0px;
+    margin-top: 0;
+    padding: unset
 }
 
-
-
 #showcase h3 {
-    /* margin-top: 100px; */
+    background-color: #f5fffa73;
+    border-bottom: 1px solid #035387;
+    border-left: 7px solid #035387;
+    box-shadow: 5px 5px 10px 0 #000000;
     color: black;
     font-size: 25px;
     margin-bottom: 6px;
     margin-left: 25px;
     margin-right: 25px;
     padding: 0 0 4px 6px;
-    border-left: 7px solid #035387;
-    border-bottom: 1px solid #035387;
-    text-align: center;
-    background-color: #f5fffa73;
-    box-shadow: 5px 5px 10px 0px #000000;
+    text-align: center
 }
 
 #showcase ul li h3 {
-    /* margin-top: 100px; */
+    background-color: #f5fffa73;
+    border-bottom: 1px solid #035387;
+    border-left: 7px solid #035387;
+    box-shadow: 5px 5px 10px 0 #000000;
     color: black;
     font-size: 25px;
     margin-bottom: 6px;
     margin-left: 75px;
     margin-right: 25px;
     padding: 0 0 4px 6px;
-    border-left: 7px solid #035387;
-    border-bottom: 1px solid #035387;
-    text-align: center;
-    background-color: #f5fffa73;
-    box-shadow: 5px 5px 10px 0px #000000;
+    text-align: center
 }
 
 #showcase p {
-    font-size: 20px;
+    font-size: 20px
 }
 
-
-/* Sidebar */
 aside#sidebar {
     float: right;
     min-height: 400px;
-    width: 30%;
+    width: 30%
 }
 
-
     aside#sidebar .quote input, aside#sidebar .quote textarea {
-        width: 90%;
         padding: 5px;
+        width: 90%
     }
-
 
 #main-col {
     float: left;
-    width: 60%;
-    padding: unset;
     margin: unset;
+    padding: unset;
+    width: 60%
 }
 
-
 footer {
-    bottom: 0px;
-    color: black;
-    border-top: 1px solid #035387;
     background-color: lightblue;
-    width: 100%;
+    border-top: 1px solid #035387;
+    bottom: 0;
+    color: black;
     min-height: 70px;
     position: fixed;
+    width: 100%
 }
 
     footer .copyright {
-        padding-left: 15px;
         float: left;
+        padding-left: 15px
     }
 
     footer .circolo {
-        padding-right: 15px;
         float: right;
+        padding-right: 15px
     }
 
 select {
-    font: 400 12px/1.3 sans-serif;
-    color: #000000;
-    width: 80px;
-    border: 1px solid dimgray;
-    line-height: 1;
-    outline: 0;
-    padding: 0.65em 2.5em 0.55em 0.75em;
-    border-radius: var(--radius);
     background-color: #87ceeb69;
-    background-image: linear-gradient(dimgray, dimgray), linear-gradient(-135deg, transparent 50%, #cccccc 50%), linear-gradient(-225deg, transparent 50%, #cccccc 50%), linear-gradient(#cccccc 42%, #82898d 42%);
-    background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
-    background-size: 1px 100%, 20px 22px, 20px 22px, 20px 100%;
-    background-position: right 20px center, right bottom, right bottom, right bottom;
+    background-image: linear-gradient(dimgray,dimgray),linear-gradient(-135deg,transparent 50%,#cccccc 50%),linear-gradient(-225deg,transparent 50%,#cccccc 50%),linear-gradient(#cccccc 42%,#82898d 42%);
+    background-position: right 20px center,right bottom,right bottom,right bottom;
+    background-repeat: no-repeat,no-repeat,no-repeat,no-repeat;
+    background-size: 1px 100%,20px 22px,20px 22px,20px 100%;
+    border: 1px solid dimgray;
+    border-radius: var(--radius);
+    color: #000000;
+    font: 400 12px/1.3 sans-serif;
+    outline: 0;
+    padding: .65em 2.5em .55em .75em;
+    width: 80px
 }
 
     select:hover {
-        background-image: linear-gradient(#82898d, #82898d), linear-gradient(-135deg, transparent 50%, #82898d 50%), linear-gradient(-225deg, transparent 50%, #82898d 50%), linear-gradient(#82898d 42%, #cccccc 42%);
+        background-image: linear-gradient(#82898d,#82898d),linear-gradient(-135deg,transparent 50%,#82898d 50%),linear-gradient(-225deg,transparent 50%,#82898d 50%),linear-gradient(#82898d 42%,#cccccc 42%)
     }
 
-#linksLf select {
-    width: unset;
+#linkslf select {
+    width: unset
 }
 
 select:active {
-    border-color: #87ceeb69;
+    border-color: #87ceeb69
 }
-
-
-
 
 .fill {
     display: flex;
@@ -338,86 +312,61 @@ select:active {
 }
 
     .fill img {
-        border: 2px solid dimgray;
+        border: 2px solid dimgray
     }
-
 
 @media(max-width: 1800px) {
     .fill img {
         height: 360px
     }
 }
-/* Media Queries serve per adattare lo scenario mostrato a schermi più piccoli di 768 px*/
+
 @media(max-width: 1600px) {
-    .baseInvisible ul li div {
-        padding: 0px 15px 0px 15px;
+    .baseinvisible ul li div {
+        padding: 0 15px
     }
 }
-/* Media Queries serve per adattare lo scenario mostrato a schermi più piccoli di 768 px*/
-@media(max-width: 1450px) {
 
+@media(max-width: 1450px) {
     #showcase h1 {
         font-size: 55px;
+        margin-top: 40px
     }
 
-    aside#sidebarNoMargin,
-    aside.base,
-    div#main-col {
+    aside#sidebarnomargin, aside.base, div#main-col {
         float: left;
-        width: 100%;
+        width: 100%
     }
 
     footer {
-        position: relative;
+        position: relative
     }
 
-    aside#sidebarNoMargin,
-    aside.base,
-    div#main-col,
-    header #branding,
-    header nav,
-    header nav li,
-    #newsletter h1,
-    #newsletter form,
-    aside.base,
-    #boxes .box,
-    article#main-col,
-    aside#sidebar,
-    aside#sidebarNoMargin {
+    aside#sidebarnomargin, aside.base, div#main-col, header #branding, header nav, header nav li, #newsletter h1, #newsletter form, aside.base, #boxes .box, article#main-col, aside#sidebar, aside#sidebarnomargin {
         float: none;
-        width: 100%;
-        padding: unset;
         margin: unset;
+        padding: unset;
+        width: 100%
     }
-
 
     header {
-        padding-bottom: 20px;
-    }
-
-    #showcase h1 {
-        margin-top: 40px;
+        padding-bottom: 20px
     }
 
     #newsletter button, .quote button {
         display: block;
-        width: 100%;
+        width: 100%
     }
 
     section {
-        padding-bottom: 100PX;
+        padding-bottom: 100PX
     }
 
-    footer {
-        position: relative;
-    }
-
-
-    .PartnerLeftTran {
+    .partnerlefttran {
         background-color: transparent;
         float: left;
-        width: 100%;
         min-width: unset;
+        width: 100%
     }
 }
 
@@ -425,7 +374,6 @@ select:active {
     .fill img {
         height: 250px
     }
-
 
     * {
         font-size: 17px
@@ -435,7 +383,6 @@ select:active {
         width: 75px
     }
 }
-
 
 @media(max-width: 600px) {
     .fill img {
@@ -450,37 +397,32 @@ select:active {
         font-size: 15px
     }
 
-    .baseInvisible ul li div {
-        min-height: 100px;
+    .baseinvisible ul li div {
+        min-height: 100px
     }
 }
 
 @media(max-width: 500px) {
-
     #showcase h1 {
-        font-size: 35px;
+        font-size: 35px
     }
 
-
-    .didascaliaTitolo,
-    #showcase h2 {
-        font-size: 19px;
+    .didascaliatitolo, #showcase h2 {
+        font-size: 19px
     }
 
     * {
-        font-size: 12px;
+        font-size: 12px
     }
 }
 
 @media(max-width: 400px) {
-
     #showcase h1 {
-        font-size: 25px;
+        font-size: 25px
     }
 
-    .didascaliaTitolo,
-    #showcase h2 {
-        font-size: 16px;
+    .didascaliatitolo, #showcase h2 {
+        font-size: 16px
     }
 
     * {
@@ -492,11 +434,7 @@ select:active {
     }
 }
 
-
 @media(max-width: 350px) {
-
-
-
     #showcase p {
         font-size: 9px
     }
@@ -516,32 +454,29 @@ select:active {
 }
 
     .fillheigth img {
-        flex-shrink: 0;
-        height: 400px;
         border: 2px solid dimgray;
+        height: 400px
     }
-
 
 .required {
     color: #ff0000;
-    position: absolute;
+    position: absolute
 }
 
-.borderLine {
+.borderline {
     border-bottom: #035387 1px solid;
     margin-bottom: 15px;
-    margin-top: 5px;
+    margin-top: 5px
 }
 
-.floatRight {
-    float: right;
+.floatright {
+    float: right
 }
-
 
 .grab {
-    cursor: grab;
+    cursor: grab
 }
 
 .no-drop {
-    cursor: no-drop;
+    cursor: no-drop
 }

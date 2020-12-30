@@ -1,50 +1,39 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> parent of 9698f0f... test css optimizer
-=======
-Minified CSS
-Source map
-Restructure
-Beautify
->>>>>>> parent of 32a1cae... fix?
-#Regione {
+#regione {
     color: #035387 !important;
-    text-transform: uppercase;
     font-weight: bold;
+    text-transform: uppercase
 }
 
-.listaProvince {
-    margin-left: 25px;
+.listaprovince {
+    margin-left: 25px
 }
 
-.Provincia {
-    border-radius: 5px 5px;
+.provincia {
     background-color: #035387;
+    border-radius: 5px 5px;
     color: #fff;
-    text-transform: uppercase;
     font-weight: bold;
-    padding: 5px 10px 5px 10px;
+    padding: 5px 10px;
+    text-transform: uppercase
 }
 
-.listaPartner {
-    margin-left: 25px;
+.listapartner {
     border-bottom: 2px solid #035387;
-    margin-top: 15px;
     margin-bottom: 5px;
+    margin-left: 25px;
+    margin-top: 15px
 }
 
-    .listaPartner:last-child {
-        border-bottom: none;
+    .listapartner:last-child {
+        border-bottom: none
     }
 
-.Partner {
+.partner {
     font-weight: bold;
-    padding: 1px 5px 5px 5px;
+    padding: 1px 5px 5px
 }
 
-    .Partner:first-child {
+    .partner:first-child {
         border-bottom: none;
-        padding-top: 5px;
+        padding-top: 5px
     }

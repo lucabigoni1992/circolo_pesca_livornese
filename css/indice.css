@@ -1,39 +1,37 @@
-
 .image-map-container {
-    position: relative;
     display: inline-block;
+    position: relative
 }
 
     .image-map-container img {
-        display: block;
+        display: block
     }
 
     .image-map-container .map-selector {
-        left: 0;
-        top: 0;
-        right: 0;
         bottom: 0;
         color: #546E7A00;
+        left: 0;
+        right: 0;
+        top: 0;
         transition-duration: .3s;
-        transition-timing-function: ease-out;
-        transition-property: top, left, right, bottom, color;
+        transition-property: top,left,right,bottom,color;
+        transition-timing-function: ease-out
     }
 
         .image-map-container .map-selector.hover {
-            color: #546E7A80;
+            color: #546E7A80
         }
 
 .map-selector:after {
-    content: '';
-    position: absolute;
     background: currentColor;
-    top: inherit;
-    right: inherit;
+    background: currentColor;
     bottom: inherit;
+    content: '';
     left: inherit;
-    background: currentColor;
+    position: absolute;
+    right: inherit;
+    top: inherit;
     transition-duration: .3s;
-    transition-timing-function: ease-out;
-    transition-property: top, left, right, bottom, background;
-    pointer-events: none;
+    transition-property: top,left,right,bottom,background;
+    transition-timing-function: ease-out
 }
