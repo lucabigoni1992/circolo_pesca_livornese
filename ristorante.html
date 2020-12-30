@@ -136,13 +136,13 @@
                 </table>
                 <div id="PreventivoDataInput">
                     <div>
-                        <input id="inp_mail" type="email" name="name" onkeyup="controllaEmail(inp_mail)" placeholder="Email del Richiedente">
+                        <input id="inp_mail" type="email" Title="Email del Richiedente" name="name" onkeyup="controllaEmail(inp_mail)" placeholder="Email del Richiedente">
                     </div>
                     <div>
-                        <input id="inp_richiedente" type="text" name="name" onkeyup="controllaRichiedente(inp_richiedente)" placeholder="Nome del Richiedente" disabled>
+                        <input id="inp_richiedente" type="text"Title="Nome del Richiedente" name="name" onkeyup="controllaRichiedente(inp_richiedente)" placeholder="Nome del Richiedente" disabled>
                     </div>
                     <div>
-                        <textarea id="inp_message" name="message" onkeyup="controllaMessage(inp_message)" placeholder="Note D'allegare" disabled></textarea>
+                        <textarea id="inp_message"Title="Note D'allegare" name="message" onkeyup="controllaMessage(inp_message)" placeholder="Note D'allegare" disabled></textarea>
                     </div>
                     <input id="btn_sendQuote" type="button" class="OrangeButton" onClick="inviaPreventivo(normalizeData(),inp_mail,inp_richiedente,inp_message);" value="Richiedi" disabled />
                 </div>

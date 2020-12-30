@@ -43,12 +43,12 @@
             <p>
                 Per abbonarti al nostro Circolo pesca ti basterà <a href="mailto:luca.bigoni@live.it">inviarci un email</a>, all'interno della quale, dovranno essere presenti i seguenti dati:
             </p>
-                <ul>
-                    <li>Nome</li>
-                    <li>Cognome</li>
-                    <li>Copia del versamento (formato PDF)</li>
-                    <li>Copia della vostra Carta d'identità (formato PDF)</li>
-                </ul>
+            <ul>
+                <li>Nome</li>
+                <li>Cognome</li>
+                <li>Copia del versamento (formato PDF)</li>
+                <li>Copia della vostra Carta d'identità (formato PDF)</li>
+            </ul>
             <p>
                 Se invece preferisci creare automaticamente un'email precompilata, clicca sul prezzo e trascinalo nel campo "Messaggio" a destra, compila gli altri campi e premi su "Invia".
             </p>
@@ -85,21 +85,21 @@
             <span class="didascaliaTitolo">Richiedi d'iscrizione</span>
             <div class="borderLine"></div>
 
-            <form id="contact-form" onsubmit="submitContactForm('Richiedi un preventivo');" class="margin-top">
+            <form id="contact-form" onsubmit=" return submitContactForm('Richiedi un preventivo');" class="margin-top">
                 <div class="row form-group">
                     <i class="fa fa-check-circle fa-2 check" aria-hidden="true"></i>
-                    <input id="form_name" type="text" name="name" placeholder="Nome" required="required"
-                           data-error="Nome è obligatorio.">
+                    <input id="form_name" type="text" name="name" placeholder="Nome" required="required" title="Il nome è obligatorio."
+                           data-error="Il nome è obligatorio.">
                 </div>
                 <div class="row form-group">
                     <i class="fa fa-check-circle fa-2 check" aria-hidden="true"></i>
-                    <input id="form_email" type="email" name="email" placeholder="Email" required="required"
+                    <input id="form_email" type="email" name="email" placeholder="Email" required="required" title="E-mail è obligatorio."
                            data-error="E-mail è obligatorio.">
                 </div>
                 <div class="row form-group">
                     <i class="fa fa-check-circle fa-2 check" aria-hidden="true"></i>
                     <input id="form_phone" type="tel" pattern="[\+]\d{2}-\d{10}" placeholder="+39-1234567890"
-                           name="phone" required="required" title=" placeholder="+39-1234567890""
+                           name="phone" required="required" title="+39-1234567890"
                            data-error="numero di telefono obbligatorio.">
                 </div>
 
