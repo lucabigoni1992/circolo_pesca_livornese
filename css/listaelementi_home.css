@@ -70,11 +70,14 @@
 }
 
 @media(max-width: 500px) {
-        #showcase ul li h3 {
-            font-size: 15px;
-            margin-right: unset;
-            margin-left: 35px;
-        }
+    #showcase ul li h3 {
+        font-size: 10PX;
+        margin-right: unset;
+        margin-left: 35px;
+    }
+    #showcase ul li div {
+        margin: unset;
+    }
         #showcase ul li p {
             font-size: 12px;
         }

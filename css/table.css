@@ -9,7 +9,7 @@ table.TabellaProdotti {
 }
 
     table.TabellaProdotti td, table.TabellaProdotti th {
-        padding: 3px 2px;
+        padding: 3px 0px;
     }
 
     table.TabellaProdotti tbody td {
@@ -38,102 +38,127 @@ table.TabellaProdotti {
         }
 
         table.TabellaProdotti thead th {
-            font-size: 15px;
+            padding: 15px 0px;
+            float: left;
             font-weight: bold;
             color: black;
             border: none;
         }
 
-            table.TabellaProdotti thead th:first-child {
-                border-left: none;
-            }
 
-    table.TabellaProdotti tfoot {
+#noScrollTab thead th:not(:first-child),
+#noScrollTab tbody td:not(:first-child) {
+    text-align: left;
+}
+
+#noScrollTab thead th:first-child div {
+    text-align: left;
+    margin-left: 8px;
+    width: 150px;
+}
+#noScrollTab thead th:last-child div {
+    text-align: right;
+    padding-right: 8px;
+}
+
+#noScrollTab tbody td:last-child {
+    text-align: right;
+    padding-right: 8px;
+}
+
+
+
+table.TabellaProdotti thead th:first-child {
+    border-left: none;
+}
+
+table.TabellaProdotti tfoot {
+    font-size: 14px;
+    font-weight: bold;
+    color: black;
+    background: #87ceeb69;
+    margin: 5px;
+}
+
+    table.TabellaProdotti tfoot td {
         font-size: 14px;
-        font-weight: bold;
+    }
+
+    table.TabellaProdotti tfoot tr {
+        display: flex;
+    }
+
+table.TabellaProdotti tbody ul {
+    padding: 20px;
+    text-align: left;
+    list-style: none;
+    padding: 5px;
+    margin-bottom: 5px;
+}
+
+table.TabellaProdotti tbody h4 {
+    font-size: 15px;
+    font-weight: bold;
+    color: black;
+    border: none;
+}
+
+table.TabellaProdotti tbody p {
+    text-align: center;
+    font-size: 10px;
+}
+
+table.TabellaProdotti tbody ul li {
+    padding: 5px;
+    font-size: 13px
+}
+
+    table.TabellaProdotti tbody ul li:not(:last-child) {
+        border-bottom: #929292 solid 1px;
+    }
+
+table.TabellaProdotti tfoot #links {
+    text-align: right;
+    float: right;
+    margin: 5px;
+}
+
+    table.TabellaProdotti tfoot #links input {
+        background: #82898d;
         color: black;
-        background: #87ceeb69;
-        margin: 5px;
+        padding: 2px 8px;
+        border-radius: 5px;
+        height: auto;
     }
 
-        table.TabellaProdotti tfoot td {
-            font-size: 14px;
-        }
-
-        table.TabellaProdotti tfoot tr {
-            display: flex;
-        }
-
-    table.TabellaProdotti tbody ul {
-        padding: 20px;
-        text-align: left;
-        list-style: none;
-        padding: 5px;
-        margin-bottom: 5px;
-    }
-
-    table.TabellaProdotti tbody h4 {
-        font-size: 15px;
-        font-weight: bold;
+    table.TabellaProdotti tfoot #links input {
+        background: linear-gradient(to bottom,#3e5d6f 0%,#3f7399 50%, #3e5d6f 100%);
         color: black;
-        border: none;
+        padding: 2px 8px;
+        border-radius: 5px;
+        margin: 1px;
+        display: inline-block;
+        height: 32px;
     }
 
-    table.TabellaProdotti tbody p {
-        text-align: center;
-        font-size: 10px;
-    }
-
-    table.TabellaProdotti tbody ul li {
-        padding: 5px;
-    }
-
-        table.TabellaProdotti tbody ul li:not(:last-child) {
-            border-bottom: #929292 solid 1px;
+        table.TabellaProdotti tfoot #links input:hover {
+            background-color: #46000D;
+            color: black;
         }
 
-    table.TabellaProdotti tfoot #links {
-        text-align: right;
-        float: right;
+table.TabellaProdotti tfoot #linksLf {
+    text-align: right;
+    float: left;
+    text-align: left;
+}
+
+    table.TabellaProdotti tfoot #linksLf div {
+        background: linear-gradient(to bottom,#3e5d6f 0%,#3f7399 50%, #3e5d6f 100%);
+        color: black;
+        padding: 2px 6px;
         margin: 5px;
+        border-radius: 5px;
     }
-
-        table.TabellaProdotti tfoot #links input {
-            background: #82898d;
-            color: black;
-            padding: 2px 8px;
-            border-radius: 5px;
-            height: auto;
-        }
-
-        table.TabellaProdotti tfoot #links input {
-            background: linear-gradient(to bottom,#3e5d6f 0%,#3f7399 50%, #3e5d6f 100%);
-            color: black;
-            padding: 2px 8px;
-            border-radius: 5px;
-            margin: 1px;
-            display: inline-block;
-            height: 32px;
-        }
-
-            table.TabellaProdotti tfoot #links input:hover {
-                background-color: #46000D;
-                color: black;
-            }
-
-    table.TabellaProdotti tfoot #linksLf {
-        text-align: right;
-        float: left;
-        text-align: left;
-    }
-
-        table.TabellaProdotti tfoot #linksLf div {
-            background: linear-gradient(to bottom,#3e5d6f 0%,#3f7399 50%, #3e5d6f 100%);
-            color: black;
-            padding: 2px 6px;
-            margin: 5px;
-            border-radius: 5px;
-        }
 
 
 /*  OverRide for table*/
@@ -160,6 +185,12 @@ ul.Prodotti li {
 .colw2 {
     width: 20%;
 }
+.colw27 {
+    width: 26%;
+}
+.colw13 {
+    width: 13%;
+}
 
 .imgOffuscataNonDisponibile {
     filter: brightness(100%) blur(5px);
@@ -179,14 +210,15 @@ table.TabellaProdotti th {
 
 
 /*per la scroll bar nella tabella */
-#scrollTab thead,
-#scrollTab tbody,
-#noScrollTab tbody,
-#noScrollTab thead {
+
+table.TabellaProdotti thead,
+table.TabellaProdotti tbody {
     float: initial;
     width: 100%;
 }
-
+#noScrollTab {
+    max-width: 600px;
+}
 #scrollTab tbody {
     overflow: auto;
     max-height: 400px;
@@ -240,7 +272,7 @@ table.TabellaProdotti th {
 @media(max-width: 1500px) {
     #scrollTab *,
     #noScrollTab * {
-        font-size: 16px
+        font-size: 12px
     }
 
     table.TabellaProdotti tbody img { /*immagine  nella tabella e*/
@@ -252,34 +284,30 @@ table.TabellaProdotti th {
         height: 20px
     }
 }
+
 @media(max-width: 1000px) {
     #scrollTab *,
     #noScrollTab * {
-        font-size: 14px
+        font-size: 11px
     }
-
-
 }
-@media(max-width: 800px) {
-    #scrollTab *,
-    #noScrollTab *{
-        font-size: 13px
-    }
 
+@media(max-width: 800px) {
     table.TabellaProdotti tbody img { /*immagine  nella tabella e*/
         width: 90px;
     }
-
 }
 
 @media(max-width: 600px) {
     #scrollTab *,
     #noScrollTab * {
-        font-size: 12px
+        font-size: 10px
     }
+
     table.TabellaProdotti tbody img { /*immagine  nella tabella e*/
         width: 75px;
     }
+
     table.TabellaProdotti tfoot #links input {
         width: 15px;
         height: 12px
@@ -287,42 +315,45 @@ table.TabellaProdotti th {
 }
 
 @media(max-width: 500px) {
+    #scrollTab *,
     #noScrollTab * {
-        font-size: 10px
-    }
-    #scrollTab * {
-        font-size: 10px
+        font-size: 9px
     }
 
     #showcase ul li {
         display: list-item;
     }
+
     table.TabellaProdotti tbody img { /*immagine  nella tabella e*/
         width: 50px;
     }
+
     table.TabellaProdotti tfoot #links input {
         width: 12px;
-        height: 10px; padding: unset;
+        height: 10px;
+        padding: unset;
     }
 }
+
 @media(max-width: 400px) {
+
+    #scrollTab *,
     #noScrollTab * {
         font-size: 7px;
         padding: unset;
     }
-    #scrollTab *{
-        font-size: 7px;
-        padding: unset;
-    }
+
     table.TabellaProdotti tbody img { /*immagine  nella tabella e*/
         width: 35px;
     }
 }
+
 @media(max-width: 300px) {
     #scrollTab *,
     #noScrollTab * {
         font-size: 5px
     }
+
     table.TabellaProdotti tfoot #links input {
         width: 10px;
         height: 8px

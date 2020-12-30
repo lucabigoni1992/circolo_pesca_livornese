@@ -18,7 +18,9 @@ function recursiveCreateDesc(ul, elem, idxCur) {
     if (idxCur == elem.descrizione.length)
         return;
     var li = document.createElement("li");
-    li.appendChild(document.createTextNode(elem.descrizione[idxCur]));
+    var label = document.createElement("label");
+    label.appendChild(document.createTextNode(elem.descrizione[idxCur]));
+    li.appendChild(label);
     recursiveCreateDesc(ul, elem, idxCur + 1);
     ul.appendChild(li);
 }
@@ -26,12 +28,13 @@ function recursiveCreateDesc(ul, elem, idxCur) {
 function impostaQuantita(ul, elem, indx) {
     var li = document.createElement("li");
     var input = document.createElement("input");
+    var label = document.createElement("label");
+    label.appendChild(document.createTextNode("Quantità:"));
     input.type = "number";
     input.min = 0;
     input.value = getStoredQuantityValue(indx)
     var id = "id_" + elem.id + "_inputQuantita";
     input.id = id;
-    var label = document.createElement("label");
     if (!elem.disponibile) input.disabled = true;
     else input.addEventListener("change",
         () => {
@@ -46,8 +49,8 @@ function impostaQuantita(ul, elem, indx) {
             }
         }
     );
-    li.appendChild(input);
     li.appendChild(label);
+    li.appendChild(input);
     ul.appendChild(li);
 }
 /* abilito o disabilito la selezione della tipologia del prodotto*/
@@ -92,9 +95,9 @@ function impostaColonna1(tdCol, elem, indx) {
     h4.appendChild(document.createTextNode(elem.Titolo.length > 0 ? (elem.Titolo[0].toUpperCase() + elem.Titolo.slice(1)) : ""));
     var img = document.createElement("img");
     img.id = "img" + indx.toString();
-    img.title = elem.Titolo.toString().toLowerCase() ;
+    img.title = elem.Titolo.toString().toLowerCase();
     img.alt = img.title;
-    img.src = "./resource/img/pietanze/" + img.title.replaceAll(" ", "_") +"Min.jpg" ;
+    img.src = "./resource/img/pietanze/" + img.title.replaceAll(" ", "_") + "Min.jpg";
     img.setAttribute("alt", elem.Titolo);
     img.classList.add("imageGallery");
     if (!elem.disponibile) img.className = "imgOffuscataNonDisponibile";
@@ -120,9 +123,7 @@ function impostaColonna3(tdCol, elem, indx) {
     tdCol.className = "colw2";
     var label = document.createElement("p");
     var testo = !elem.disponibile ?
-        "NON disponibile" :
-        elem.alPeso === "" ?
-            "" : elem.alPeso;
+        "NON disponibile" : "Disponibile";
     label.appendChild(document.createTextNode(testo));
     var ul = document.createElement("ul");
     impostaQuantita(ul, elem, indx);
@@ -289,7 +290,7 @@ function openGallery(e) {
         var overlayImage = document.getElementById('gallery');
         overlay.classList.add('open');
         var split = src.split('/');
-        var name = split[split.length - 1].replaceAll('_',' ');
+        var name = split[split.length - 1].replaceAll('_', ' ');
         overlayImage.title = name;
         overlayImage.alt = name;
         src = src + "1.jpg";

@@ -217,7 +217,7 @@ const _prodotti = {
                 { quantita: 6, prezzo: 5.5 }
             ],
             disponibile: true,
-            alPeso: "Porzione",
+ 
             varianti: [
                 { Prodotto: "Insalata belga" }
                 , { Prodotto: "Insalata romana" }

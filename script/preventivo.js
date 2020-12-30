@@ -94,7 +94,8 @@ function refreshTableQuote() {
             recursiveAddHeaderPrevenction(newHeadRow, ["Prodotto scelto", " N°", "Prezzo", "Totale"], 0);
             curTab.appendChild(newHeadRow);
         }
-        var elemName = addFirstRow(_MemPrev[ProdIx].prodotto.Titolo);
+        var elemName = add
+        tRow(_MemPrev[ProdIx].prodotto.Titolo);
         var elemPrices = addSecondRow(_MemPrev[ProdIx], ProdIx);
         curTab.appendChild(elemName);
         curTab.appendChild(elemPrices);

@@ -75,12 +75,12 @@ function addElement(elem, indx) {
     newColLab.classList.add("noMargin");
     newColLab.classList.add("alignLefth");
     var newColType = document.createElement("td");
-    newColType.classList.add("colw2");
+    newColType.classList.add("colw33");
     newColType.classList.add("noMargin");
  //   newColType.classList.add("alignLefth");
     newColType.appendChild(document.createTextNode(elem.tipo));
     var newColPrice = document.createElement("td");
-    newColPrice.classList.add("colw2");
+    newColPrice.classList.add("colw07");
     newColPrice.classList.add("noMargin");
   //  newColPrice.classList.add("alignRight");
     newColLab.appendChild(document.createTextNode(elem.label));

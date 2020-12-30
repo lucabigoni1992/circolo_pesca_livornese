@@ -57,9 +57,9 @@
             <table id="noScrollTab" class="TabellaProdotti">
                 <thead>
                     <tr>
-                        <th class="colw6">Abbonamento</th>
-                        <th class="colw2">Tipologia</th>
-                        <th class="colw2">Costo (Euro)</th>
+                        <th class="colw6"> <div>Abbonamento</div></th>
+                        <th class="colw27">Tipologia</th>
+                        <th class="colw13"><div>Costo (€)</div></th>
                     </tr>
                 </thead>
                 <tbody id="tabBody" class="table-wrapper-scroll-y my-custom-scrollbar">
@@ -85,21 +85,21 @@
             <span class="didascaliaTitolo">Richiedi d'iscrizione</span>
             <div class="borderLine"></div>
 
-            <form id="contact-form" onsubmit=" return submitContactForm('Richiedi un preventivo');" class="margin-top">
+            <form id="contact-form" onsubmit="submitContactForm('Richiedi un preventivo');" class="margin-top">
                 <div class="row form-group">
                     <i class="fa fa-check-circle fa-2 check" aria-hidden="true"></i>
-                    <input id="form_name" type="text" name="name" placeholder="Nome" required="required" title="Il nome è obligatorio."
-                           data-error="Il nome è obligatorio.">
+                    <input id="form_name" type="text" name="name" placeholder="Nome" required="required"
+                           data-error="Nome è obligatorio.">
                 </div>
                 <div class="row form-group">
                     <i class="fa fa-check-circle fa-2 check" aria-hidden="true"></i>
-                    <input id="form_email" type="email" name="email" placeholder="Email" required="required" title="E-mail è obligatorio."
+                    <input id="form_email" type="email" name="email" placeholder="Email" required="required"
                            data-error="E-mail è obligatorio.">
                 </div>
                 <div class="row form-group">
                     <i class="fa fa-check-circle fa-2 check" aria-hidden="true"></i>
                     <input id="form_phone" type="tel" pattern="[\+]\d{2}-\d{10}" placeholder="+39-1234567890"
-                           name="phone" required="required" title="+39-1234567890"
+                           name="phone" required="required" title=" placeholder=" +39-1234567890""
                            data-error="numero di telefono obbligatorio.">
                 </div>
 

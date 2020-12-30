@@ -1,4 +1,4 @@
-Beautify
+
 section * {
     box-sizing: border-box;
 }
@@ -208,6 +208,12 @@ input[type="radio"] {
     .weekdays li, .days li {
         display: inline-block !important;
         width: 13.1%;
+    }
+    .boxFilter {
+        display:unset;
+    }
+    .month {
+        margin-top: 5px
     }
 }
 
