@@ -1,74 +1,89 @@
+
+
 #showcase ul {
     list-style-type: none;
     width: 100%;
-    padding: unset
+    padding: unset;
 }
 
     #showcase ul li {
         width: 48%;
         padding: 5px;
-        display: inline-table
+        display: inline-table;
     }
-
 #showcase h3 {
-    font: 700 20px/1.5 Helvetica,Verdana,sans-serif
+    font: bold 20px/1.5 Helvetica, Verdana, sans-serif;
 }
 
 #showcase article span {
     text-align: center;
-    margin-left: 105px
+    margin-left: 105px;
 }
+
+
 
 #showcase li img {
     float: left;
     padding-top: 25px;
-    height: 50px
+    height: 50px;
 }
 
-#showcase ul li p {
-    font-size: 18px
+
+
+
+#showcase ul li {
+    /*    padding: 5px;
+    overflow: auto;*/
 }
 
-#showcase ul li h3:hover {
-    background: #6a9dbfc9;
-    cursor: pointer
-}
+    #showcase ul li p {
+        font-size: 18px;
+    }
 
-@media (max-width:1400px) {
+    #showcase ul li h3:hover {
+        background: #6a9dbfc9;
+        cursor: pointer;
+    }
+
+@media(max-width: 1400px) {
     #showcase ul {
-        width: 100%
+        width: 100%;
     }
 
         #showcase ul li {
             width: 100%;
-            padding: 5px 0
+            padding: 5px 0px;
         }
 
             #showcase ul li img {
                 padding-top: 10px;
-                height: 50px
+                height: 50px;
             }
 
             #showcase ul li h3 {
-                margin-left: 65px
+                margin-left: 65px;
+            }
+
+            #showcase ul li p {
+              /*  display: none;*/
             }
 }
 
-@media (max-width:500px) {
-    #showcase ul li h3 {
-        font-size: 15px;
-        margin-right: unset;
-        margin-left: 35px
-    }
-
-    #showcase ul li p {
-        font-size: 12px
-    }
-
-    #showcase ul li img {
-        float: left;
-        padding-top: 15px;
-        margin: 0 15px 0 0;
-        height: 25px
-    }
+@media(max-width: 500px) {
+        #showcase ul li h3 {
+            font-size: 15px;
+            margin-right: unset;
+            margin-left: 35px;
+        }
+        #showcase ul li p {
+            font-size: 12px;
+        }
+        #showcase ul li img {
+            float: left;
+            padding-top:15px;
+            margin: 0 15px 0 0;
+            height: 25px;
+        }
 }
+
+ 

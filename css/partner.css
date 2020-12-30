@@ -1,41 +1,43 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> parent of 9698f0f... test css optimizer
 #Regione {
-    color: #035387 !important
+    color: #035387 !important;
+    text-transform: uppercase;
+    font-weight: bold;
 }
 
 .listaProvince {
-    margin-left: 25px
-}
-
-#Regione, .Provincia {
-    text-transform: uppercase;
-    font-weight: 700
+    margin-left: 25px;
 }
 
 .Provincia {
     border-radius: 5px 5px;
     background-color: #035387;
     color: #fff;
-    padding: 5px 10px
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 5px 10px 5px 10px;
 }
 
 .listaPartner {
     margin-left: 25px;
     border-bottom: 2px solid #035387;
     margin-top: 15px;
-    margin-bottom: 5px
+    margin-bottom: 5px;
 }
 
     .listaPartner:last-child {
-        border-bottom: none
+        border-bottom: none;
     }
 
 .Partner {
-    font-weight: 700;
-    padding: 1px 5px 5px
+    font-weight: bold;
+    padding: 1px 5px 5px 5px;
 }
 
     .Partner:first-child {
         border-bottom: none;
-        padding-top: 5px
+        padding-top: 5px;
     }
