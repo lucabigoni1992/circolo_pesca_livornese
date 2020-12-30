@@ -1,38 +1,43 @@
+
+Minified CSS
+Source map
+Restructure
+Beautify
 .image-map-container {
     position: relative;
-    display: inline-block;
+    display: inline-block
 }
 
-    .image-map-container img {
-        display: block;
-    }
+.image-map-container img {
+    display: block
+}
 
-    .image-map-container .map-selector {
-        left: 0;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        color: #546E7A00;
-        transition-duration: .3s;
-        transition-timing-function: ease-out;
-        transition-property: top, left, right, bottom, color;
-    }
+.image-map-container .map-selector, .map-selector:after {
+    transition-duration: .3s;
+    transition-timing-function: ease-out
+}
 
-        .image-map-container .map-selector.hover {
-            color: #546E7A80;
-        }
+.image-map-container .map-selector {
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    color: #546e7a00;
+    transition-property: top,left,right,bottom,color
+}
+
+    .image-map-container .map-selector.hover {
+        color: #546e7a80
+    }
 
 .map-selector:after {
     content: '';
     position: absolute;
-    background: currentColor;
     top: inherit;
     right: inherit;
     bottom: inherit;
     left: inherit;
     background: currentColor;
-    transition-duration: .3s;
-    transition-timing-function: ease-out;
-    transition-property: top, left, right, bottom, background;
-    pointer-events: none;
+    transition-property: top,left,right,bottom,background;
+    pointer-events: none
 }

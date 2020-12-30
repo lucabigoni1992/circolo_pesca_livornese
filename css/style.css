@@ -1,17 +1,15 @@
-/*modifico la select option*/
-
 body {
     font-size: 15px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Arial,Helvetica,sans-serif;
     padding: 0;
     margin: 0;
     background: #e9f4f9;
-    background-attachment: fixed;
+    background-attachment: fixed
 }
 
 ul li {
     font-size: 18px;
-    padding-top: 3px;
+    padding-top: 3px
 }
 
 .PartnerLeftTran {
@@ -20,204 +18,190 @@ ul li {
     width: 100%;
     min-width: 400px;
     text-align: center;
-    display: block;
+    display: block
 }
 
     .PartnerLeftTran img {
-        float: right;
+        float: right
     }
 
     .PartnerLeftTran ul {
         width: 50% !important;
-        float: left;
+        float: left
     }
-
 
 .baseInvisible {
     margin-right: 10px;
     margin-left: 10px;
     background-color: transparent;
-    border: none;
-    box-shadow: none;
+    border: 0;
+    box-shadow: none
 }
 
-    .baseInvisible ul li div {
+    .base, .baseInvisible ul li div {
         border-radius: 5px 5px;
         padding: 15px;
-        min-height: 160px;
-        background: #87ceebad;
         margin-right: 10px;
         margin-left: 10px;
-        color: black;
-        border: 1px solid #6a6a6a;
+        color: #000
+    }
+
+    .baseInvisible ul li div {
+        min-height: 160px;
+        background: #87ceebad;
+        border: 1px solid #6a6a6a
     }
 
 .base {
-    border-radius: 5px 5px;
-    padding: 15px;
-    margin-right: 10px;
-    margin-left: 10px;
-    color: black;
-    margin-bottom: 10px;
+    margin-bottom: 10px
 }
 
-
-.didascalia {
-    font-size: 18px;
-    font-style: italic;
-}
+    .base ul span, .didascalia {
+        font-size: 18px;
+        font-style: italic
+    }
 
 .didascaliaTitolo {
     font-size: 25px;
-    font-weight: bold;
+    font-weight: 700
 }
 
 .base ul span {
     font-weight: 900;
-    font-size: 18px;
-    font-style: unset;
+    font-style: unset
 }
 
-
-textarea,
-input[type=text],
-input[type='email'],
-input[type='tel'] {
+input[type=email], input[type=tel], input[type=text], textarea {
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
     display: inline-block;
     border: 1px solid #ccc;
     border-radius: 4px;
-    box-sizing: border-box;
+    box-sizing: border-box
 }
 
 textarea {
-    height: 100px;
+    height: 100px
 }
 
-input[type='button'],
-input[type='submit'] {
+input[type=button], input[type=submit] {
     height: 38px;
     background: #035387;
     border: 0;
     padding-left: 20px;
     padding-right: 20px;
-    color: black;
-    border-radius: 10px 10px;
+    color: #000;
+    border-radius: 10px 10px
 }
 
-    input[type='button']:hover {
-        background-color: seagreen;
-        color: black;
+    input[type=button]:hover {
+        background-color: #2e8b57;
+        color: #000;
         padding-left: 20px;
-        padding-right: 20px;
+        padding-right: 20px
     }
 
-    input[type='button']:disabled {
-        background-color: #59727c;
+    input[type=button]:disabled {
+        background-color: #59727c
     }
-/* Header **/
-header {
-    background: lightblue;
-    color: black;
-    min-height: 70px;
-    border-bottom: #035387 3px solid;
-    vertical-align: middle;
+
+footer, header {
+    color: #000;
+    min-height: 70px
 }
 
-    header .container {
+header {
+    background: #add8e6;
+    border-bottom: #035387 3px solid;
+    vertical-align: middle
+}
+
+    #showcase, header .container {
         width: 80%;
         margin: auto;
-        overflow: hidden;
+        overflow: hidden
     }
 
-
     header a {
-        color: black;
+        color: #000;
         text-decoration: none;
         text-transform: uppercase;
-        font-size: 16px;
+        font-size: 16px
     }
 
     header ul {
         margin: 0;
-        padding-left: 0px;
+        padding-left: 0;
         height: 100%;
         display: table;
-        width: 100%;
+        width: 100%
     }
 
         header ul li {
             float: left;
-            padding: 0 10px 0 10px;
+            padding: 0 10px;
             list-style: none;
-            color: black;
+            color: #000
         }
 
     header #branding {
-        float: left;
+        float: left
     }
 
         header #branding h1 {
-            margin: 0;
+            margin: 0
         }
 
     header nav {
         right: 50%;
         float: right;
-        margin-top: 35px;
+        margin-top: 35px
     }
 
-    header .highlight, header .current a {
+    header .current a, header .highlight {
         color: #035387;
-        font-weight: bold;
+        font-weight: 700
     }
 
     header a:hover {
-        color: #75827a;
+        color: #75827a
     }
 
 section {
     min-height: 400px;
-    padding-bottom: 60PX;
+    padding-bottom: 60PX
 }
 
-/* Showcase */
 #showcase {
-    width: 80%;
-    margin: auto;
-    overflow: hidden;
     min-height: 400px;
-    color: black;
+    color: #000
 }
+
+    #showcase h1, #showcase h2 {
+        padding: unset;
+        color: #035387
+    }
 
     #showcase h1 {
         font-size: 75px;
-        padding: unset;
-        color: #035387;
         margin: auto;
         padding-top: 15px;
-        text-shadow: 1px 1px 0px #000000;
+        text-shadow: 1px 1px 0 #000
     }
 
 .h1Homepage {
-    text-align: center;
+    text-align: center
 }
 
 #showcase h2 {
     font-size: 35px;
-    padding: unset;
-    color: #035387;
     margin-bottom: 20PX;
-    margin-top: 0px;
+    margin-top: 0
 }
 
-
-
-#showcase h3 {
-    /* margin-top: 100px; */
-    color: black;
+#showcase h3, #showcase ul li h3 {
+    color: #000;
     font-size: 25px;
     margin-bottom: 6px;
     margin-left: 25px;
@@ -227,101 +211,80 @@ section {
     border-bottom: 1px solid #035387;
     text-align: center;
     background-color: #f5fffa73;
-    box-shadow: 5px 5px 10px 0px #000000;
+    box-shadow: 5px 5px 10px 0 #000
 }
 
 #showcase ul li h3 {
-    /* margin-top: 100px; */
-    color: black;
-    font-size: 25px;
-    margin-bottom: 6px;
-    margin-left: 75px;
-    margin-right: 25px;
-    padding: 0 0 4px 6px;
-    border-left: 7px solid #035387;
-    border-bottom: 1px solid #035387;
-    text-align: center;
-    background-color: #f5fffa73;
-    box-shadow: 5px 5px 10px 0px #000000;
+    margin-left: 75px
 }
 
 #showcase p {
-    font-size: 20px;
+    font-size: 20px
 }
 
-
-/* Sidebar */
 aside#sidebar {
     float: right;
     min-height: 400px;
-    width: 30%;
+    width: 30%
 }
-
 
     aside#sidebar .quote input, aside#sidebar .quote textarea {
         width: 90%;
-        padding: 5px;
+        padding: 5px
     }
-
 
 #main-col {
     float: left;
     width: 60%;
     padding: unset;
-    margin: unset;
+    margin: unset
 }
 
-
 footer {
-    bottom: 0px;
-    color: black;
+    bottom: 0;
     border-top: 1px solid #035387;
-    background-color: lightblue;
+    background-color: #add8e6;
     width: 100%;
-    min-height: 70px;
-    position: fixed;
+    position: fixed
 }
 
     footer .copyright {
         padding-left: 15px;
-        float: left;
+        float: left
     }
 
     footer .circolo {
         padding-right: 15px;
-        float: right;
+        float: right
     }
 
 select {
     font: 400 12px/1.3 sans-serif;
-    color: #000000;
+    color: #000;
     width: 120px;
-    border: 1px solid dimgray;
+    border: 1px solid #696969;
     line-height: 1;
     outline: 0;
-    padding: 0.65em 2.5em 0.55em 0.75em;
+    padding: .65em 2.5em .55em .75em;
     border-radius: var(--radius);
     background-color: #87ceeb69;
-    background-image: linear-gradient(dimgray, dimgray), linear-gradient(-135deg, transparent 50%, #cccccc 50%), linear-gradient(-225deg, transparent 50%, #cccccc 50%), linear-gradient(#cccccc 42%, #82898d 42%);
-    background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
-    background-size: 1px 100%, 20px 22px, 20px 22px, 20px 100%;
-    background-position: right 20px center, right bottom, right bottom, right bottom;
+    background-image: linear-gradient(#696969,#696969),linear-gradient(-135deg,transparent 50%,#ccc 50%),linear-gradient(-225deg,transparent 50%,#ccc 50%),linear-gradient(#ccc 42%,#82898d 42%);
+    background-repeat: no-repeat,no-repeat,no-repeat,no-repeat;
+    background-size: 1px 100%,20px 22px,20px 22px,20px 100%;
+    background-position: right 20px center,right bottom,right bottom,right bottom
 }
 
     select:hover {
-        background-image: linear-gradient(#82898d, #82898d), linear-gradient(-135deg, transparent 50%, #82898d 50%), linear-gradient(-225deg, transparent 50%, #82898d 50%), linear-gradient(#82898d 42%, #cccccc 42%);
+        background-image: linear-gradient(#82898d,#82898d),linear-gradient(-135deg,transparent 50%,#82898d 50%),linear-gradient(-225deg,transparent 50%,#82898d 50%),linear-gradient(#82898d 42%,#ccc 42%)
     }
 
 #linksLf select {
-    width: unset;
+    width: unset
 }
 
 select:active {
-    border-color: #87ceeb69;
+    border-color: #87ceeb69
 }
-
-
-
 
 .fill {
     display: flex;
@@ -330,90 +293,63 @@ select:active {
 }
 
     .fill img {
-        border: 2px solid dimgray;
+        border: 2px solid #696969
     }
 
-
-@media(max-width: 1800px) {
+@media (max-width:1800px) {
     .fill img {
         height: 360px
     }
 }
-/* Media Queries serve per adattare lo scenario mostrato a schermi più piccoli di 768 px*/
-@media(max-width: 1600px) {
+
+@media (max-width:1600px) {
     .baseInvisible ul li div {
-        padding: 0px 15px 0px 15px;
+        padding: 0 15px
     }
 }
-/* Media Queries serve per adattare lo scenario mostrato a schermi più piccoli di 768 px*/
-@media(max-width: 1450px) {
 
+@media (max-width:1450px) {
     #showcase h1 {
-        font-size: 55px;
-    }
-
-    aside#sidebarNoMargin,
-    aside.base,
-    div#main-col {
-        float: left;
-        width: 100%;
+        font-size: 55px
     }
 
     footer {
-        position: relative;
+        position: relative
     }
 
-    aside#sidebarNoMargin,
-    aside.base,
-    div#main-col,
-    header #branding,
-    header nav,
-    header nav li,
-    #newsletter h1,
-    #newsletter form,
-    aside.base,
-    #boxes .box,
-    article#main-col,
-    aside#sidebar,
-    aside#sidebarNoMargin {
+    #boxes .box, #newsletter form, #newsletter h1, article#main-col, aside#sidebar, aside#sidebarNoMargin, aside.base, div#main-col, header #branding, header nav, header nav li {
         float: none;
         width: 100%;
         padding: unset;
-        margin: unset;
+        margin: unset
     }
 
-
     header {
-        padding-bottom: 20px;
+        padding-bottom: 20px
     }
 
     #showcase h1 {
-        margin-top: 40px;
+        margin-top: 40px
     }
 
     #newsletter button, .quote button {
         display: block;
-        width: 100%;
+        width: 100%
     }
 
     section {
-        padding-bottom: 100PX;
+        padding-bottom: 100PX
     }
-
-    footer {
-        position: relative;
-    }
-
 
     .PartnerLeftTran {
         background-color: transparent;
         float: left;
         width: 100%;
-        min-width: unset;
+        min-width: unset
     }
 }
 
-@media(max-width: 800px) {
+@media (max-width:800px) {
     .fill img {
         height: 250px
     }
@@ -421,86 +357,72 @@ select:active {
     select {
         width: 100px
     }
-    #showcase p,
-    #showcase li {
+
+    #showcase li, #showcase p {
         font-size: 17px
     }
 
-    select,
-    input[type="number" i] {
+    input[type=number i], select {
         width: 75px
     }
 }
 
-
-@media(max-width: 600px) {
+@media (max-width:600px) {
     .fill img {
         height: 225px
     }
 
-    select,
-    input[type="number" i] {
+    input[type=number i], select {
         width: 75px
     }
 
-    #showcase p,
-    #showcase li {
+    #showcase li, #showcase p {
         font-size: 15px
     }
 
     .baseInvisible ul li div {
-        min-height: 100px;
+        min-height: 100px
     }
 }
 
-@media(max-width: 500px) {
-
+@media (max-width:500px) {
     #showcase h1 {
-        font-size: 35px;
+        font-size: 35px
     }
 
-
-    .didascaliaTitolo,
-    #showcase h2 {
-        font-size: 19px;
+    #showcase h2, .didascaliaTitolo {
+        font-size: 19px
     }
 
     p {
-        font-size: 12px;
+        font-size: 12px
     }
 }
-@media(max-width: 400px) {
 
+@media (max-width:400px) {
     #showcase h1 {
-        font-size: 25px;
-    }
-    .didascaliaTitolo,
-    #showcase h2 {
-        font-size: 16px;
+        font-size: 25px
     }
 
-    #showcase p,
-    #showcase li {
+    #showcase h2, .didascaliaTitolo {
+        font-size: 16px
+    }
+
+    #showcase li, #showcase p {
         font-size: 11px
     }
 
-    select,
-    input[type="number" i] {
+    input[type=number i], select {
         width: 50px
     }
 }
 
-
-@media(max-width: 350px) {
-
-
-
+@media (max-width:350px) {
     #showcase p {
         font-size: 9px
     }
 
-    select,
-    input[type="number" i] {
+    input[type=number i], select {
         width: 35px
     }
 }
@@ -513,30 +435,28 @@ select:active {
     .fillheigth img {
         flex-shrink: 0;
         height: 400px;
-        border: 2px solid dimgray;
+        border: 2px solid #696969
     }
 
-
 .required {
-    color: #ff0000;
-    position: absolute;
+    color: red;
+    position: absolute
 }
 
 .borderLine {
     border-bottom: #035387 1px solid;
     margin-bottom: 15px;
-    margin-top: 5px;
+    margin-top: 5px
 }
 
 .floatRight {
-    float: right;
+    float: right
 }
 
-
 .grab {
-    cursor: grab;
+    cursor: grab
 }
 
 .no-drop {
-    cursor: no-drop;
+    cursor: no-drop
 }

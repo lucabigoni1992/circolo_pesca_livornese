@@ -1,125 +1,122 @@
-
-
-#showcase ul {
+#showcase ul, .Eventi {
     list-style-type: none;
-    width: 100%;
-    padding: unset;
+    width: 100%
 }
 
 #showcase ul {
-    list-style-type: none;
-    width: 100%;
+    padding: unset
 }
 
 .Eventi {
-    list-style-type: none;
-    width: 100%;
-    display: flex !important;
+    display: flex !important
 }
 
-@media(max-width: 1400px) {
-    .Eventi {
+@media (max-width:1400px) {
+    #showcase ul, .Eventi {
         list-style-type: none;
-        width: 100%;
-        display: list-item !important;
+        width: 100%
+    }
+
+    .Eventi {
+        display: list-item !important
     }
 
     #showcase ul {
-        list-style-type: none;
-        width: 100%;
-        display: list-item;
+        display: list-item
     }
 }
 
-@media(max-width: 1000px) {
+@media (max-width:1000px) {
     #mapItalia {
-        display: unset!important
+        display: unset !important
     }
+
     .Eventi {
         list-style-type: none;
         width: 100%;
-        display: list-item !important;
+        display: list-item !important
+    }
+
+    #showcase img, #showcase ul {
+        list-style-type: none;
+        display: list-item
     }
 
     #showcase ul {
-        list-style-type: none;
-        width: 100% !important;
-        display: list-item;
+        width: 100% !important
     }
 
     #showcase img {
-        list-style-type: none;
-        float: none;
-        display: list-item;
+        float: none
     }
 }
 
 #showcaseConcat ul {
     list-style-type: none;
-    width: 100%;
+    width: 100%
 }
 
 #showcase h3 {
-    font: bold 20px/1.5 Helvetica, Verdana, sans-serif;
+    font: 700 20px/1.5 Helvetica,Verdana,sans-serif
 }
 
 #showcase article span {
     text-align: center;
-    margin-left: 105px;
+    margin-left: 105px
 }
 
 #showcase li img {
     float: left;
     margin: 0 15px 0 0;
-    height: 50px;
+    height: 50px
 }
 
-
 #showcase ul li p {
-    font-size: 18px;
+    font-size: 18px
 }
 
 #showcase ul li h3:hover {
     background: #6a9dbfc9;
-    cursor: pointer;
+    cursor: pointer
 }
 
-@media(max-width: 500px) {
+@media (max-width:500px) {
     #mapItalia {
         height: 300px
     }
 
-        #showcase ul li h3 {
-            font-size: 15px;
-        }
+    #showcase ul li h3 {
+        font-size: 15px
+    }
 
     #showcase h2 {
-        font-size: 19px;
+        font-size: 19px
     }
 
     p {
-        font-size: 12px;
+        font-size: 12px
     }
 }
 
-@media(max-width: 350px) {
+@media (max-width:350px) {
     #mapItalia {
         height: 200px
     }
-        #showcase ul li h3 {
-            font-size: 13px;
-            margin-left: 45px;
-        }
+
+    #showcase ul li h3 {
+        font-size: 13px;
+        margin-left: 45px
+    }
 
     #showcase li img {
-        height: 35px;
+        height: 35px
     }
 
     #showcase h2 {
-        font-size: 15px;
+        font-size: 15px
     }
 
     p {
-        font-size: 10px;
+        font-size: 10px
     }
 }

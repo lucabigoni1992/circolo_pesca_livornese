@@ -1,20 +1,15 @@
-
 body {
-    margin: 0;
+    margin: 0
 }
 
 .imageGallery {
-    cursor: pointer;
+    cursor: pointer
 }
-
 
 .gallery {
     position: relative;
-    overflow: hidden;
+    overflow: hidden
 }
-
-
-
 
 .overlay {
     position: fixed;
@@ -24,85 +19,74 @@ body {
     bottom: 0;
     left: 0;
     display: none;
-    z-index: 3;
+    z-index: 3
 }
 
     .overlay.open {
         display: grid;
         align-items: center;
-        justify-content: center;
+        justify-content: center
     }
 
 .overlay__inner {
     width: 100%;
-    opacity: 1;
+    opacity: 1
 }
+
     .overlay__inner img {
         width: 550px;
         border: 3px solid #6a6a6a;
-        border-radius: 25px;
+        border-radius: 25px
     }
 
-
-@media screen and (max-width: 1000px) {
+@media screen and (max-width:1000px) {
     .overlay__inner img {
-        width: 400px;
+        width: 400px
     }
-
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width:700px) {
     .overlay__inner img {
-        width: 300px;
+        width: 300px
     }
 }
-@media screen and (max-width: 500px) {
+
+@media screen and (max-width:500px) {
     .overlay__inner img {
-        width: 150px;
+        width: 150px
     }
 }
-.close {
+
+.close, .scorriL, .scorriR {
     position: absolute;
-    background: none;
+    background: 0 0;
     outline: 0;
-    color: wheat;
-    background-color: rgba(128, 128, 128, 0.70);
-    border: 3px solid #6a6a6a;    
     text-transform: uppercase;
-    letter-spacing: 2px;
+    letter-spacing: 2px
+}
+
+.close {
+    color: wheat;
+    background-color: rgba(128,128,128,.7);
+    border: 3px solid #6a6a6a
 }
 
     .close:hover {
-        color: black;
-        cursor:pointer;
+        color: #000;
+        cursor: pointer
     }
 
-.scorriR {
-    position: absolute;
+.scorriL, .scorriR {
     height: 50px;
-    right: 5px;
-    background: none;
-    outline: 0;
-    color: #002c63;
-    border: 0;
-    text-transform: uppercase;
-    letter-spacing: 2px;
     BOTTOM: 50%;
+    color: #002c63;
+    border: 0
+}
+
+.scorriR {
+    right: 5px
 }
 
 .scorriL {
-    position: absolute;
-    height: 50px;
-    left: 5px;
-    background: none;
-    outline: 0;
-    BOTTOM: 50%;
-    color: #002c63;
-    border: 0;
-    text-transform: uppercase;
-    letter-spacing: 2px;
+    left: 5px
 }
-
-
-
-
