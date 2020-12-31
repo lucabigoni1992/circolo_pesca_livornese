@@ -51,7 +51,13 @@ function impostaQuantita(ul, elem, indx) {
 }
 /* abilito o disabilito la selezione della tipologia del prodotto*/
 function enabeOrDisabeProductList(productList, quantity) {
-	productList.disabled = quantity > 0 ? false : true;
+	if (quantity > 0) {
+		productList.disabled = false;
+		productList.title = "";
+	} else {
+		productList.disabled = true;
+		productList.title = "Per abilitare, aumenta la quantità";
+	}
 }
 /*Preparazione per settare i colori nella select */
 function impostaSceltaProdotto(ul, elem, indx) {
@@ -61,6 +67,7 @@ function impostaSceltaProdotto(ul, elem, indx) {
 	var select = document.createElement("select");
 	var id = "id_" + elem.id + "_inputProdotto";
 	select.id = id;
+	select.title = "Per abilitare, aumenta la quantità";
 	select.disabled = true;
 	popolaSelect(select, elem.varianti)
 	if (!elem.disponibile) select.disabled = true;
