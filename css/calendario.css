@@ -1,165 +1,171 @@
+
 section * {
-    box-sizing: border-box
+    box-sizing: border-box;
 }
 
 ul {
-    list-style-type: none
+    list-style-type: none;
 }
 
 .month {
-    background: #035387;
+    padding: 15px 15px;
+    width: 100%;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
-    padding: 15px;
+    background: #035387;
     text-align: center;
-    width: 100%
 }
 
     .month ul {
         margin: 0;
-        padding: 0
+        padding: 0;
     }
 
         .month ul li {
             color: white;
             font-size: 20px;
+            text-transform: uppercase;
             letter-spacing: 3px;
-            text-transform: uppercase
         }
 
             .month ul li p {
+                text-align: center;
+                font-style: italic;
                 color: white;
                 font-size: 20px;
-                font-style: italic;
+                text-transform: uppercase;
                 letter-spacing: 3px;
-                text-align: center;
-                text-transform: uppercase
             }
 
     .month .prev {
         float: left;
-        padding-top: 20px
+        padding-top: 20px;
     }
 
     .month .next {
         float: right;
-        padding-top: 20px
+        padding-top: 20px;
     }
 
 .weekdays {
-    background-color: #ddd;
     margin: 0;
-    padding: 10px 0
+    padding: 10px 0;
+    background-color: #ddd;
 }
 
     .weekdays li {
-        color: #666;
         display: inline-block;
+        width: 13.6%;
+        color: #666;
         text-align: center;
-        width: 13.6%
     }
 
 .days {
+    padding: 10px 0;
     background: #eee;
+    margin: 0;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
-    margin: 0;
-    padding: 10px 0
 }
 
     .days li {
-        color: #777;
-        display: inline-block;
-        font-size: 12px;
         list-style-type: none;
+        display: inline-block;
+        width: 14.27%;
         text-align: center;
-        width: 14.27%
+        font-size: 12px;
+        color: #777;
     }
 
         .days li .active {
             background: #035387;
+            color: #87ceebad !important;
             border-radius: 5px;
-            color: #87ceebad !important
         }
 
-    .days .currentlast, .days .currentfirst, .days .current {
+    .days .currentLast,
+    .days .currentFirst,
+    .days .current {
+        padding: 5px;
         background-color: #87ceebad;
         color: #035387 !important;
-        padding: 5px
     }
 
-    .days .currentfirst {
-        border-top-left-radius: 5px
+    .days .currentFirst {
+        border-top-left-radius: 5px;
     }
 
-    .days .currentlast {
-        border-bottom-right-radius: 5px
+    .days .currentLast {
+        border-bottom-right-radius: 5px;
     }
 
-        .days .current:hover, .days .currentlast:hover, .days .currentfirst:hover {
-            background: linear-gradient(to bottom,#87ceebad 0%,#3f7399 50%,#87ceebad 100%)
+        .days .current:hover,
+        .days .currentLast:hover,
+        .days .currentFirst:hover {
+            background: linear-gradient(to bottom,#87ceebad 0%, #3f7399 50%,#87ceebad 100%);
         }
 
-    .days .currentfirstsunday {
-        border-top-right-radius: 5px
+    .days .currentFirstSunday {
+        border-top-right-radius: 5px;
     }
 
-    .days .currentlastsunday {
-        border-bottom-right-radius: 5px
+    .days .currentLastSunday {
+        border-bottom-right-radius: 5px;
     }
 
-    .days .currentfirstmonday {
-        border-top-left-radius: 5px
+    .days .currentFirstMonday {
+        border-top-left-radius: 5px;
     }
 
-    .days .currentlastmonday {
-        border-bottom-left-radius: 5px
+    .days .currentLastMonday {
+        border-bottom-left-radius: 5px;
     }
 
-    .days .currentsunday {
+    .days .currentSunday {
         background-color: #1f5ec67d
     }
 
-        .days .currentsunday:hover {
-            background: linear-gradient(to bottom,#1f5ec67d 0%,#3f7399 50%,#1f5ec67d 100%)
+        .days .currentSunday:hover {
+            background: linear-gradient(to bottom, #1f5ec67d 0%, #3f7399 50%,#1f5ec67d 100%);
         }
 
-    .days .currentmonday {
+    .days .currentMonday {
         background-color: #44855e7d
     }
 
-        .days .currentmonday:hover {
-            background: linear-gradient(to bottom,#95be95 0%,#3f7399 50%,#95be95 100%)
+        .days .currentMonday:hover {
+            background: linear-gradient(to bottom, #95be95 0%, #3f7399 50%,#95be95 100%);
         }
 
     .days .padd {
-        padding: 5px
+        padding: 5px;
     }
 
     .days .evento {
-        background: linear-gradient(to bottom,#c8393959 0%,#fa00007a 50%,#c8393959 100%);
+        background: linear-gradient(to bottom, #c8393959 0%, #fa00007a 50%,#c8393959 100%);
+        padding: 5px;
         border-radius: unset;
-        padding: 5px
     }
 
-        .days .evento:hover, .days .fakehover {
-            background: linear-gradient(to bottom,#c8393999 0%,#fa0000e6 50%,#c8393999 100%);
+        .days .evento:hover,
+        .days .fakehover {
+            background: linear-gradient(to bottom, #c8393999 0%, #fa0000e6 50%,#c8393999 100%);
+            padding: 5px;
             border-radius: unset;
-            padding: 5px
         }
 
     .days li:hover {
+        padding: 5px !important;
         background: #035387;
-        background: linear-gradient(to bottom,#393d3e00 0%,#657989 50%,#393d3e00 100%);
         color: black !important;
-        padding: 5px !important
+        background: linear-gradient(to bottom, #393d3e00 0%, #657989 50%,#393d3e00 100%);
     }
 
-    .days .currentrest:hover {
-        background: linear-gradient(to bottom,#1f5ec67d 0%,#3f7399 50%,#1f5ec67d 100%);
+    .days .currentRest:hover {
+        padding: 5px !important;
         background-color: #1f5ec67d !important;
         color: black !important;
-        padding: 5px !important
+        background: linear-gradient(to bottom,#1f5ec67d 0%, #3f7399 50%,#1f5ec67d 100%);
     }
 
 #prev, #next {
@@ -167,41 +173,45 @@ ul {
     color: whitesmoke
 }
 
-.boxfilter {
+
+.boxFilter {
+    margin-bottom: 20px;
     display: inline-flex;
-    margin-bottom: 20px
 }
+
 
 input[type="radio"] {
     margin-left: 20px;
-    margin-right: 5px
+    margin-right: 5px;
 }
 
+
 .section {
-    height: auto;
     overflow: hidden;
+    transition: transform 2s ease-out;
+    height: auto;
     transform: scaleY(1);
     transform-origin: top;
-    transition: transform 2s ease-out
 }
 
     .section.collapsed {
+        transition: transform 1s ease-out;
         transform: scaleY(0);
-        transition: transform 1s ease-out
     }
 
-.fakedisplaynone {
-    transform: scaleY(0)
+.fakeDisplayNone {
+    transform: scaleY(0);
 }
 
+/* Add media queries for smaller screens */
 @media screen and (max-width:720px) {
     .weekdays li, .days li {
         display: inline-block !important;
-        width: 13.1%
+        width: 13.1%;
     }
 
-    .boxfilter {
-        display: unset
+    .boxFilter {
+        display: unset;
     }
 
     .month {
@@ -211,25 +221,25 @@ input[type="radio"] {
 
 @media screen and (max-width: 420px) {
     .weekdays li, .days li {
-        width: 12.75%
+        width: 12.75%;
     }
 
         .days li .active {
-            padding: 2px
+            padding: 2px;
         }
 
     .base span {
-        font: italic small-caps bold 12px Georgia,serif
+        font: italic small-caps bold 12px Georgia, serif;
     }
 }
 
 @media screen and (max-width: 375px) {
     .weekdays li, .days li {
-        width: 12.75%
+        width: 12.75%;
     }
 
     ul * {
-        padding: unset
+        padding: unset;
     }
 
     .base ul span {
@@ -237,6 +247,6 @@ input[type="radio"] {
     }
 
     .base span {
-        font: italic small-caps bold 8px Georgia,serif
+        font: italic small-caps bold 8px Georgia, serif;
     }
 }

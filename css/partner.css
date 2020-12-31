@@ -1,14 +1,14 @@
-#regione {
+#Regione {
     color: #035387 !important;
     font-weight: bold;
     text-transform: uppercase
 }
 
-.listaprovince {
+.listaProvince {
     margin-left: 25px
 }
 
-.provincia {
+.Provincia {
     background-color: #035387;
     border-radius: 5px 5px;
     color: #fff;
@@ -17,23 +17,23 @@
     text-transform: uppercase
 }
 
-.listapartner {
+.listaPartner {
     border-bottom: 2px solid #035387;
     margin-bottom: 5px;
     margin-left: 25px;
     margin-top: 15px
 }
 
-    .listapartner:last-child {
+    .listaPartner:last-child {
         border-bottom: none
     }
 
-.partner {
+.Partner {
     font-weight: bold;
     padding: 1px 5px 5px
 }
 
-    .partner:first-child {
+    .Partner:first-child {
         border-bottom: none;
         padding-top: 5px
     }
