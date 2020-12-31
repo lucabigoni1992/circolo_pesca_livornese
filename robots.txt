@@ -1,4 +1,7 @@
 User-Agent: *
 Allow: /
 
-Sitemap: https://circolopescalivornese.herokuapp.com/documentazione/sitemap.xml
+User-Agent: *
+Disallow:/documentazione/
+
+Sitemap: https://circolopescalivornese.herokuapp.com/sitemap.xml
