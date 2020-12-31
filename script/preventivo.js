@@ -283,6 +283,10 @@ function controllaEmail(emailField) {
         var ris = !(/^([A-Za-z0-9_\-.])+@([A-Za-z0-9_\-.])+\.([A-Za-z]{2,4})$/).test(emailField.value)
         inp_richiedente.disabled = ris;
         inp_richiedente.title = ris ? "Per abilitare inserire un prodotto nel carrello e validare gli altri campi" : "";
+        if (ris) {
+            var inp_message = document.getElementById("inp_message");
+            inp_message.disabled = ris;
+        }
         controllaRichiedente(inp_richiedente);
         controllaMessage(document.getElementById("inp_message"));
     } catch (e) {
