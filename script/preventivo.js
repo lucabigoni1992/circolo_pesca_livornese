@@ -285,7 +285,10 @@ function controllaEmail(emailField) {
         inp_richiedente.title = ris ? "Per abilitare inserire un prodotto nel carrello e validare gli altri campi" : "";
         if (ris) {
             var inp_message = document.getElementById("inp_message");
+            var btn_sendQuote = document.getElementById("btn_sendQuote");
             inp_message.disabled = ris;
+            btn_sendQuote.disabled = ris;
+            return
         }
         controllaRichiedente(inp_richiedente);
         controllaMessage(document.getElementById("inp_message"));
