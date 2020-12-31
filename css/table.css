@@ -88,6 +88,10 @@ table.TabellaProdotti tfoot {
     table.TabellaProdotti tfoot tr {
         display: flex;
     }
+    table.TabellaProdotti tfoot select {
+        padding: 0.65em 2.5em 0.55em 0.75em;
+    }
+
 
 table.TabellaProdotti tbody ul {
     padding: 20px;
