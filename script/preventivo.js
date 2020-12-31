@@ -303,6 +303,11 @@ function controllaRichiedente(customerField) {
         var ris = !(customerField && customerField.value !== "");
         inp_message.disabled = ris;
         inp_message.title = ris ? "Per abilitare inserire un prodotto nel carrello e validare gli altri campi" : "";
+        if (ris) {
+            var btn_sendQuote = document.getElementById("btn_sendQuote");
+            btn_sendQuote.disabled = ris;
+            return
+        }
         controllaMessage(inp_message);
     } catch (e) {
         alert("gestoreLoad " + e);
