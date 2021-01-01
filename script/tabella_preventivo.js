@@ -258,20 +258,29 @@ function gallery() {
         overlay.addEventListener('click', close);
         var scorriL = document.getElementById('scorriL');
         var scorriR = document.getElementById('scorriR');
-        scorriL.addEventListener('click', function () {
-            try {
-                scorri(-1)
-            } catch (e) {
-                alert("gestoreConverti " + e);
-            }
-        }, false);
-        scorriR.addEventListener('click', function () {
-            try {
-                scorri(1)
-            } catch (e) {
-                alert("gestoreConverti " + e);
-            }
-        }, false)
+
+        if (scorriL.getAttribute('listener') !== 'true') {
+            scorriL.addEventListener('click', function (event) {
+                try {
+                    const elementClicked = event.target;
+                    elementClicked.setAttribute('listener', 'true');
+                    scorri(-1)
+                } catch (e) {
+                    alert("gestoreConverti " + e);
+                }
+            }, false);
+        }
+        if (scorriR.getAttribute('listener') !== 'true') {
+            scorriR.addEventListener('click', function (event) {
+                try {
+                    const elementClicked = event.target;
+                    elementClicked.setAttribute('listener', 'true');
+                    scorri(1)
+                } catch (e) {
+                    alert("gestoreConverti " + e);
+                }
+            }, false)
+        }
     } catch (e) {
         window.alert(e.message);
         console.log(e.message, e.name);
