@@ -165,8 +165,8 @@ function chekAndSetEvent(elem, year, month, day) {
             });
             elem.addEventListener("click", () => {
                 try {
-                    if (new Date() > event.datafine && new Date() > event.datainizio) { alert("Evento è già FINITO, non è possibile isctversi"); return }
-                    if (new Date() > event.datainizio) { alert("Evento è già INIZIATO, non è possibile isctversi"); return }
+                    if (new Date() > event.datafine && new Date() > event.datainizio) { alert("Evento già FINITO, non è possibile isctversi"); return }
+                    if (new Date() > event.datainizio) { alert("Evento già INIZIATO, non è possibile isctversi"); return }
                     inviaRichiestaEvento(event.descrizione, event.titolo, event.datainizio, event.datafine)
                 } catch (e) {
                     alert("gestoreConverti " + e);
