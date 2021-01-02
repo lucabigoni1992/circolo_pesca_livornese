@@ -24,7 +24,7 @@ function start(filter) {
 /*prendo ed elaboro i parametri passati*/
 function getUrlParams(ParamsStr, parName) {
     var vars = ParamsStr.split("&");
-    for (var i = 0; i < vars.length; i++) {
+    for ( const  i = 0; i < vars.length; i++) {
         var pair = vars[i].split("=");
         if (pair[0] === parName) return pair[1];
     }
@@ -86,7 +86,7 @@ function SetCurrentMonth(elem, year, month, days, startTo, current, count) {
             day: "Monday"
         }
     }
-    for (iday = startTo; iday <= days; iday++, added++) {
+    for ( const iday = startTo; iday <= days; iday++, added++) {
         var isMonday = (((iday + count) % 7) === 1);
         var li = document.createElement("li");
         var span = document.createElement("span");
@@ -139,7 +139,7 @@ non si considera il caso d'eventi sovrapposti
  */
 function chekAndSetEvent(elem, year, month, day) {
     var currDay = new Date(year, month, day)
-    for (eventi = 0; eventi < _event.length; eventi++) {
+    for ( const eventi = 0; eventi < _event.length; eventi++) {
         var event = _event[eventi];
         if (((_MemCalendar.filterBy !== "" && _MemCalendar.filterBy == event.tipologia) && (currDay >= event.datainizio && currDay <= event.datafine)) || (_MemCalendar.filterBy === "" && (currDay >= event.datainizio && currDay <= event.datafine))) {
             elem.classList.add("evento");
@@ -223,7 +223,7 @@ function addOrRemoveClss(eventId, addOrRemove) {
 }
 //prendo l'evento che mi serve
 function getEventById(eventId) {
-    for (i = 0; i < _event.length; i++)
+    for ( const i = 0; i < _event.length; i++)
         if (eventId === _event[i].id) return _event[i];
 }
 //imposto il menu laterale di destra con la descrizione e l'immagine che vogliamo

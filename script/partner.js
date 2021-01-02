@@ -14,7 +14,7 @@ function GenerateAddressList(e, regione) {
 /*prendo ed elaboro i parametri passati*/
 function getUrlParams(ParamsStr, parName) {
     var vars = ParamsStr.split("&");
-    for (var i = 0; i < vars.length; i++) {
+    for ( const  i = 0; i < vars.length; i++) {
         var pair = vars[i].split("=");
         if (pair[0] === parName) return pair[1];
     }
@@ -26,9 +26,9 @@ function getUrlParams(ParamsStr, parName) {
  */
 function getAddressByParam(locazione) {
     var ris = [];
-    for (var iAdd = 0; iAdd < _regioniLocazione.length; iAdd++)
+    for ( const  iAdd = 0; iAdd < _regioniLocazione.length; iAdd++)
         if (_regioniLocazione[iAdd].Locazione === locazione)
-            for (var iShop = 0; iShop < _elencoPartner.length; iShop++)
+            for ( const  iShop = 0; iShop < _elencoPartner.length; iShop++)
                 if (_elencoPartner[iShop].regione === _regioniLocazione[iAdd].regione) ris.push({
                     indirizzo: "Via " + _elencoPartner[iShop].via + ", " + _elencoPartner[iShop].civico + " - " + _elencoPartner[iShop].cap,
                     provincia: _elencoPartner[iShop].provincia,
@@ -60,7 +60,7 @@ function cleanAllRow(region) {
  */
 function OrderArrayForProvince(address) {
     var ris = [];
-    for (i = 0; i < address.length; i++) {
+    for ( const i = 0; i < address.length; i++) {
         var ind = alreadyTaken(ris, address[i].provincia);
         if (ind > -1) ris[ind].citta.push(address[i]);
         else ris.push({
@@ -74,18 +74,18 @@ function OrderArrayForProvince(address) {
 restituisce l'indirizzo del dizionario o -1 se non esiste
  * */
 function alreadyTaken(dictionary, key) {
-    for (Dicix = 0; Dicix < dictionary.length; Dicix++)
+    for ( const Dicix = 0; Dicix < dictionary.length; Dicix++)
         if (dictionary[Dicix].provincia === key) return Dicix;
     return -1;
 }
 //Parte interamente di gestione grafica
 /* Genero graficamente la lista dei Partner */
 function createShopTree(dictionary, regionNode) {
-    for (keyIx = 0; keyIx < dictionary.length; keyIx++) {
+    for ( const keyIx = 0; keyIx < dictionary.length; keyIx++) {
         var key = dictionary[keyIx].provincia;
         var value = dictionary[keyIx].citta;
         var nodeProvince = GeneratePorvinceNode(key);
-        for (valIx = 0; valIx < value.length; valIx++) {
+        for ( const valIx = 0; valIx < value.length; valIx++) {
             var citta = value[valIx];
             nodeProvince.appendChild(GenerateCityNode(citta));
         }

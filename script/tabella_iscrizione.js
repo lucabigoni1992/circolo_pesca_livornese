@@ -32,7 +32,7 @@ function drop(ev) {
 }
 /**Prendo la corretta Label da visualizzare */
 function getLabelAndPrice(id) {
-    for (i = 0; i < _quote.length; i++)
+    for ( const i = 0; i < _quote.length; i++)
         if (_quote[i].id === parseInt(id)) return _quote[i];
 }
 
@@ -100,7 +100,7 @@ function addElement(elem, indx) {
 }
 /* prendo il messaggio corretto per il titolo*/
 function getMessage(title) {
-    for (ititle = 0; ititle < _riserva.length; ititle++) {
+    for ( const ititle = 0; ititle < _riserva.length; ititle++) {
         if (_riserva[ititle].riserva === title) return _riserva[ititle].label;
     }
 }
@@ -108,7 +108,7 @@ function getMessage(title) {
 function getCurrPage() {
     try {
         var childLinks = document.getElementById("links").children;
-        for (iCurrPage = 0; iCurrPage < childLinks.length; iCurrPage++) {
+        for ( const iCurrPage = 0; iCurrPage < childLinks.length; iCurrPage++) {
             if (childLinks[iCurrPage].className === 'active') {
                 return childLinks[iCurrPage].value;
             }
@@ -132,7 +132,7 @@ function cleanNode(grid) {
 function populateGrid(body) {
     try {
         cleanNode(body);
-        for (i = 0; i < _quote.length; i++) { //per ogni elemento nella struttura genero nuovi div
+        for ( const i = 0; i < _quote.length; i++) { //per ogni elemento nella struttura genero nuovi div
             var elem = addElement(_quote[i], i)
             body.appendChild(elem); //li appendo al babbo
         }

@@ -20,7 +20,7 @@ function AggiornaPreventivo(selectedData, id) {
 }
 /* se l'elemento è in memoria restituisco true sennò false */
 function isInMemPrev(id) {
-    for (idx = 0; idx < _MemPrev.length; idx++)
+    for ( const idx = 0; idx < _MemPrev.length; idx++)
         if (_MemPrev[idx].prodotto.id === id) return true;
     return false;
 }
@@ -43,7 +43,7 @@ function addNewProduct(id, selectedData) {
 /* aggiorno un nuovo già esistente */
 function updateProduct(id, selectedData) {
     try {
-        for (idx = 0; idx < _MemPrev.length; idx++)
+        for ( const idx = 0; idx < _MemPrev.length; idx++)
             if (_MemPrev[idx].prodotto.id === id) {
                 _MemPrev[idx].ProdottoScelto = selectedData.type;
                 _MemPrev[idx].quantiaScelta = selectedData.quantity;
@@ -56,7 +56,7 @@ function updateProduct(id, selectedData) {
 /* aggiorno un nuovo già esistente */
 function removeProduct(id) {
     try {
-        for (idx = 0; idx < _MemPrev.length; idx++)
+        for ( const idx = 0; idx < _MemPrev.length; idx++)
             if (_MemPrev[idx].prodotto.id === id) {
                 _MemPrev.splice(idx, 1);
                 return;
@@ -68,7 +68,7 @@ function removeProduct(id) {
 /*prendo un prodotto in base al sui id */
 function GetProduct(id) {
     var prod = _prodotti.prodotti;
-    for (idx = 0; idx < prod.length; idx++)
+    for ( const idx = 0; idx < prod.length; idx++)
         if (prod[idx].id === id) return prod[idx];
     throw 'Prodotto non trovato, contattare l\'assistenza';
 }
@@ -77,7 +77,7 @@ function refreshTableQuote() {
     var curTab = document.getElementById("TabPreventivo");
     var curTabHead = document.getElementById("TabPreventivoHead");
     cleanAllRow([curTab, curTabHead]);
-    for (ProdIx = 0; ProdIx < _MemPrev.length; ProdIx++) {
+    for ( const ProdIx = 0; ProdIx < _MemPrev.length; ProdIx++) {
         if (ProdIx === 0) {
             var newHeadRow = document.createElement("tr");
             recursiveAddHeaderPrevenction(newHeadRow, ["Prodotto scelto", " N°", "Prezzo", "Totale"], 0);
@@ -110,7 +110,7 @@ function fakeNode() {
 }
 /* Pulisco il Preventivo Rimuovendo i dati precedenti */
 function cleanAllRow(tabs) {
-    for (TabIx = 0; TabIx < tabs.length; TabIx++)
+    for ( const TabIx = 0; TabIx < tabs.length; TabIx++)
         while (tabs[TabIx].firstChild) tabs[TabIx].removeChild(tabs[TabIx].firstChild);
     i
 }
@@ -173,7 +173,7 @@ function addSummaryOfQuote() {
         indx.className = "colw4";
         indx.colspan = "2";
         indx.appendChild(document.createTextNode("N° (" + _MemPrev.length + ") Totale: "));
-        for (ProdIx = 0; ProdIx < _MemPrev.length; ProdIx++) {
+        for ( const ProdIx = 0; ProdIx < _MemPrev.length; ProdIx++) {
             var prodotto = _MemPrev[ProdIx];
             var product = prodotto.prodotto;
             var prices = product.prezzi;
@@ -234,7 +234,7 @@ function addTitleSummaryOfQuote() {
 function DisableQuotePart(disabled) {
     var curTab = document.getElementById("PreventivoDataInput");
     var child = curTab.querySelectorAll("input, textarea, button");
-    for (i = 0; i < child.length; i++) {
+    for ( const i = 0; i < child.length; i++) {
         if (!disabled && (child[i].id === "inp_mail")) controllaEmail(child[i]);
         if (disabled && (child[i].id !== "inp_mail")) child[i].title = "Per abilitare inserire un prodotto nel carrello e validare gli altri campi";
         else child[i].title = "";
@@ -252,7 +252,7 @@ function GetPrice(quanita, prices) {
         return 0;
     });
     var correctPrice = prices[0];
-    for (i = 0; i < prices.length; i++) {
+    for ( const i = 0; i < prices.length; i++) {
         if (quanita > prices[i].quantita) correctPrice = prices[i];
         else return correctPrice.prezzo;
     }
@@ -261,7 +261,7 @@ function GetPrice(quanita, prices) {
 //restituisce un semplice array da'oggetti con i soli valori che invieremo per email
 function normalizeData() {
     var norm = new Array(); //e quivale a usare []
-    for (idx = 0; idx < _MemPrev.length; idx++) {
+    for ( const idx = 0; idx < _MemPrev.length; idx++) {
         var prezzoU = GetPrice(_MemPrev[idx].quantiaScelta, _MemPrev[idx].prodotto.prezzi);
         norm.push({
             Modello: _MemPrev[idx].prodotto.Titolo,
@@ -327,7 +327,7 @@ function controllaMessage(noteField) {
 /* restituisco la quantità in base all'id */
 function getStoredQuantityValue(idProd) {
     try {
-        for (idx = 0; idx < _MemPrev.length; idx++)
+        for ( const idx = 0; idx < _MemPrev.length; idx++)
             if (_MemPrev[idx].prodotto.id === idProd) return _MemPrev[idx].quantiaScelta
         return 0
     } catch (e) {
@@ -337,7 +337,7 @@ function getStoredQuantityValue(idProd) {
 /* restituisco la quantità in base all'id */
 function getStoredColorValue(idProd) {
     try {
-        for (idx = 0; idx < _MemPrev.length; idx++)
+        for ( const idx = 0; idx < _MemPrev.length; idx++)
             if (_MemPrev[idx].prodotto.id === idProd) return _MemPrev[idx].ProdottoScelto;
         return ""
     } catch (e) {
