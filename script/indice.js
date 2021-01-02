@@ -18,7 +18,7 @@ function madeArea(area) {
     areaMap.id = "mapCoord" + area.zona;
     areaMap.title = area.zona;
     areaMap.href = "";
-    areaMap.addEventListener("click",function (event)
+    areaMap.addEventListener("click", function (event) {
         try {
             GenerateAddressList(event, area.tipologia);
             mouseOver(event, area.zona);
@@ -29,14 +29,14 @@ function madeArea(area) {
     });
     areaMap.coords = area.coors.join(",");
     areaMap.shape = area.type;
-    areaMap.addEventListener("mouseover",function (event)
+    areaMap.addEventListener("mouseover", function (event) {
         try {
             mouseOver(event, area.zona)
         } catch (e) {
             alert("gestoreConverti " + e);
         }
     });
-    areaMap.addEventListener("mouseout",function (event)
+    areaMap.addEventListener("mouseout", function (event) {
         try {
             mouseOut(event, area.zona)
         } catch (e) {
@@ -52,14 +52,14 @@ function madeRegione(area) {
     var a = document.createElement("a");
     img.alt = area.zona;
     img.title = area.zona;
-    img.addEventListener("click",function (event)
+    img.addEventListener("click", function (event) {
         try {
             return GenerateAddressList(event, area.zona);
         } catch (e) {
             alert("gestoreConverti " + e);
         }
     });
-    img.addEventListener("mouseover",function (event)
+    img.addEventListener("mouseover", function (event) {
         try {
             GenerateAddressList(event, area.zona)
         } catch (e) {
@@ -69,7 +69,7 @@ function madeRegione(area) {
     img.src = "./resource/icone/icona-" + area.zona.toLowerCase() + ".png";
     li.appendChild(img);
     var h3 = document.createElement("h3");
-    h3.addEventListener("mouseover",function (event)
+    h3.addEventListener("mouseover", function (event) {
         try {
             GenerateAddressList(event, area.zona)
         } catch (e) {

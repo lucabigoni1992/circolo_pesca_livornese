@@ -155,7 +155,7 @@ function generatePageManu(showN) {
         btnFirst.type = "button";
         btnlast.type = "button";
         btnFirst.value = "<<";
-        btnFirst.addEventListener("click", function (event) addProductElement(document.getElementById('ProdNumber').value, 0));
+        btnFirst.addEventListener("click", function (event) { addProductElement(document.getElementById('ProdNumber').value, 0) });
         childLinks.appendChild(btnFirst);
         var numpage = _prodotti.quantita / showN;
         var elem = document.createElement("input");
