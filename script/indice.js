@@ -6,10 +6,10 @@ window.onload = function () {
 function generateMapItaly() {
     var element = document.getElementById("Regioni");
     var ul = document.createElement("ul");
-    for ( const iMap = 0; iMap < _regioniMap.length; iMap++) ul.appendChild(madeRegione(_regioniMap[iMap]))
+    for ( var iMap = 0; iMap < _regioniMap.length; iMap++) ul.appendChild(madeRegione(_regioniMap[iMap]))
     element.appendChild(ul);
     var elementReg = document.getElementById("mapCoord");
-    for ( const iMap = 0; iMap < _regioniMap.length; iMap++) elementReg.appendChild(madeArea(_regioniMap[iMap]))
+    for ( var iMap = 0; iMap < _regioniMap.length; iMap++) elementReg.appendChild(madeArea(_regioniMap[iMap]))
 }
 /*genero il mapping delle aree in base alle coordinate settate in memoria*/
 function madeArea(area) {

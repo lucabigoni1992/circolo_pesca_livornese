@@ -1,6 +1,6 @@
 /*PopolaSelect In questa Funzione vado ad inserire l'elenco dei vari colori nella Select */
 function popolaSelect(select, valori) {
-    for ( const iSelect = 0; iSelect < valori.length; iSelect++) {
+    for ( var iSelect = 0; iSelect < valori.length; iSelect++) {
         var option = document.createElement("option");
         if (iSelect === 0) option.setAttribute("selected", "true");
         option.setAttribute("value", valori[iSelect].Prodotto);
@@ -160,7 +160,7 @@ function generatePageManu(showN) {
         var numpage = _prodotti.quantita / showN;
         var elem = document.createElement("input");
         elem.className = "active";
-        for ( const iLink = 0; iLink < numpage; iLink++) {
+        for ( var iLink = 0; iLink < numpage; iLink++) {
             elem.type = "button";
             elem.value = iLink;
             elem.addEventListener('click', function (event) {
@@ -192,7 +192,7 @@ function generatePageManu(showN) {
 function getCurrPage() {
     try {
         var childLinks = document.getElementById("links").children;
-        for ( const iCurrPage = 0; iCurrPage < childLinks.length; iCurrPage++) {
+        for ( var iCurrPage = 0; iCurrPage < childLinks.length; iCurrPage++) {
             if (childLinks[iCurrPage].className === 'active') {
                 return childLinks[iCurrPage].value;
             }
@@ -220,7 +220,7 @@ function addProductElement(showN, currpage) {
         cleanNode(curUl);
         var StartFrom = (currpage * showN);
         var untilTo = StartFrom + showN;
-        for ( const i = StartFrom; i < untilTo && i < _prodotti.quantita; i++) { //per ogni elemento nella struttura genero nuovi div
+        for ( var i = StartFrom; i < untilTo && i < _prodotti.quantita; i++) { //per ogni elemento nella struttura genero nuovi div
             var elem = addElement(_prodotti.prodotti[i], i)
             curUl.appendChild(elem); //li appendo al babbo
         }
@@ -255,7 +255,7 @@ function gallery() {
         var buttons = document.querySelectorAll('.gallery');
         var overlay = document.querySelector('.overlay');
         var btnlen = button.length;
-        for ( const btnix = 0; btnlen; btnix++) 
+        for ( var btnix = 0; btnlen; btnix++) 
             button[btnix].addEventListener('click', openGallery)
         
         overlay.addEventListener('click', close);

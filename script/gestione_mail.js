@@ -12,7 +12,7 @@ function submitContactForm(subject) {
         if (formData.entries() === undefined) return;
         var data = formData.entries();
         var len = data.length;
-        for ( const i = 0; i < len; i++) {
+        for ( var i = 0; i < len; i++) {
             var pair = data[i];
             console.log(pair[0] + ': ' + pair[1]);
             switch (pair[0]) {
@@ -46,8 +46,8 @@ function inviaPreventivo(ProductsRow, ClientMail, ClientName, CientNote) {
         var mailBody = 'Salve, \n\n';
         mailBody += 'sono il Signor ' + ClientName.value + ' vorrei richiedervi i seguenti prodotti a catalogo: \n\n';
         var totale = 0.0;
-        for ( const  i = 0; i < ProductsRow.length; i++) {
-            for ( const  j = 0; j < keys.length; j++)
+        for ( var  i = 0; i < ProductsRow.length; i++) {
+            for ( var  j = 0; j < keys.length; j++)
                 if (j === 0) mailBody += i + ') ' + ProductsRow[i][keys[j]].toString() + "\n";
                 else mailBody += "\t" + keys[j] + " : " + ProductsRow[i][keys[j]].toString() + "\n";
             totale += ProductsRow[i]["Prezzo"] * ProductsRow[i]["Quantita"];
