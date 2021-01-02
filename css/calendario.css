@@ -79,7 +79,7 @@ ul {
 
         .days li .active {
             background: #035387;
-            color: #87ceebad !important;
+            color: #cef1ff !important;
             border-radius: 5px;
         }
 
@@ -87,7 +87,7 @@ ul {
     .days .currentFirst,
     .days .current {
         padding: 5px;
-        background-color: #87ceebad;
+        background-color: #cef1ff;
         color: #035387 !important;
     }
 
@@ -102,7 +102,7 @@ ul {
         .days .current:hover,
         .days .currentLast:hover,
         .days .currentFirst:hover {
-            background: linear-gradient(to bottom,#87ceebad 0%, #3f7399 50%,#87ceebad 100%);
+            background: linear-gradient(to bottom,#cef1ff 0%, #3f7399 50%,#cef1ff 100%);
         }
 
     .days .currentFirstSunday {
@@ -122,15 +122,15 @@ ul {
     }
 
     .days .currentSunday {
-        background-color: #1f5ec67d
+        background-color: #9991f3
     }
 
         .days .currentSunday:hover {
-            background: linear-gradient(to bottom, #1f5ec67d 0%, #3f7399 50%,#1f5ec67d 100%);
+            background: linear-gradient(to bottom, #9991f3 0%, #3230da 50%,#9991f3 100%);
         }
 
     .days .currentMonday {
-        background-color: #44855e7d
+        background-color: #8fcca7
     }
 
         .days .currentMonday:hover {
@@ -142,14 +142,14 @@ ul {
     }
 
     .days .evento {
-        background: linear-gradient(to bottom, #c8393959 0%, #fa00007a 50%,#c8393959 100%);
+        background: linear-gradient(to bottom, #ec9d9d 0%, #a92e2e 50%,#ec9d9d 100%);
         padding: 5px;
         border-radius: unset;
     }
 
         .days .evento:hover,
         .days .fakehover {
-            background: linear-gradient(to bottom, #c8393999 0%, #fa0000e6 50%,#c8393999 100%);
+            background: linear-gradient(to bottom, #f78585 0%, #fa0000 50%,#f78585 100%);
             padding: 5px;
             border-radius: unset;
         }

@@ -112,7 +112,6 @@ function fakeNode() {
 function cleanAllRow(tabs) {
     for ( var TabIx = 0; TabIx < tabs.length; TabIx++)
         while (tabs[TabIx].firstChild) tabs[TabIx].removeChild(tabs[TabIx].firstChild);
-    i
 }
 //costruisco l'eader partendo del nodo padre e una lista di valori che ci voglio inseire dentro
 function recursiveAddHeaderPrevenction(node, values, recursiveIdx) {

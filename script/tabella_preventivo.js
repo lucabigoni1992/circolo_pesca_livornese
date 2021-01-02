@@ -32,7 +32,7 @@ function impostaQuantita(ul, elem, indx) {
     var id = "id_" + elem.id + "_inputQuantita";
     input.id = id;
     if (!elem.disponibile) input.disabled = true;
-    else input.addEventListener("change", function (event) {
+    else input.addEventListener("change", function (ev) {
         try {
             var productList = document.getElementById("id_" + elem.id + "_inputProdotto");
             enabeOrDisabeProductList(productList, input.value);
@@ -71,7 +71,7 @@ function impostaSceltaProdotto(ul, elem, indx) {
     select.disabled = true;
     popolaSelect(select, elem.varianti)
     if (!elem.disponibile) select.disabled = true;
-    else select.addEventListener("change", function (event) {
+    else select.addEventListener("change", function (ev) {
         try {
             var productQuantity = document.getElementById("id_" + elem.id + "_inputQuantita");
             var inputProdotto = document.getElementById("id_" + elem.id + "_inputProdotto");
@@ -99,7 +99,7 @@ function impostaColonna1(tdCol, elem, indx) {
     img.id = "img" + indx.toString();
     img.title = elem.Titolo.toString().toLowerCase();
     img.alt = img.title;
-    img.src = "./resource/img/pietanze/" + img.title.replaceAll(" ", "_") + "Min.jpg";
+    img.src = "./resource/img/pietanze/" + img.title.split(' ').join('_')+ "Min.jpg";
     img.setAttribute("alt", elem.Titolo);
     img.classList.add("imageGallery");
     if (!elem.disponibile) img.className = "imgOffuscataNonDisponibile";
@@ -155,7 +155,7 @@ function generatePageManu(showN) {
         btnFirst.type = "button";
         btnlast.type = "button";
         btnFirst.value = "<<";
-        btnFirst.addEventListener("click", function (event) { addProductElement(document.getElementById('ProdNumber').value, 0) });
+        btnFirst.addEventListener("click", function (ev) { addProductElement(document.getElementById('ProdNumber').value, 0) });
         childLinks.appendChild(btnFirst);
         var numpage = _prodotti.quantita / showN;
         var elem = document.createElement("input");
@@ -165,7 +165,7 @@ function generatePageManu(showN) {
             elem.value = iLink;
             elem.addEventListener('click', function (event) {
                 try {
-                    addProductElement(document.getElementById('ProdNumber').value, event.toElement.value);
+                    addProductElement(document.getElementById('ProdNumber').value, event.currentTarget.value);
                 } catch (e) {
                     alert("gestoreConverti " + e);
                 }
@@ -174,7 +174,7 @@ function generatePageManu(showN) {
             elem = document.createElement("input");
         }
         btnlast.value = ">>";
-        btnlast.addEventListener("click", function (event) {
+        btnlast.addEventListener("click", function (ev) {
             try {
                 addProductElement(document.getElementById('ProdNumber').value, (iLink - 1))
             } catch (e) {
@@ -254,9 +254,9 @@ function gallery() {
     try {
         var buttons = document.querySelectorAll('.gallery');
         var overlay = document.querySelector('.overlay');
-        var btnlen = button.length;
-        for ( var btnix = 0; btnlen; btnix++) 
-            button[btnix].addEventListener('click', openGallery)
+        var btnlen = buttons.length;
+        for (var btnix = 0; btnix<btnlen; btnix++) 
+            buttons[btnix].addEventListener('click', openGallery)
         
         overlay.addEventListener('click', close);
         var scorriL = document.getElementById('scorriL');
@@ -305,13 +305,13 @@ function scorri(currPage) {
 function openGallery(e) {
     try {
         var src = e.currentTarget.querySelector('img').src;
-        if (src.endsWith("Min.jpg")) src = src.substring(0, src.length - 7);
+        if (endsWith(src,"Min.jpg")) src = src.substring(0, src.length - 7);
         else return;
         var overlay = document.querySelector('.overlay');
         var overlayImage = document.getElementById('gallery');
         overlay.classList.add('open');
         var split = src.split('/');
-        var name = split[split.length - 1].replaceAll('_', ' ');
+        var name = split[split.length - 1].split('_').join(' '); 
         overlayImage.title = name;
         overlayImage.alt = name;
         src = src + "1.jpg";
@@ -331,3 +331,8 @@ function close(e) {
         console.log(e.message, e.name);
     }
 }
+//ie 11 do not support endswith
+function endsWith  (string,pattern) {
+    var d = string.length - pattern.length;
+    return d >= 0 && string.lastIndexOf(pattern) === d;
+};

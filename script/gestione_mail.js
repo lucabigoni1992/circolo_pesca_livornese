@@ -8,29 +8,27 @@ var MailData = {
 //semplicemtne  vado a crearmi il testo che invierò per email
 function submitContactForm(subject) {
     try {
-        const formData = new FormData(document.querySelector('#contact-form')); //prendiamo l'array dei valori che pasiamo all'intero del form
-        if (formData.entries() === undefined) return;
-        var data = formData.entries();
+        const formData = document.querySelector('#contact-form'); //prendiamo l'array dei valori che pasiamo all'intero del form
+        var data = formData.querySelectorAll("input, textarea");
         var len = data.length;
-        for ( var i = 0; i < len; i++) {
+        for (var i = 0; i < len; i++) {
             var pair = data[i];
-            console.log(pair[0] + ': ' + pair[1]);
-            switch (pair[0]) {
+            switch (pair.name) {
                 case "message":
-                    MailData.message = pair[1];
+                    MailData.message = pair.value;
                     break;
                 case "name":
-                    MailData.name = "Cordiali Saluti, %0A" + pair[1];
+                    MailData.name = "Cordiali Saluti, %0A" + pair.value;
                     break;
                 case "phone":
-                    MailData.phone = "Può contattattarmi al : " + pair[1];
+                    MailData.phone = "Può contattattarmi al : " + pair.value;
                     break;
                 case "email":
-                    MailData.mittente = pair[1];
+                    MailData.mittente = pair.value;
                     break;
             }
         }
-        window.open('mailto:l.bigoni@studenti.unipi.it?cc=' + MailData.mittente + '&subject=' + subject + '&body=Salve,%0A%0A' + MailData.message.replace('\r', '%0A') + '%0A' + MailData.phone + '%0A%0A' + MailData.name);
+        window.open('mailto:l.bigoni@studenti.unipi.it?cc=' + MailData.mittente + '&subject=' + subject + '&body=Salve,%0A%0A' + MailData.message.split('\r').join('%0A')+ '%0A' + MailData.phone + '%0A%0A' + MailData.name);
     } catch (e) {
         alert("gestoreLoad " + e);
     }
@@ -46,8 +44,8 @@ function inviaPreventivo(ProductsRow, ClientMail, ClientName, CientNote) {
         var mailBody = 'Salve, \n\n';
         mailBody += 'sono il Signor ' + ClientName.value + ' vorrei richiedervi i seguenti prodotti a catalogo: \n\n';
         var totale = 0.0;
-        for ( var  i = 0; i < ProductsRow.length; i++) {
-            for ( var  j = 0; j < keys.length; j++)
+        for (var i = 0; i < ProductsRow.length; i++) {
+            for (var j = 0; j < keys.length; j++)
                 if (j === 0) mailBody += i + ') ' + ProductsRow[i][keys[j]].toString() + "\n";
                 else mailBody += "\t" + keys[j] + " : " + ProductsRow[i][keys[j]].toString() + "\n";
             totale += ProductsRow[i]["Prezzo"] * ProductsRow[i]["Quantita"];
@@ -58,7 +56,7 @@ function inviaPreventivo(ProductsRow, ClientMail, ClientName, CientNote) {
         mailBody += "\tSenza IVA :" + Number(totale / 1.22).toFixed(2) + " €\n";
         mailBody += "\tTotale       :" + totale + " €\n\n";
         mailBody += "Note:\n";
-        mailBody += CientNote.value.replace("\n\r", "\n");
+        mailBody += CientNote.value.split("\n\r").join("\n");
         window.open('mailto:l.bigoni@studenti.unipi.it?cc=' + ClientMail.value + '&subject=Preventivo&body=' + encodeURI(mailBody));
     } catch (e) {
         alert("gestoreLoad " + e);

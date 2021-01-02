@@ -1,6 +1,6 @@
 table.TabellaProdotti {
     border-radius: 5px 5px;
-    background: #87ceeb69;
+    background: #d8eff7;
     margin-bottom: 10px;
     border: 1px solid #6a6a6a;
     width: 100%;
@@ -18,6 +18,7 @@ table.TabellaProdotti {
 
     table.TabellaProdotti tbody tr {
         display: inline-table;
+        width:100%
     }
 
     table.TabellaProdotti tbody img { /*immagine  nella tabella e*/
@@ -29,7 +30,7 @@ table.TabellaProdotti {
         font-size: 14px;
         font-weight: bold;
         color: black;
-        background: linear-gradient(to bottom,#035387 0%, #3f7399 50%, #87ceeb69 100%);
+        background: linear-gradient(to bottom,#035387 0%, #3f7399 50%, #d8eff7 100%)
     }
 
         table.TabellaProdotti thead tr {

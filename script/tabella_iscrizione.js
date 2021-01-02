@@ -9,8 +9,8 @@ function allowDrop(ev) {
 /**mi salvo in memoria l'id dell'oggetto che intendo andare a spostare */
 function drag(ev) {
     try {
-        if (ev.target.id === undefined) return false;
-        ev.dataTransfer.setData("dataDrag", ev.target.id.split("_")[1]);
+        if (ev.currentTarget.id === undefined) return false;
+        ev.dataTransfer.setData("Text", ev.currentTarget.id.split("_")[1]);
     } catch (e) {
         window.alert(e.message);
         console.log(e.message, e.name);
@@ -20,10 +20,10 @@ function drag(ev) {
 function drop(ev) {
     try {
         ev.preventDefault();
-        var data = ev.dataTransfer.getData("dataDrag");
+        var data = ev.dataTransfer.getData("Text");
         if (!data || data === "") return;
         var elem = getLabelAndPrice(data);
-        if (elem.tipo == "Abbonamento") ev.target.textContent = "Vi inoltro la mia richiesta d'iscrizione per il Seguente Abbonamento:\n" + (elem.label + "  " + elem.prezzo + "€");
+        if (elem.tipo == "Abbonamento") ev.currentTarget.value = "Vi inoltro la mia richiesta d'iscrizione per il Seguente Abbonamento:\n" + (elem.label + "  " + elem.prezzo + "€");
         else window.alert("Tipologia d'iscrizione non accatta non è un'abbonamento");
     } catch (e) {
         window.alert(e.message);

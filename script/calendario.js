@@ -149,21 +149,21 @@ function chekAndSetEvent(elem, year, month, day) {
                 day: '2-digit'
             });
             elem.title = event.titolo;
-            elem.addEventListener("mouseover", function (event) {
+            elem.addEventListener("mouseover", function (ev) {
                 try {
                     mouseOver(event, event.id)
                 } catch (e) {
                     alert("gestoreConverti " + e);
                 }
             });
-            elem.addEventListener("mouseout", function (event) {
+            elem.addEventListener("mouseout", function (ev) {
                 try {
                     mouseOut(event, event.id)
                 } catch (e) {
                     alert("gestoreConverti " + e);
                 }
             });
-            elem.addEventListener("click", function (event) {
+            elem.addEventListener("click", function (ev) {
                 try {
                     if (new Date() > event.datafine && new Date() > event.datainizio) { alert("Evento già FINITO, non è possibile isctversi"); return }
                     if (new Date() > event.datainizio) { alert("Evento già INIZIATO, non è possibile isctversi"); return }

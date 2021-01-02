@@ -91,8 +91,6 @@ function createShopTree(dictionary, regionNode) {
         }
         regionNode.appendChild(nodeProvince);
     }
-    if (dictionary[Dicix].provincia === key) return Dicix;
-    return -1;
 }
 /*genero il nodo regione*/
 function GenerateRegionNode(region) {
@@ -102,7 +100,7 @@ function GenerateRegionNode(region) {
 /*genero il nodo provincia*/
 function GeneratePorvinceNode(provincia) {
     var provinceList = document.createElement("div");
-    provinceList.addEventListener('click', function (event) {
+    provinceList.addEventListener('click', function (ev) {
         try {
             slide(event.toElement.value);
         } catch (e) {

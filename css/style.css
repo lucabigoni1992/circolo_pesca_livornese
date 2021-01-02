@@ -28,7 +28,7 @@ ul li {
         border-radius: 5px 5px;
         padding: 15px;
         min-height: 160px;
-        background: #87ceebad;
+        background: #cef1ff;
         margin-right: 10px;
         margin-left: 10px;
         color: black;
@@ -287,8 +287,7 @@ select {
     border: 1px solid dimgray;
     line-height: 1;
     outline: 0;
-    border-radius: var(--radius);
-    background-color: #87ceeb69;
+    background-color: #d2dce1;
     background-image: linear-gradient(dimgray, dimgray), linear-gradient(-135deg, transparent 50%, #cccccc 50%), linear-gradient(-225deg, transparent 50%, #cccccc 50%), linear-gradient(#cccccc 42%, #82898d 42%);
     background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
     background-size: 1px 100%, 20px 22px, 20px 22px, 20px 100%;
