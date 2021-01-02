@@ -32,7 +32,7 @@ function impostaQuantita(ul, elem, indx) {
     var id = "id_" + elem.id + "_inputQuantita";
     input.id = id;
     if (!elem.disponibile) input.disabled = true;
-    else input.addEventListener("change", () => {
+    else input.addEventListener("change", function (event) {
         try {
             var productList = document.getElementById("id_" + elem.id + "_inputProdotto");
             enabeOrDisabeProductList(productList, input.value);
@@ -71,7 +71,7 @@ function impostaSceltaProdotto(ul, elem, indx) {
     select.disabled = true;
     popolaSelect(select, elem.varianti)
     if (!elem.disponibile) select.disabled = true;
-    else select.addEventListener("change", () => {
+    else select.addEventListener("change", function (event) {
         try {
             var productQuantity = document.getElementById("id_" + elem.id + "_inputQuantita");
             var inputProdotto = document.getElementById("id_" + elem.id + "_inputProdotto");

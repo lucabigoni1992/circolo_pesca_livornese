@@ -8,7 +8,7 @@ var MailData = {
 //semplicemtne  vado a crearmi il testo che invierò per email
 function submitContactForm(subject) {
 	try {
-		const formData = new FormData(document.querySelector('#contact-form')) //prendiamo l'array dei valori che pasiamo all'intero del form
+		const formData = new FormData(document.querySelector('#contact-form')); //prendiamo l'array dei valori che pasiamo all'intero del form
 		for (var pair of formData.entries()) {
 			console.log(pair[0] + ': ' + pair[1]);
 			switch (pair[0]) {
