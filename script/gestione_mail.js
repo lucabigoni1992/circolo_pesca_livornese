@@ -42,7 +42,7 @@ function inviaPreventivo(ProductsRow, ClientMail, ClientName, CientNote) {
         }
         var keys = Object.keys(ProductsRow[0]);
         var mailBody = 'Salve, \n\n';
-        mailBody += 'sono il Signor ' + ClientName.value + ' vorrei richiedervi i seguenti prodotti a catalogo: \n\n';
+        mailBody += 'sono il Signor ' + ClientName.value + ' vorrei effettuare un ordiene per le seguenti pietanze: \n\n';
         var totale = 0.0;
         for (var i = 0; i < ProductsRow.length; i++) {
             for (var j = 0; j < keys.length; j++)
