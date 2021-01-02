@@ -52,7 +52,7 @@ table.TabellaProdotti {
     text-align: left;
 }
 
-#noScrollTab body th:first-child div,
+#noScrollTab tbody th:first-child div,
 #noScrollTab thead th:first-child div {
     text-align: left;
     margin-left: 8px;
