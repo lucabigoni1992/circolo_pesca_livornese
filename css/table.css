@@ -54,7 +54,7 @@ table.TabellaProdotti {
 
 #noScrollTab thead th:first-child div {
     text-align: left;
-    margin-left: 8px;
+    margin-left: 18px;
     width: 150px;
 }
 
@@ -263,8 +263,6 @@ table.TabellaProdotti tbody {
 
 .noMargin {
     border: unset !important;
-    margin-right: 5px;
-    margin-left: 5px
 }
 
 /* Media Queries serve per adattare lo scenario mostrato a schermi più piccoli di 768 px*/
