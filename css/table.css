@@ -52,15 +52,18 @@ table.TabellaProdotti {
     text-align: left;
 }
 
+#noScrollTab body th:first-child div,
 #noScrollTab thead th:first-child div {
     text-align: left;
-    margin-left: 18px;
+    margin-left: 8px;
+}
+#noScrollTab thead th:first-child div {
     width: 150px;
 }
 
 #noScrollTab thead th:last-child div {
     text-align: right;
-    padding-right: 8px;
+    padding-right: 18px;
 }
 
 #noScrollTab tbody td:last-child {
