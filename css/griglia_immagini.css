@@ -90,6 +90,7 @@ body {
     text-transform: uppercase;
     letter-spacing: 2px;
     BOTTOM: 50%;
+    cursor: pointer;
 }
 
 .scorriL {
@@ -103,4 +104,5 @@ body {
     border: 0;
     text-transform: uppercase;
     letter-spacing: 2px;
+    cursor: pointer;
 }
